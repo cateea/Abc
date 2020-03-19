@@ -1,6 +1,8 @@
 ﻿using Abc.Data.Quantity;
 using Abc.Domain.Quantity;
 using Abc.Facade.Quantity;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 
 namespace Abc.Pages.Quantity {
 
@@ -9,6 +11,7 @@ namespace Abc.Pages.Quantity {
         protected internal UnitsPage(IUnitsRepository r) : base(r) {
             PageTitle = "Units";
         }
+        public IEnumerable<SelectListItem> Measures { get; }
 
         public override string ItemId => Item.Id;
 
@@ -18,6 +21,13 @@ namespace Abc.Pages.Quantity {
 
         protected internal override UnitView toView(Unit obj) {
             return UnitViewFactory.Create(obj);
+        }
+        public string GetMeasureName (string measureId)
+        {
+            foreach (var m in Measures)
+                if (m.Value == measureId)
+                    return m.Text;
+            return "Unspecified";
         }
     }
 
