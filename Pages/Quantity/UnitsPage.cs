@@ -15,9 +15,16 @@ namespace Abc.Pages.Quantity {
 
         public override string ItemId => Item.Id;
 
-        protected internal override Unit toObject(UnitView view) {
+        protected internal override Unit toObject(UnitView view)
+        {
             return UnitViewFactory.Create(view);
         }
+        protected internal override string getPageSubtitle()
+        {
+            if (FixedValue is null) return base.getPageSubtitle();
+            return $"For {GetMeasureName(FixedValue)}";
+        }
+
 
         protected internal override UnitView toView(Unit obj) {
             return UnitViewFactory.Create(obj);
