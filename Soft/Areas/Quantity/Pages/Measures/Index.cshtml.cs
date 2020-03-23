@@ -8,8 +8,8 @@ namespace Abc.Soft.Areas.Quantity.Pages.Measures
     {
         
         public IndexModel(IMeasureRepository r) : base(r)
-    {
-    }
+        {
+        }
 
         public async Task OnGetAsync(string sortOrder,
             string currentFilter, string searchString, int? pageIndex, string fixedValue, string fixedFilter) {
@@ -17,7 +17,5 @@ namespace Abc.Soft.Areas.Quantity.Pages.Measures
             await getList(sortOrder, currentFilter, searchString, pageIndex, fixedFilter, fixedValue);
 
         }
-
-
     }
 }

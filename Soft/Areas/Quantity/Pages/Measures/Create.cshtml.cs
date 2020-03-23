@@ -9,13 +9,19 @@ namespace Abc.Soft.Areas.Quantity.Pages.Measures {
 
         public CreateModel(IMeasureRepository r) : base(r) { }
 
-        public IActionResult OnGet() {
+        public IActionResult OnGet(string fixedFilter, string fixedValue)
+        {
+            FixedFilter = fixedFilter;
+            FixedValue = fixedValue;
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync() {
+        public async Task<IActionResult> OnPostAsync(string fixedFilter, string fixedValue) 
+        {
+            FixedFilter = fixedFilter;
+            FixedValue = fixedValue;
             if (!await addObject()) return Page();
-            return RedirectToPage("./Index");
+            return Redirect($"/Quantity/Measures/Index?fixedFilter={FixedFilter}&fixedValue={fixedValue}");
         }
 
     }
