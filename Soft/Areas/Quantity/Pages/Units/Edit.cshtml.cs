@@ -7,26 +7,18 @@ namespace Abc.Soft.Areas.Quantity.Pages.Units {
 
     public class EditModel : UnitsPage {
 
-        public EditModel(IUnitsRepository r) : base(r) { }
+        public EditModel(IUnitsRepository r, IMeasureRepository m) : base(r, m) { }
 
 
-        public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
-        {
-
-            FixedFilter = fixedFilter;
-            FixedValue = fixedValue;
-            await getObject(id);
+        public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue) {
+            await getObject(id, fixedFilter, fixedValue);
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(string fixedFilter, string fixedValue)
-        {
+        public async Task<IActionResult> OnPostAsync(string fixedFilter, string fixedValue) {
+            await updateObject(fixedFilter,fixedValue);
 
-            FixedFilter = fixedFilter;
-            FixedValue = fixedValue;
-            await updateObject();
-
-            return Redirect($"/Quantity/Units/Index?fixedFilter={FixedFilter}&fixedValue={fixedValue}");
+            return Redirect(PageUrl);
         }
 
     }

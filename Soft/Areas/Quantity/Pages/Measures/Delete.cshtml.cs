@@ -11,18 +11,14 @@ namespace Abc.Soft.Areas.Quantity.Pages.Measures {
 
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue) 
         {
-            await getObject(id);
-            FixedFilter = fixedFilter;
-            FixedValue = fixedValue;
+            await getObject(id, fixedFilter, fixedValue);
             return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(string id, string fixedFilter, string fixedValue)
         {
-            await deleteObject(id);
-            FixedFilter = fixedFilter;
-            FixedValue = fixedValue;
-            return Redirect($"/Quantity/Measures/Index?fixedFilter={FixedFilter}&fixedValue={fixedValue}");
+            await deleteObject(id, fixedFilter, fixedValue);
+            return Redirect(IndexUrl);
         }
 
     }

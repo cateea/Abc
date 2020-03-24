@@ -7,22 +7,16 @@ namespace Abc.Soft.Areas.Quantity.Pages.Units {
 
     public class DeleteModel : UnitsPage {
 
-        public DeleteModel(IUnitsRepository r) : base(r) { }
+        public DeleteModel(IUnitsRepository r, IMeasureRepository m) : base(r, m) { }
 
-        public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
-        {
-            await getObject(id);
-            FixedFilter = fixedFilter;
-            FixedValue = fixedValue;
+        public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue) {
+            await getObject(id, fixedFilter, fixedValue);
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(string id, string fixedFilter, string fixedValue)
-        {
-            await deleteObject(id);
-            FixedFilter = fixedFilter;
-            FixedValue = fixedValue;
-            return Redirect($"/Quantity/Units/Index?fixedFilter={FixedFilter}&fixedValue={fixedValue}");
+        public async Task<IActionResult> OnPostAsync(string id, string fixedFilter, string fixedValue) {
+            await deleteObject(id, fixedFilter, fixedValue);
+            return Redirect(IndexUrl);
         }
     }
 

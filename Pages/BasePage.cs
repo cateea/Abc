@@ -31,7 +31,7 @@ namespace Abc.Pages {
             set=> db.FixedFilter = value; }
         public string FixedValue {
             get => db.FixedValue;
-            set => FixedValue = value; }
+            set => db.FixedValue = value; }
         public string SortOrder{ 
             get=> db.SortOrder;
             set => db.SortOrder = value; 
@@ -49,12 +49,21 @@ namespace Abc.Pages {
         public bool HasNextPage => db.HasNextPage;
 
         public int TotalPages => db.TotalPages;
+        public string IndexUrl => getIndexUrl();
 
-        protected internal virtual string getPageSubtitle()
-        {
+        public string PageUrl => getPageUrl();
+
+        protected internal abstract string getPageUrl();
+        protected internal string getIndexUrl() {
+            return $"{PageUrl}/Quantity/Measures/Index?fixedFilter={FixedFilter}&fixedValue={FixedValue}";
+        }
+
+        protected internal virtual string getPageSubtitle() {
             return string.Empty;
         }
-        protected internal async Task<bool> addObject() {
+        protected internal async Task<bool> addObject(string fixedFilter, string fixedValue) {
+            FixedFilter = fixedFilter;
+            FixedValue = fixedValue;
             //TODO see viga tuleb lahendada
             // To protect from overposting attacks, please enable the specific properties you want to bind to, for
             // more details see https://aka.ms/RazorPagesCRUD.
@@ -70,7 +79,9 @@ namespace Abc.Pages {
 
         protected internal abstract TDomain toObject(TView view);
 
-        protected internal async Task updateObject() {
+        protected internal async Task updateObject(string fixedFilter, string fixedValue) {
+            FixedFilter = fixedFilter;
+            FixedValue = fixedValue;
             //TODO see viga tuleb lahendada
             // To protect from overposting attacks, please enable the specific properties you want to bind to, for
             // more details see https://aka.ms/RazorPagesCRUD.
@@ -78,14 +89,20 @@ namespace Abc.Pages {
             await db.Update(toObject(Item));
         }
 
-        protected internal async Task getObject(string id) {
+        protected internal async Task getObject(string id, string fixedFilter, string fixedValue)
+        {
+            FixedFilter = fixedFilter;
+            FixedValue = fixedValue;
             var o = await db.Get(id);
             Item = toView(o);
         }
 
         protected internal abstract TView toView(TDomain obj);
 
-        protected internal async Task deleteObject(string id) {
+        protected internal async Task deleteObject(string id, string fixedFilter, string fixedValue)
+        {
+            FixedFilter = fixedFilter;
+            FixedValue = fixedValue;
             await db.Delete(id);
         }
 
@@ -112,14 +129,12 @@ namespace Abc.Pages {
 
             Items = await getList();
         }
-        private string getSearchString(string currentFilter, string searchString, string sortOrder)
-        {
+        private string getSearchString(string currentFilter, string searchString, string sortOrder) {
             if (searchString != null) { PageIndex = 1; }
             else { searchString = currentFilter; }
             return searchString;
         }
-        internal async Task<List<TView>> getList()
-        { 
+        internal async Task<List<TView>> getList() { 
             var l = await db.Get();
             return l.Select(toView).ToList();
         }
