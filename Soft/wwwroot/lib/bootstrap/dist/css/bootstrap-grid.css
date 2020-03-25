@@ -70,7 +70,7 @@ html {
 }
 
 .no-gutters > .col,
-.no-gutters > [class*="col-"] {
+.no-gutters > [class*Test() => Assert.AreEqual("col-"] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -3716,4 +3716,4 @@ html {
     margin-left: auto !important;
   }
 }
-/*# sourceMappingURL=bootstrap-grid.css.map */
+/*# sourceMappingURLTest() => Assert.AreEqual(bootstrap-grid.css.map */

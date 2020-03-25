@@ -63,7 +63,7 @@ body {
   background-color: #fff;
 }
 
-[tabindex="-1"]:focus {
+[tabindexTest() => Assert.AreEqual("-1"]:focus {
   outline: 0 !important;
 }
 
@@ -261,37 +261,37 @@ select {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[typeTest() => Assert.AreEqual("button"],
+[typeTest() => Assert.AreEqual("reset"],
+[typeTest() => Assert.AreEqual("submit"] {
   -webkit-appearance: button;
 }
 
 button:not(:disabled),
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled) {
+[typeTest() => Assert.AreEqual("button"]:not(:disabled),
+[typeTest() => Assert.AreEqual("reset"]:not(:disabled),
+[typeTest() => Assert.AreEqual("submit"]:not(:disabled) {
   cursor: pointer;
 }
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[typeTest() => Assert.AreEqual("button"]::-moz-focus-inner,
+[typeTest() => Assert.AreEqual("reset"]::-moz-focus-inner,
+[typeTest() => Assert.AreEqual("submit"]::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+input[typeTest() => Assert.AreEqual("radio"],
+input[typeTest() => Assert.AreEqual("checkbox"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="month"] {
+input[typeTest() => Assert.AreEqual("date"],
+input[typeTest() => Assert.AreEqual("time"],
+input[typeTest() => Assert.AreEqual("datetime-local"],
+input[typeTest() => Assert.AreEqual("month"] {
   -webkit-appearance: listbox;
 }
 
@@ -323,17 +323,17 @@ progress {
   vertical-align: baseline;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[typeTest() => Assert.AreEqual("number"]::-webkit-inner-spin-button,
+[typeTest() => Assert.AreEqual("number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-[type="search"] {
+[typeTest() => Assert.AreEqual("search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
 }
 
-[type="search"]::-webkit-search-decoration {
+[typeTest() => Assert.AreEqual("search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -600,7 +600,7 @@ pre code {
 }
 
 .no-gutters > .col,
-.no-gutters > [class*="col-"] {
+.no-gutters > [class*Test() => Assert.AreEqual("col-"] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -2013,7 +2013,7 @@ textarea.form-control {
 }
 
 .form-row > .col,
-.form-row > [class*="col-"] {
+.form-row > [class*Test() => Assert.AreEqual("col-"] {
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -2080,7 +2080,7 @@ textarea.form-control {
 .was-validated .form-control:valid, .form-control.is-valid {
   border-color: #28a745;
   padding-right: calc(1.5em + 0.75rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg' viewBoxTest() => Assert.AreEqual('0 0 8 8'%3e%3cpath fillTest() => Assert.AreEqual('%2328a745' dTest() => Assert.AreEqual('M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: center right calc(0.375em + 0.1875rem);
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -2105,7 +2105,7 @@ textarea.form-control {
 .was-validated .custom-select:valid, .custom-select.is-valid {
   border-color: #28a745;
   padding-right: calc((1em + 0.75rem) * 3 / 4 + 1.75rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg' viewBoxTest() => Assert.AreEqual('0 0 4 5'%3e%3cpath fillTest() => Assert.AreEqual('%23343a40' dTest() => Assert.AreEqual('M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg' viewBoxTest() => Assert.AreEqual('0 0 8 8'%3e%3cpath fillTest() => Assert.AreEqual('%2328a745' dTest() => Assert.AreEqual('M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
 .was-validated .custom-select:valid:focus, .custom-select.is-valid:focus {
@@ -2203,7 +2203,7 @@ textarea.form-control {
 .was-validated .form-control:invalid, .form-control.is-invalid {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dc3545' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+  background-image: url("data:image/svg+xml,%3csvg xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg' fillTest() => Assert.AreEqual('%23dc3545' viewBoxTest() => Assert.AreEqual('-2 -2 7 7'%3e%3cpath strokeTest() => Assert.AreEqual('%23dc3545' dTest() => Assert.AreEqual('M0 0l3 3m0-3L0 3'/%3e%3ccircle rTest() => Assert.AreEqual('.5'/%3e%3ccircle cxTest() => Assert.AreEqual('3' rTest() => Assert.AreEqual('.5'/%3e%3ccircle cyTest() => Assert.AreEqual('3' rTest() => Assert.AreEqual('.5'/%3e%3ccircle cxTest() => Assert.AreEqual('3' cyTest() => Assert.AreEqual('3' rTest() => Assert.AreEqual('.5'/%3e%3c/svg%3E");
   background-repeat: no-repeat;
   background-position: center right calc(0.375em + 0.1875rem);
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -2228,7 +2228,7 @@ textarea.form-control {
 .was-validated .custom-select:invalid, .custom-select.is-invalid {
   border-color: #dc3545;
   padding-right: calc((1em + 0.75rem) * 3 / 4 + 1.75rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dc3545' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg' viewBoxTest() => Assert.AreEqual('0 0 4 5'%3e%3cpath fillTest() => Assert.AreEqual('%23343a40' dTest() => Assert.AreEqual('M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg' fillTest() => Assert.AreEqual('%23dc3545' viewBoxTest() => Assert.AreEqual('-2 -2 7 7'%3e%3cpath strokeTest() => Assert.AreEqual('%23dc3545' dTest() => Assert.AreEqual('M0 0l3 3m0-3L0 3'/%3e%3ccircle rTest() => Assert.AreEqual('.5'/%3e%3ccircle cxTest() => Assert.AreEqual('3' rTest() => Assert.AreEqual('.5'/%3e%3ccircle cyTest() => Assert.AreEqual('3' rTest() => Assert.AreEqual('.5'/%3e%3ccircle cxTest() => Assert.AreEqual('3' cyTest() => Assert.AreEqual('3' rTest() => Assert.AreEqual('.5'/%3e%3c/svg%3E") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
 .was-validated .custom-select:invalid:focus, .custom-select.is-invalid:focus {
@@ -2991,9 +2991,9 @@ fieldset:disabled a.btn {
   margin-top: 0.5rem;
 }
 
-input[type="submit"].btn-block,
-input[type="reset"].btn-block,
-input[type="button"].btn-block {
+input[typeTest() => Assert.AreEqual("submit"].btn-block,
+input[typeTest() => Assert.AreEqual("reset"].btn-block,
+input[typeTest() => Assert.AreEqual("button"].btn-block {
   width: 100%;
 }
 
@@ -3214,7 +3214,7 @@ input[type="button"].btn-block {
   vertical-align: 0;
 }
 
-.dropdown-menu[x-placement^="top"], .dropdown-menu[x-placement^="right"], .dropdown-menu[x-placement^="bottom"], .dropdown-menu[x-placement^="left"] {
+.dropdown-menu[x-placement^Test() => Assert.AreEqual("top"], .dropdown-menu[x-placement^Test() => Assert.AreEqual("right"], .dropdown-menu[x-placement^Test() => Assert.AreEqual("bottom"], .dropdown-menu[x-placement^Test() => Assert.AreEqual("left"] {
   right: auto;
   bottom: auto;
 }
@@ -3394,10 +3394,10 @@ input[type="button"].btn-block {
   margin-bottom: 0;
 }
 
-.btn-group-toggle > .btn input[type="radio"],
-.btn-group-toggle > .btn input[type="checkbox"],
-.btn-group-toggle > .btn-group > .btn input[type="radio"],
-.btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
+.btn-group-toggle > .btn input[typeTest() => Assert.AreEqual("radio"],
+.btn-group-toggle > .btn input[typeTest() => Assert.AreEqual("checkbox"],
+.btn-group-toggle > .btn-group > .btn input[typeTest() => Assert.AreEqual("radio"],
+.btn-group-toggle > .btn-group > .btn input[typeTest() => Assert.AreEqual("checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -3534,8 +3534,8 @@ input[type="button"].btn-block {
   border-radius: 0.25rem;
 }
 
-.input-group-text input[type="radio"],
-.input-group-text input[type="checkbox"] {
+.input-group-text input[typeTest() => Assert.AreEqual("radio"],
+.input-group-text input[typeTest() => Assert.AreEqual("checkbox"] {
   margin-top: 0;
 }
 
@@ -3680,7 +3680,7 @@ input[type="button"].btn-block {
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg' viewBoxTest() => Assert.AreEqual('0 0 8 8'%3e%3cpath fillTest() => Assert.AreEqual('%23fff' dTest() => Assert.AreEqual('M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
@@ -3689,7 +3689,7 @@ input[type="button"].btn-block {
 }
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg' viewBoxTest() => Assert.AreEqual('0 0 4 4'%3e%3cpath strokeTest() => Assert.AreEqual('%23fff' dTest() => Assert.AreEqual('M0 2h4'/%3e%3c/svg%3e");
 }
 
 .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
@@ -3705,7 +3705,7 @@ input[type="button"].btn-block {
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg' viewBoxTest() => Assert.AreEqual('-4 -4 8 8'%3e%3ccircle rTest() => Assert.AreEqual('3' fillTest() => Assert.AreEqual('%23fff'/%3e%3c/svg%3e");
 }
 
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
@@ -3761,7 +3761,7 @@ input[type="button"].btn-block {
   line-height: 1.5;
   color: #495057;
   vertical-align: middle;
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+  background: url("data:image/svg+xml,%3csvg xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg' viewBoxTest() => Assert.AreEqual('0 0 4 5'%3e%3cpath fillTest() => Assert.AreEqual('%23343a40' dTest() => Assert.AreEqual('M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
@@ -3781,7 +3781,7 @@ input[type="button"].btn-block {
   background-color: #fff;
 }
 
-.custom-select[multiple], .custom-select[size]:not([size="1"]) {
+.custom-select[multiple], .custom-select[size]:not([sizeTest() => Assert.AreEqual("1"]) {
   height: auto;
   padding-right: 0.75rem;
   background-image: none;
@@ -4486,7 +4486,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg viewBoxTest() => Assert.AreEqual('0 0 30 30' xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg'%3e%3cpath strokeTest() => Assert.AreEqual('rgba(0, 0, 0, 0.5)' stroke-widthTest() => Assert.AreEqual('2' stroke-linecapTest() => Assert.AreEqual('round' stroke-miterlimitTest() => Assert.AreEqual('10' dTest() => Assert.AreEqual('M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar-light .navbar-text {
@@ -4534,7 +4534,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg viewBoxTest() => Assert.AreEqual('0 0 30 30' xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg'%3e%3cpath strokeTest() => Assert.AreEqual('rgba(255, 255, 255, 0.5)' stroke-widthTest() => Assert.AreEqual('2' stroke-linecapTest() => Assert.AreEqual('round' stroke-miterlimitTest() => Assert.AreEqual('10' dTest() => Assert.AreEqual('M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar-dark .navbar-text {
@@ -5983,61 +5983,61 @@ a.close.disabled {
   border-style: solid;
 }
 
-.bs-tooltip-top, .bs-tooltip-auto[x-placement^="top"] {
+.bs-tooltip-top, .bs-tooltip-auto[x-placement^Test() => Assert.AreEqual("top"] {
   padding: 0.4rem 0;
 }
 
-.bs-tooltip-top .arrow, .bs-tooltip-auto[x-placement^="top"] .arrow {
+.bs-tooltip-top .arrow, .bs-tooltip-auto[x-placement^Test() => Assert.AreEqual("top"] .arrow {
   bottom: 0;
 }
 
-.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^Test() => Assert.AreEqual("top"] .arrow::before {
   top: 0;
   border-width: 0.4rem 0.4rem 0;
   border-top-color: #000;
 }
 
-.bs-tooltip-right, .bs-tooltip-auto[x-placement^="right"] {
+.bs-tooltip-right, .bs-tooltip-auto[x-placement^Test() => Assert.AreEqual("right"] {
   padding: 0 0.4rem;
 }
 
-.bs-tooltip-right .arrow, .bs-tooltip-auto[x-placement^="right"] .arrow {
+.bs-tooltip-right .arrow, .bs-tooltip-auto[x-placement^Test() => Assert.AreEqual("right"] .arrow {
   left: 0;
   width: 0.4rem;
   height: 0.8rem;
 }
 
-.bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before {
+.bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^Test() => Assert.AreEqual("right"] .arrow::before {
   right: 0;
   border-width: 0.4rem 0.4rem 0.4rem 0;
   border-right-color: #000;
 }
 
-.bs-tooltip-bottom, .bs-tooltip-auto[x-placement^="bottom"] {
+.bs-tooltip-bottom, .bs-tooltip-auto[x-placement^Test() => Assert.AreEqual("bottom"] {
   padding: 0.4rem 0;
 }
 
-.bs-tooltip-bottom .arrow, .bs-tooltip-auto[x-placement^="bottom"] .arrow {
+.bs-tooltip-bottom .arrow, .bs-tooltip-auto[x-placement^Test() => Assert.AreEqual("bottom"] .arrow {
   top: 0;
 }
 
-.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^Test() => Assert.AreEqual("bottom"] .arrow::before {
   bottom: 0;
   border-width: 0 0.4rem 0.4rem;
   border-bottom-color: #000;
 }
 
-.bs-tooltip-left, .bs-tooltip-auto[x-placement^="left"] {
+.bs-tooltip-left, .bs-tooltip-auto[x-placement^Test() => Assert.AreEqual("left"] {
   padding: 0 0.4rem;
 }
 
-.bs-tooltip-left .arrow, .bs-tooltip-auto[x-placement^="left"] .arrow {
+.bs-tooltip-left .arrow, .bs-tooltip-auto[x-placement^Test() => Assert.AreEqual("left"] .arrow {
   right: 0;
   width: 0.4rem;
   height: 0.8rem;
 }
 
-.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
+.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^Test() => Assert.AreEqual("left"] .arrow::before {
   left: 0;
   border-width: 0.4rem 0 0.4rem 0.4rem;
   border-left-color: #000;
@@ -6097,70 +6097,70 @@ a.close.disabled {
   border-style: solid;
 }
 
-.bs-popover-top, .bs-popover-auto[x-placement^="top"] {
+.bs-popover-top, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("top"] {
   margin-bottom: 0.5rem;
 }
 
-.bs-popover-top > .arrow, .bs-popover-auto[x-placement^="top"] > .arrow {
+.bs-popover-top > .arrow, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("top"] > .arrow {
   bottom: calc((0.5rem + 1px) * -1);
 }
 
-.bs-popover-top > .arrow::before, .bs-popover-auto[x-placement^="top"] > .arrow::before {
+.bs-popover-top > .arrow::before, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("top"] > .arrow::before {
   bottom: 0;
   border-width: 0.5rem 0.5rem 0;
   border-top-color: rgba(0, 0, 0, 0.25);
 }
 
-.bs-popover-top > .arrow::after, .bs-popover-auto[x-placement^="top"] > .arrow::after {
+.bs-popover-top > .arrow::after, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("top"] > .arrow::after {
   bottom: 1px;
   border-width: 0.5rem 0.5rem 0;
   border-top-color: #fff;
 }
 
-.bs-popover-right, .bs-popover-auto[x-placement^="right"] {
+.bs-popover-right, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("right"] {
   margin-left: 0.5rem;
 }
 
-.bs-popover-right > .arrow, .bs-popover-auto[x-placement^="right"] > .arrow {
+.bs-popover-right > .arrow, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("right"] > .arrow {
   left: calc((0.5rem + 1px) * -1);
   width: 0.5rem;
   height: 1rem;
   margin: 0.3rem 0;
 }
 
-.bs-popover-right > .arrow::before, .bs-popover-auto[x-placement^="right"] > .arrow::before {
+.bs-popover-right > .arrow::before, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("right"] > .arrow::before {
   left: 0;
   border-width: 0.5rem 0.5rem 0.5rem 0;
   border-right-color: rgba(0, 0, 0, 0.25);
 }
 
-.bs-popover-right > .arrow::after, .bs-popover-auto[x-placement^="right"] > .arrow::after {
+.bs-popover-right > .arrow::after, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("right"] > .arrow::after {
   left: 1px;
   border-width: 0.5rem 0.5rem 0.5rem 0;
   border-right-color: #fff;
 }
 
-.bs-popover-bottom, .bs-popover-auto[x-placement^="bottom"] {
+.bs-popover-bottom, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("bottom"] {
   margin-top: 0.5rem;
 }
 
-.bs-popover-bottom > .arrow, .bs-popover-auto[x-placement^="bottom"] > .arrow {
+.bs-popover-bottom > .arrow, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("bottom"] > .arrow {
   top: calc((0.5rem + 1px) * -1);
 }
 
-.bs-popover-bottom > .arrow::before, .bs-popover-auto[x-placement^="bottom"] > .arrow::before {
+.bs-popover-bottom > .arrow::before, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("bottom"] > .arrow::before {
   top: 0;
   border-width: 0 0.5rem 0.5rem 0.5rem;
   border-bottom-color: rgba(0, 0, 0, 0.25);
 }
 
-.bs-popover-bottom > .arrow::after, .bs-popover-auto[x-placement^="bottom"] > .arrow::after {
+.bs-popover-bottom > .arrow::after, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("bottom"] > .arrow::after {
   top: 1px;
   border-width: 0 0.5rem 0.5rem 0.5rem;
   border-bottom-color: #fff;
 }
 
-.bs-popover-bottom .popover-header::before, .bs-popover-auto[x-placement^="bottom"] .popover-header::before {
+.bs-popover-bottom .popover-header::before, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("bottom"] .popover-header::before {
   position: absolute;
   top: 0;
   left: 50%;
@@ -6171,24 +6171,24 @@ a.close.disabled {
   border-bottom: 1px solid #f7f7f7;
 }
 
-.bs-popover-left, .bs-popover-auto[x-placement^="left"] {
+.bs-popover-left, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("left"] {
   margin-right: 0.5rem;
 }
 
-.bs-popover-left > .arrow, .bs-popover-auto[x-placement^="left"] > .arrow {
+.bs-popover-left > .arrow, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("left"] > .arrow {
   right: calc((0.5rem + 1px) * -1);
   width: 0.5rem;
   height: 1rem;
   margin: 0.3rem 0;
 }
 
-.bs-popover-left > .arrow::before, .bs-popover-auto[x-placement^="left"] > .arrow::before {
+.bs-popover-left > .arrow::before, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("left"] > .arrow::before {
   right: 0;
   border-width: 0.5rem 0 0.5rem 0.5rem;
   border-left-color: rgba(0, 0, 0, 0.25);
 }
 
-.bs-popover-left > .arrow::after, .bs-popover-auto[x-placement^="left"] > .arrow::after {
+.bs-popover-left > .arrow::after, .bs-popover-auto[x-placement^Test() => Assert.AreEqual("left"] > .arrow::after {
   right: 1px;
   border-width: 0.5rem 0 0.5rem 0.5rem;
   border-left-color: #fff;
@@ -6351,11 +6351,11 @@ a.close.disabled {
 }
 
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg' fillTest() => Assert.AreEqual('%23fff' viewBoxTest() => Assert.AreEqual('0 0 8 8'%3e%3cpath dTest() => Assert.AreEqual('M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
 }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlnsTest() => Assert.AreEqual('http://www.w3.org/2000/svg' fillTest() => Assert.AreEqual('%23fff' viewBoxTest() => Assert.AreEqual('0 0 8 8'%3e%3cpath dTest() => Assert.AreEqual('M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
 }
 
 .carousel-indicators {
@@ -10035,4 +10035,4 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+/*# sourceMappingURLTest() => Assert.AreEqual(bootstrap.css.map */

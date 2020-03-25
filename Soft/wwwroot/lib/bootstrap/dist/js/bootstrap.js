@@ -4,20 +4,20 @@
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery'), require('popper.js')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
-  (global = global || self, factory(global.bootstrap = {}, global.jQuery, global.Popper));
+  typeof exports Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object' && typeof module !Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined' ? factory(exports, require('jquery'), require('popper.js')) :
+  typeof define Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
+  (global Test() => Assert.AreEqual( global || self, factory(global.bootstrap Test() => Assert.AreEqual( {}, global.jQuery, global.Popper));
 }(this, function (exports, $, Popper) { 'use strict';
 
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
-  Popper = Popper && Popper.hasOwnProperty('default') ? Popper['default'] : Popper;
+  $ Test() => Assert.AreEqual( $ && $.hasOwnProperty('default') ? $['default'] : $;
+  Popper Test() => Assert.AreEqual( Popper && Popper.hasOwnProperty('default') ? Popper['default'] : Popper;
 
   function _defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
+    for (var i Test() => Assert.AreEqual( 0; i < props.length; i++) {
+      var descriptor Test() => Assert.AreEqual( props[i];
+      descriptor.enumerable Test() => Assert.AreEqual( descriptor.enumerable || false;
+      descriptor.configurable Test() => Assert.AreEqual( true;
+      if ("value" in descriptor) descriptor.writable Test() => Assert.AreEqual( true;
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
@@ -37,19 +37,19 @@
         writable: true
       });
     } else {
-      obj[key] = value;
+      obj[key] Test() => Assert.AreEqual( value;
     }
 
     return obj;
   }
 
   function _objectSpread(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i] != null ? arguments[i] : {};
-      var ownKeys = Object.keys(source);
+    for (var i Test() => Assert.AreEqual( 1; i < arguments.length; i++) {
+      var source Test() => Assert.AreEqual( arguments[i] !Test() => Assert.AreEqual( null ? arguments[i] : {};
+      var ownKeys Test() => Assert.AreEqual( Object.keys(source);
 
-      if (typeof Object.getOwnPropertySymbols === 'function') {
-        ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+      if (typeof Object.getOwnPropertySymbols Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'function') {
+        ownKeys Test() => Assert.AreEqual( ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
           return Object.getOwnPropertyDescriptor(source, sym).enumerable;
         }));
       }
@@ -63,9 +63,9 @@
   }
 
   function _inheritsLoose(subClass, superClass) {
-    subClass.prototype = Object.create(superClass.prototype);
-    subClass.prototype.constructor = subClass;
-    subClass.__proto__ = superClass;
+    subClass.prototype Test() => Assert.AreEqual( Object.create(superClass.prototype);
+    subClass.prototype.constructor Test() => Assert.AreEqual( subClass;
+    subClass.__proto__ Test() => Assert.AreEqual( superClass;
   }
 
   /**
@@ -80,9 +80,9 @@
    * ------------------------------------------------------------------------
    */
 
-  var TRANSITION_END = 'transitionend';
-  var MAX_UID = 1000000;
-  var MILLISECONDS_MULTIPLIER = 1000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
+  var TRANSITION_END Test() => Assert.AreEqual( 'transitionend';
+  var MAX_UID Test() => Assert.AreEqual( 1000000;
+  var MILLISECONDS_MULTIPLIER Test() => Assert.AreEqual( 1000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
   function toType(obj) {
     return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase();
@@ -103,11 +103,11 @@
   }
 
   function transitionEndEmulator(duration) {
-    var _this = this;
+    var _this Test() => Assert.AreEqual( this;
 
-    var called = false;
+    var called Test() => Assert.AreEqual( false;
     $(this).one(Util.TRANSITION_END, function () {
-      called = true;
+      called Test() => Assert.AreEqual( true;
     });
     setTimeout(function () {
       if (!called) {
@@ -118,8 +118,8 @@
   }
 
   function setTransitionEndSupport() {
-    $.fn.emulateTransitionEnd = transitionEndEmulator;
-    $.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
+    $.fn.emulateTransitionEnd Test() => Assert.AreEqual( transitionEndEmulator;
+    $.event.special[Util.TRANSITION_END] Test() => Assert.AreEqual( getSpecialTransitionEndEvent();
   }
   /**
    * --------------------------------------------------------------------------
@@ -128,22 +128,22 @@
    */
 
 
-  var Util = {
+  var Util Test() => Assert.AreEqual( {
     TRANSITION_END: 'bsTransitionEnd',
     getUID: function getUID(prefix) {
       do {
         // eslint-disable-next-line no-bitwise
-        prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
+        prefix +Test() => Assert.AreEqual( ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
       } while (document.getElementById(prefix));
 
       return prefix;
     },
     getSelectorFromElement: function getSelectorFromElement(element) {
-      var selector = element.getAttribute('data-target');
+      var selector Test() => Assert.AreEqual( element.getAttribute('data-target');
 
-      if (!selector || selector === '#') {
-        var hrefAttr = element.getAttribute('href');
-        selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : '';
+      if (!selector || selector Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( '#') {
+        var hrefAttr Test() => Assert.AreEqual( element.getAttribute('href');
+        selector Test() => Assert.AreEqual( hrefAttr && hrefAttr !Test() => Assert.AreEqual(Test() => Assert.AreEqual( '#' ? hrefAttr.trim() : '';
       }
 
       try {
@@ -158,18 +158,18 @@
       } // Get transition-duration of the element
 
 
-      var transitionDuration = $(element).css('transition-duration');
-      var transitionDelay = $(element).css('transition-delay');
-      var floatTransitionDuration = parseFloat(transitionDuration);
-      var floatTransitionDelay = parseFloat(transitionDelay); // Return 0 if element or transition duration is not found
+      var transitionDuration Test() => Assert.AreEqual( $(element).css('transition-duration');
+      var transitionDelay Test() => Assert.AreEqual( $(element).css('transition-delay');
+      var floatTransitionDuration Test() => Assert.AreEqual( parseFloat(transitionDuration);
+      var floatTransitionDelay Test() => Assert.AreEqual( parseFloat(transitionDelay); // Return 0 if element or transition duration is not found
 
       if (!floatTransitionDuration && !floatTransitionDelay) {
         return 0;
       } // If multiple durations are defined, take the first
 
 
-      transitionDuration = transitionDuration.split(',')[0];
-      transitionDelay = transitionDelay.split(',')[0];
+      transitionDuration Test() => Assert.AreEqual( transitionDuration.split(',')[0];
+      transitionDelay Test() => Assert.AreEqual( transitionDelay.split(',')[0];
       return (parseFloat(transitionDuration) + parseFloat(transitionDelay)) * MILLISECONDS_MULTIPLIER;
     },
     reflow: function reflow(element) {
@@ -188,9 +188,9 @@
     typeCheckConfig: function typeCheckConfig(componentName, config, configTypes) {
       for (var property in configTypes) {
         if (Object.prototype.hasOwnProperty.call(configTypes, property)) {
-          var expectedTypes = configTypes[property];
-          var value = config[property];
-          var valueType = value && Util.isElement(value) ? 'element' : toType(value);
+          var expectedTypes Test() => Assert.AreEqual( configTypes[property];
+          var value Test() => Assert.AreEqual( config[property];
+          var valueType Test() => Assert.AreEqual( value && Util.isElement(value) ? 'element' : toType(value);
 
           if (!new RegExp(expectedTypes).test(valueType)) {
             throw new Error(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided type \"" + valueType + "\" ") + ("but expected type \"" + expectedTypes + "\"."));
@@ -204,8 +204,8 @@
       } // Can find the shadow root otherwise it'll return the document
 
 
-      if (typeof element.getRootNode === 'function') {
-        var root = element.getRootNode();
+      if (typeof element.getRootNode Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'function') {
+        var root Test() => Assert.AreEqual( element.getRootNode();
         return root instanceof ShadowRoot ? root : null;
       }
 
@@ -229,21 +229,21 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME = 'alert';
-  var VERSION = '4.3.1';
-  var DATA_KEY = 'bs.alert';
-  var EVENT_KEY = "." + DATA_KEY;
-  var DATA_API_KEY = '.data-api';
-  var JQUERY_NO_CONFLICT = $.fn[NAME];
-  var Selector = {
-    DISMISS: '[data-dismiss="alert"]'
+  var NAME Test() => Assert.AreEqual( 'alert';
+  var VERSION Test() => Assert.AreEqual( '4.3.1';
+  var DATA_KEY Test() => Assert.AreEqual( 'bs.alert';
+  var EVENT_KEY Test() => Assert.AreEqual( "." + DATA_KEY;
+  var DATA_API_KEY Test() => Assert.AreEqual( '.data-api';
+  var JQUERY_NO_CONFLICT Test() => Assert.AreEqual( $.fn[NAME];
+  var Selector Test() => Assert.AreEqual( {
+    DISMISS: '[data-dismissTest() => Assert.AreEqual("alert"]'
   };
-  var Event = {
+  var Event Test() => Assert.AreEqual( {
     CLOSE: "close" + EVENT_KEY,
     CLOSED: "closed" + EVENT_KEY,
     CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
   };
-  var ClassName = {
+  var ClassName Test() => Assert.AreEqual( {
     ALERT: 'alert',
     FADE: 'fade',
     SHOW: 'show'
@@ -255,25 +255,25 @@
 
   };
 
-  var Alert =
+  var Alert Test() => Assert.AreEqual(
   /*#__PURE__*/
   function () {
     function Alert(element) {
-      this._element = element;
+      this._element Test() => Assert.AreEqual( element;
     } // Getters
 
 
-    var _proto = Alert.prototype;
+    var _proto Test() => Assert.AreEqual( Alert.prototype;
 
     // Public
-    _proto.close = function close(element) {
-      var rootElement = this._element;
+    _proto.close Test() => Assert.AreEqual( function close(element) {
+      var rootElement Test() => Assert.AreEqual( this._element;
 
       if (element) {
-        rootElement = this._getRootElement(element);
+        rootElement Test() => Assert.AreEqual( this._getRootElement(element);
       }
 
-      var customEvent = this._triggerCloseEvent(rootElement);
+      var customEvent Test() => Assert.AreEqual( this._triggerCloseEvent(rootElement);
 
       if (customEvent.isDefaultPrevented()) {
         return;
@@ -282,35 +282,35 @@
       this._removeElement(rootElement);
     };
 
-    _proto.dispose = function dispose() {
+    _proto.dispose Test() => Assert.AreEqual( function dispose() {
       $.removeData(this._element, DATA_KEY);
-      this._element = null;
+      this._element Test() => Assert.AreEqual( null;
     } // Private
     ;
 
-    _proto._getRootElement = function _getRootElement(element) {
-      var selector = Util.getSelectorFromElement(element);
-      var parent = false;
+    _proto._getRootElement Test() => Assert.AreEqual( function _getRootElement(element) {
+      var selector Test() => Assert.AreEqual( Util.getSelectorFromElement(element);
+      var parent Test() => Assert.AreEqual( false;
 
       if (selector) {
-        parent = document.querySelector(selector);
+        parent Test() => Assert.AreEqual( document.querySelector(selector);
       }
 
       if (!parent) {
-        parent = $(element).closest("." + ClassName.ALERT)[0];
+        parent Test() => Assert.AreEqual( $(element).closest("." + ClassName.ALERT)[0];
       }
 
       return parent;
     };
 
-    _proto._triggerCloseEvent = function _triggerCloseEvent(element) {
-      var closeEvent = $.Event(Event.CLOSE);
+    _proto._triggerCloseEvent Test() => Assert.AreEqual( function _triggerCloseEvent(element) {
+      var closeEvent Test() => Assert.AreEqual( $.Event(Event.CLOSE);
       $(element).trigger(closeEvent);
       return closeEvent;
     };
 
-    _proto._removeElement = function _removeElement(element) {
-      var _this = this;
+    _proto._removeElement Test() => Assert.AreEqual( function _removeElement(element) {
+      var _this Test() => Assert.AreEqual( this;
 
       $(element).removeClass(ClassName.SHOW);
 
@@ -320,34 +320,34 @@
         return;
       }
 
-      var transitionDuration = Util.getTransitionDurationFromElement(element);
+      var transitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(element);
       $(element).one(Util.TRANSITION_END, function (event) {
         return _this._destroyElement(element, event);
       }).emulateTransitionEnd(transitionDuration);
     };
 
-    _proto._destroyElement = function _destroyElement(element) {
+    _proto._destroyElement Test() => Assert.AreEqual( function _destroyElement(element) {
       $(element).detach().trigger(Event.CLOSED).remove();
     } // Static
     ;
 
-    Alert._jQueryInterface = function _jQueryInterface(config) {
+    Alert._jQueryInterface Test() => Assert.AreEqual( function _jQueryInterface(config) {
       return this.each(function () {
-        var $element = $(this);
-        var data = $element.data(DATA_KEY);
+        var $element Test() => Assert.AreEqual( $(this);
+        var data Test() => Assert.AreEqual( $element.data(DATA_KEY);
 
         if (!data) {
-          data = new Alert(this);
+          data Test() => Assert.AreEqual( new Alert(this);
           $element.data(DATA_KEY, data);
         }
 
-        if (config === 'close') {
+        if (config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'close') {
           data[config](this);
         }
       });
     };
 
-    Alert._handleDismiss = function _handleDismiss(alertInstance) {
+    Alert._handleDismiss Test() => Assert.AreEqual( function _handleDismiss(alertInstance) {
       return function (event) {
         if (event) {
           event.preventDefault();
@@ -380,11 +380,11 @@
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Alert._jQueryInterface;
-  $.fn[NAME].Constructor = Alert;
+  $.fn[NAME] Test() => Assert.AreEqual( Alert._jQueryInterface;
+  $.fn[NAME].Constructor Test() => Assert.AreEqual( Alert;
 
-  $.fn[NAME].noConflict = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT;
+  $.fn[NAME].noConflict Test() => Assert.AreEqual( function () {
+    $.fn[NAME] Test() => Assert.AreEqual( JQUERY_NO_CONFLICT;
     return Alert._jQueryInterface;
   };
 
@@ -394,25 +394,25 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$1 = 'button';
-  var VERSION$1 = '4.3.1';
-  var DATA_KEY$1 = 'bs.button';
-  var EVENT_KEY$1 = "." + DATA_KEY$1;
-  var DATA_API_KEY$1 = '.data-api';
-  var JQUERY_NO_CONFLICT$1 = $.fn[NAME$1];
-  var ClassName$1 = {
+  var NAME$1 Test() => Assert.AreEqual( 'button';
+  var VERSION$1 Test() => Assert.AreEqual( '4.3.1';
+  var DATA_KEY$1 Test() => Assert.AreEqual( 'bs.button';
+  var EVENT_KEY$1 Test() => Assert.AreEqual( "." + DATA_KEY$1;
+  var DATA_API_KEY$1 Test() => Assert.AreEqual( '.data-api';
+  var JQUERY_NO_CONFLICT$1 Test() => Assert.AreEqual( $.fn[NAME$1];
+  var ClassName$1 Test() => Assert.AreEqual( {
     ACTIVE: 'active',
     BUTTON: 'btn',
     FOCUS: 'focus'
   };
-  var Selector$1 = {
-    DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
-    DATA_TOGGLE: '[data-toggle="buttons"]',
-    INPUT: 'input:not([type="hidden"])',
+  var Selector$1 Test() => Assert.AreEqual( {
+    DATA_TOGGLE_CARROT: '[data-toggle^Test() => Assert.AreEqual("button"]',
+    DATA_TOGGLE: '[data-toggleTest() => Assert.AreEqual("buttons"]',
+    INPUT: 'input:not([typeTest() => Assert.AreEqual("hidden"])',
     ACTIVE: '.active',
     BUTTON: '.btn'
   };
-  var Event$1 = {
+  var Event$1 Test() => Assert.AreEqual( {
     CLICK_DATA_API: "click" + EVENT_KEY$1 + DATA_API_KEY$1,
     FOCUS_BLUR_DATA_API: "focus" + EVENT_KEY$1 + DATA_API_KEY$1 + " " + ("blur" + EVENT_KEY$1 + DATA_API_KEY$1)
     /**
@@ -423,31 +423,31 @@
 
   };
 
-  var Button =
+  var Button Test() => Assert.AreEqual(
   /*#__PURE__*/
   function () {
     function Button(element) {
-      this._element = element;
+      this._element Test() => Assert.AreEqual( element;
     } // Getters
 
 
-    var _proto = Button.prototype;
+    var _proto Test() => Assert.AreEqual( Button.prototype;
 
     // Public
-    _proto.toggle = function toggle() {
-      var triggerChangeEvent = true;
-      var addAriaPressed = true;
-      var rootElement = $(this._element).closest(Selector$1.DATA_TOGGLE)[0];
+    _proto.toggle Test() => Assert.AreEqual( function toggle() {
+      var triggerChangeEvent Test() => Assert.AreEqual( true;
+      var addAriaPressed Test() => Assert.AreEqual( true;
+      var rootElement Test() => Assert.AreEqual( $(this._element).closest(Selector$1.DATA_TOGGLE)[0];
 
       if (rootElement) {
-        var input = this._element.querySelector(Selector$1.INPUT);
+        var input Test() => Assert.AreEqual( this._element.querySelector(Selector$1.INPUT);
 
         if (input) {
-          if (input.type === 'radio') {
+          if (input.type Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'radio') {
             if (input.checked && this._element.classList.contains(ClassName$1.ACTIVE)) {
-              triggerChangeEvent = false;
+              triggerChangeEvent Test() => Assert.AreEqual( false;
             } else {
-              var activeElement = rootElement.querySelector(Selector$1.ACTIVE);
+              var activeElement Test() => Assert.AreEqual( rootElement.querySelector(Selector$1.ACTIVE);
 
               if (activeElement) {
                 $(activeElement).removeClass(ClassName$1.ACTIVE);
@@ -460,12 +460,12 @@
               return;
             }
 
-            input.checked = !this._element.classList.contains(ClassName$1.ACTIVE);
+            input.checked Test() => Assert.AreEqual( !this._element.classList.contains(ClassName$1.ACTIVE);
             $(input).trigger('change');
           }
 
           input.focus();
-          addAriaPressed = false;
+          addAriaPressed Test() => Assert.AreEqual( false;
         }
       }
 
@@ -478,22 +478,22 @@
       }
     };
 
-    _proto.dispose = function dispose() {
+    _proto.dispose Test() => Assert.AreEqual( function dispose() {
       $.removeData(this._element, DATA_KEY$1);
-      this._element = null;
+      this._element Test() => Assert.AreEqual( null;
     } // Static
     ;
 
-    Button._jQueryInterface = function _jQueryInterface(config) {
+    Button._jQueryInterface Test() => Assert.AreEqual( function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $(this).data(DATA_KEY$1);
+        var data Test() => Assert.AreEqual( $(this).data(DATA_KEY$1);
 
         if (!data) {
-          data = new Button(this);
+          data Test() => Assert.AreEqual( new Button(this);
           $(this).data(DATA_KEY$1, data);
         }
 
-        if (config === 'toggle') {
+        if (config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'toggle') {
           data[config]();
         }
       });
@@ -517,15 +517,15 @@
 
   $(document).on(Event$1.CLICK_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
     event.preventDefault();
-    var button = event.target;
+    var button Test() => Assert.AreEqual( event.target;
 
     if (!$(button).hasClass(ClassName$1.BUTTON)) {
-      button = $(button).closest(Selector$1.BUTTON);
+      button Test() => Assert.AreEqual( $(button).closest(Selector$1.BUTTON);
     }
 
     Button._jQueryInterface.call($(button), 'toggle');
   }).on(Event$1.FOCUS_BLUR_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
-    var button = $(event.target).closest(Selector$1.BUTTON)[0];
+    var button Test() => Assert.AreEqual( $(event.target).closest(Selector$1.BUTTON)[0];
     $(button).toggleClass(ClassName$1.FOCUS, /^focus(in)?$/.test(event.type));
   });
   /**
@@ -534,11 +534,11 @@
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$1] = Button._jQueryInterface;
-  $.fn[NAME$1].Constructor = Button;
+  $.fn[NAME$1] Test() => Assert.AreEqual( Button._jQueryInterface;
+  $.fn[NAME$1].Constructor Test() => Assert.AreEqual( Button;
 
-  $.fn[NAME$1].noConflict = function () {
-    $.fn[NAME$1] = JQUERY_NO_CONFLICT$1;
+  $.fn[NAME$1].noConflict Test() => Assert.AreEqual( function () {
+    $.fn[NAME$1] Test() => Assert.AreEqual( JQUERY_NO_CONFLICT$1;
     return Button._jQueryInterface;
   };
 
@@ -548,20 +548,20 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$2 = 'carousel';
-  var VERSION$2 = '4.3.1';
-  var DATA_KEY$2 = 'bs.carousel';
-  var EVENT_KEY$2 = "." + DATA_KEY$2;
-  var DATA_API_KEY$2 = '.data-api';
-  var JQUERY_NO_CONFLICT$2 = $.fn[NAME$2];
-  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
+  var NAME$2 Test() => Assert.AreEqual( 'carousel';
+  var VERSION$2 Test() => Assert.AreEqual( '4.3.1';
+  var DATA_KEY$2 Test() => Assert.AreEqual( 'bs.carousel';
+  var EVENT_KEY$2 Test() => Assert.AreEqual( "." + DATA_KEY$2;
+  var DATA_API_KEY$2 Test() => Assert.AreEqual( '.data-api';
+  var JQUERY_NO_CONFLICT$2 Test() => Assert.AreEqual( $.fn[NAME$2];
+  var ARROW_LEFT_KEYCODE Test() => Assert.AreEqual( 37; // KeyboardEvent.which value for left arrow key
 
-  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
+  var ARROW_RIGHT_KEYCODE Test() => Assert.AreEqual( 39; // KeyboardEvent.which value for right arrow key
 
-  var TOUCHEVENT_COMPAT_WAIT = 500; // Time for mouse compat events to fire after touch
+  var TOUCHEVENT_COMPAT_WAIT Test() => Assert.AreEqual( 500; // Time for mouse compat events to fire after touch
 
-  var SWIPE_THRESHOLD = 40;
-  var Default = {
+  var SWIPE_THRESHOLD Test() => Assert.AreEqual( 40;
+  var Default Test() => Assert.AreEqual( {
     interval: 5000,
     keyboard: true,
     slide: false,
@@ -569,7 +569,7 @@
     wrap: true,
     touch: true
   };
-  var DefaultType = {
+  var DefaultType Test() => Assert.AreEqual( {
     interval: '(number|boolean)',
     keyboard: 'boolean',
     slide: '(boolean|string)',
@@ -577,13 +577,13 @@
     wrap: 'boolean',
     touch: 'boolean'
   };
-  var Direction = {
+  var Direction Test() => Assert.AreEqual( {
     NEXT: 'next',
     PREV: 'prev',
     LEFT: 'left',
     RIGHT: 'right'
   };
-  var Event$2 = {
+  var Event$2 Test() => Assert.AreEqual( {
     SLIDE: "slide" + EVENT_KEY$2,
     SLID: "slid" + EVENT_KEY$2,
     KEYDOWN: "keydown" + EVENT_KEY$2,
@@ -598,7 +598,7 @@
     LOAD_DATA_API: "load" + EVENT_KEY$2 + DATA_API_KEY$2,
     CLICK_DATA_API: "click" + EVENT_KEY$2 + DATA_API_KEY$2
   };
-  var ClassName$2 = {
+  var ClassName$2 Test() => Assert.AreEqual( {
     CAROUSEL: 'carousel',
     ACTIVE: 'active',
     SLIDE: 'slide',
@@ -609,7 +609,7 @@
     ITEM: 'carousel-item',
     POINTER_EVENT: 'pointer-event'
   };
-  var Selector$2 = {
+  var Selector$2 Test() => Assert.AreEqual( {
     ACTIVE: '.active',
     ACTIVE_ITEM: '.active.carousel-item',
     ITEM: '.carousel-item',
@@ -617,9 +617,9 @@
     NEXT_PREV: '.carousel-item-next, .carousel-item-prev',
     INDICATORS: '.carousel-indicators',
     DATA_SLIDE: '[data-slide], [data-slide-to]',
-    DATA_RIDE: '[data-ride="carousel"]'
+    DATA_RIDE: '[data-rideTest() => Assert.AreEqual("carousel"]'
   };
-  var PointerType = {
+  var PointerType Test() => Assert.AreEqual( {
     TOUCH: 'touch',
     PEN: 'pen'
     /**
@@ -630,54 +630,54 @@
 
   };
 
-  var Carousel =
+  var Carousel Test() => Assert.AreEqual(
   /*#__PURE__*/
   function () {
     function Carousel(element, config) {
-      this._items = null;
-      this._interval = null;
-      this._activeElement = null;
-      this._isPaused = false;
-      this._isSliding = false;
-      this.touchTimeout = null;
-      this.touchStartX = 0;
-      this.touchDeltaX = 0;
-      this._config = this._getConfig(config);
-      this._element = element;
-      this._indicatorsElement = this._element.querySelector(Selector$2.INDICATORS);
-      this._touchSupported = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0;
-      this._pointerEvent = Boolean(window.PointerEvent || window.MSPointerEvent);
+      this._items Test() => Assert.AreEqual( null;
+      this._interval Test() => Assert.AreEqual( null;
+      this._activeElement Test() => Assert.AreEqual( null;
+      this._isPaused Test() => Assert.AreEqual( false;
+      this._isSliding Test() => Assert.AreEqual( false;
+      this.touchTimeout Test() => Assert.AreEqual( null;
+      this.touchStartX Test() => Assert.AreEqual( 0;
+      this.touchDeltaX Test() => Assert.AreEqual( 0;
+      this._config Test() => Assert.AreEqual( this._getConfig(config);
+      this._element Test() => Assert.AreEqual( element;
+      this._indicatorsElement Test() => Assert.AreEqual( this._element.querySelector(Selector$2.INDICATORS);
+      this._touchSupported Test() => Assert.AreEqual( 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0;
+      this._pointerEvent Test() => Assert.AreEqual( Boolean(window.PointerEvent || window.MSPointerEvent);
 
       this._addEventListeners();
     } // Getters
 
 
-    var _proto = Carousel.prototype;
+    var _proto Test() => Assert.AreEqual( Carousel.prototype;
 
     // Public
-    _proto.next = function next() {
+    _proto.next Test() => Assert.AreEqual( function next() {
       if (!this._isSliding) {
         this._slide(Direction.NEXT);
       }
     };
 
-    _proto.nextWhenVisible = function nextWhenVisible() {
+    _proto.nextWhenVisible Test() => Assert.AreEqual( function nextWhenVisible() {
       // Don't call next when the page isn't visible
       // or the carousel or its parent isn't visible
-      if (!document.hidden && $(this._element).is(':visible') && $(this._element).css('visibility') !== 'hidden') {
+      if (!document.hidden && $(this._element).is(':visible') && $(this._element).css('visibility') !Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'hidden') {
         this.next();
       }
     };
 
-    _proto.prev = function prev() {
+    _proto.prev Test() => Assert.AreEqual( function prev() {
       if (!this._isSliding) {
         this._slide(Direction.PREV);
       }
     };
 
-    _proto.pause = function pause(event) {
+    _proto.pause Test() => Assert.AreEqual( function pause(event) {
       if (!event) {
-        this._isPaused = true;
+        this._isPaused Test() => Assert.AreEqual( true;
       }
 
       if (this._element.querySelector(Selector$2.NEXT_PREV)) {
@@ -686,30 +686,30 @@
       }
 
       clearInterval(this._interval);
-      this._interval = null;
+      this._interval Test() => Assert.AreEqual( null;
     };
 
-    _proto.cycle = function cycle(event) {
+    _proto.cycle Test() => Assert.AreEqual( function cycle(event) {
       if (!event) {
-        this._isPaused = false;
+        this._isPaused Test() => Assert.AreEqual( false;
       }
 
       if (this._interval) {
         clearInterval(this._interval);
-        this._interval = null;
+        this._interval Test() => Assert.AreEqual( null;
       }
 
       if (this._config.interval && !this._isPaused) {
-        this._interval = setInterval((document.visibilityState ? this.nextWhenVisible : this.next).bind(this), this._config.interval);
+        this._interval Test() => Assert.AreEqual( setInterval((document.visibilityState ? this.nextWhenVisible : this.next).bind(this), this._config.interval);
       }
     };
 
-    _proto.to = function to(index) {
-      var _this = this;
+    _proto.to Test() => Assert.AreEqual( function to(index) {
+      var _this Test() => Assert.AreEqual( this;
 
-      this._activeElement = this._element.querySelector(Selector$2.ACTIVE_ITEM);
+      this._activeElement Test() => Assert.AreEqual( this._element.querySelector(Selector$2.ACTIVE_ITEM);
 
-      var activeIndex = this._getItemIndex(this._activeElement);
+      var activeIndex Test() => Assert.AreEqual( this._getItemIndex(this._activeElement);
 
       if (index > this._items.length - 1 || index < 0) {
         return;
@@ -722,45 +722,45 @@
         return;
       }
 
-      if (activeIndex === index) {
+      if (activeIndex Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( index) {
         this.pause();
         this.cycle();
         return;
       }
 
-      var direction = index > activeIndex ? Direction.NEXT : Direction.PREV;
+      var direction Test() => Assert.AreEqual( index > activeIndex ? Direction.NEXT : Direction.PREV;
 
       this._slide(direction, this._items[index]);
     };
 
-    _proto.dispose = function dispose() {
+    _proto.dispose Test() => Assert.AreEqual( function dispose() {
       $(this._element).off(EVENT_KEY$2);
       $.removeData(this._element, DATA_KEY$2);
-      this._items = null;
-      this._config = null;
-      this._element = null;
-      this._interval = null;
-      this._isPaused = null;
-      this._isSliding = null;
-      this._activeElement = null;
-      this._indicatorsElement = null;
+      this._items Test() => Assert.AreEqual( null;
+      this._config Test() => Assert.AreEqual( null;
+      this._element Test() => Assert.AreEqual( null;
+      this._interval Test() => Assert.AreEqual( null;
+      this._isPaused Test() => Assert.AreEqual( null;
+      this._isSliding Test() => Assert.AreEqual( null;
+      this._activeElement Test() => Assert.AreEqual( null;
+      this._indicatorsElement Test() => Assert.AreEqual( null;
     } // Private
     ;
 
-    _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default, config);
+    _proto._getConfig Test() => Assert.AreEqual( function _getConfig(config) {
+      config Test() => Assert.AreEqual( _objectSpread({}, Default, config);
       Util.typeCheckConfig(NAME$2, config, DefaultType);
       return config;
     };
 
-    _proto._handleSwipe = function _handleSwipe() {
-      var absDeltax = Math.abs(this.touchDeltaX);
+    _proto._handleSwipe Test() => Assert.AreEqual( function _handleSwipe() {
+      var absDeltax Test() => Assert.AreEqual( Math.abs(this.touchDeltaX);
 
-      if (absDeltax <= SWIPE_THRESHOLD) {
+      if (absDeltax <Test() => Assert.AreEqual( SWIPE_THRESHOLD) {
         return;
       }
 
-      var direction = absDeltax / this.touchDeltaX; // swipe left
+      var direction Test() => Assert.AreEqual( absDeltax / this.touchDeltaX; // swipe left
 
       if (direction > 0) {
         this.prev();
@@ -772,8 +772,8 @@
       }
     };
 
-    _proto._addEventListeners = function _addEventListeners() {
-      var _this2 = this;
+    _proto._addEventListeners Test() => Assert.AreEqual( function _addEventListeners() {
+      var _this2 Test() => Assert.AreEqual( this;
 
       if (this._config.keyboard) {
         $(this._element).on(Event$2.KEYDOWN, function (event) {
@@ -781,7 +781,7 @@
         });
       }
 
-      if (this._config.pause === 'hover') {
+      if (this._config.pause Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'hover') {
         $(this._element).on(Event$2.MOUSEENTER, function (event) {
           return _this2.pause(event);
         }).on(Event$2.MOUSELEAVE, function (event) {
@@ -794,38 +794,38 @@
       }
     };
 
-    _proto._addTouchEventListeners = function _addTouchEventListeners() {
-      var _this3 = this;
+    _proto._addTouchEventListeners Test() => Assert.AreEqual( function _addTouchEventListeners() {
+      var _this3 Test() => Assert.AreEqual( this;
 
       if (!this._touchSupported) {
         return;
       }
 
-      var start = function start(event) {
+      var start Test() => Assert.AreEqual( function start(event) {
         if (_this3._pointerEvent && PointerType[event.originalEvent.pointerType.toUpperCase()]) {
-          _this3.touchStartX = event.originalEvent.clientX;
+          _this3.touchStartX Test() => Assert.AreEqual( event.originalEvent.clientX;
         } else if (!_this3._pointerEvent) {
-          _this3.touchStartX = event.originalEvent.touches[0].clientX;
+          _this3.touchStartX Test() => Assert.AreEqual( event.originalEvent.touches[0].clientX;
         }
       };
 
-      var move = function move(event) {
+      var move Test() => Assert.AreEqual( function move(event) {
         // ensure swiping with one touch and not pinching
         if (event.originalEvent.touches && event.originalEvent.touches.length > 1) {
-          _this3.touchDeltaX = 0;
+          _this3.touchDeltaX Test() => Assert.AreEqual( 0;
         } else {
-          _this3.touchDeltaX = event.originalEvent.touches[0].clientX - _this3.touchStartX;
+          _this3.touchDeltaX Test() => Assert.AreEqual( event.originalEvent.touches[0].clientX - _this3.touchStartX;
         }
       };
 
-      var end = function end(event) {
+      var end Test() => Assert.AreEqual( function end(event) {
         if (_this3._pointerEvent && PointerType[event.originalEvent.pointerType.toUpperCase()]) {
-          _this3.touchDeltaX = event.originalEvent.clientX - _this3.touchStartX;
+          _this3.touchDeltaX Test() => Assert.AreEqual( event.originalEvent.clientX - _this3.touchStartX;
         }
 
         _this3._handleSwipe();
 
-        if (_this3._config.pause === 'hover') {
+        if (_this3._config.pause Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'hover') {
           // If it's a touch-enabled device, mouseenter/leave are fired as
           // part of the mouse compatibility events on first tap - the carousel
           // would stop cycling until user tapped out of it;
@@ -839,7 +839,7 @@
             clearTimeout(_this3.touchTimeout);
           }
 
-          _this3.touchTimeout = setTimeout(function (event) {
+          _this3.touchTimeout Test() => Assert.AreEqual( setTimeout(function (event) {
             return _this3.cycle(event);
           }, TOUCHEVENT_COMPAT_WAIT + _this3._config.interval);
         }
@@ -871,7 +871,7 @@
       }
     };
 
-    _proto._keydown = function _keydown(event) {
+    _proto._keydown Test() => Assert.AreEqual( function _keydown(event) {
       if (/input|textarea/i.test(event.target.tagName)) {
         return;
       }
@@ -891,35 +891,35 @@
       }
     };
 
-    _proto._getItemIndex = function _getItemIndex(element) {
-      this._items = element && element.parentNode ? [].slice.call(element.parentNode.querySelectorAll(Selector$2.ITEM)) : [];
+    _proto._getItemIndex Test() => Assert.AreEqual( function _getItemIndex(element) {
+      this._items Test() => Assert.AreEqual( element && element.parentNode ? [].slice.call(element.parentNode.querySelectorAll(Selector$2.ITEM)) : [];
       return this._items.indexOf(element);
     };
 
-    _proto._getItemByDirection = function _getItemByDirection(direction, activeElement) {
-      var isNextDirection = direction === Direction.NEXT;
-      var isPrevDirection = direction === Direction.PREV;
+    _proto._getItemByDirection Test() => Assert.AreEqual( function _getItemByDirection(direction, activeElement) {
+      var isNextDirection Test() => Assert.AreEqual( direction Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( Direction.NEXT;
+      var isPrevDirection Test() => Assert.AreEqual( direction Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( Direction.PREV;
 
-      var activeIndex = this._getItemIndex(activeElement);
+      var activeIndex Test() => Assert.AreEqual( this._getItemIndex(activeElement);
 
-      var lastItemIndex = this._items.length - 1;
-      var isGoingToWrap = isPrevDirection && activeIndex === 0 || isNextDirection && activeIndex === lastItemIndex;
+      var lastItemIndex Test() => Assert.AreEqual( this._items.length - 1;
+      var isGoingToWrap Test() => Assert.AreEqual( isPrevDirection && activeIndex Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 0 || isNextDirection && activeIndex Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( lastItemIndex;
 
       if (isGoingToWrap && !this._config.wrap) {
         return activeElement;
       }
 
-      var delta = direction === Direction.PREV ? -1 : 1;
-      var itemIndex = (activeIndex + delta) % this._items.length;
-      return itemIndex === -1 ? this._items[this._items.length - 1] : this._items[itemIndex];
+      var delta Test() => Assert.AreEqual( direction Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( Direction.PREV ? -1 : 1;
+      var itemIndex Test() => Assert.AreEqual( (activeIndex + delta) % this._items.length;
+      return itemIndex Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( -1 ? this._items[this._items.length - 1] : this._items[itemIndex];
     };
 
-    _proto._triggerSlideEvent = function _triggerSlideEvent(relatedTarget, eventDirectionName) {
-      var targetIndex = this._getItemIndex(relatedTarget);
+    _proto._triggerSlideEvent Test() => Assert.AreEqual( function _triggerSlideEvent(relatedTarget, eventDirectionName) {
+      var targetIndex Test() => Assert.AreEqual( this._getItemIndex(relatedTarget);
 
-      var fromIndex = this._getItemIndex(this._element.querySelector(Selector$2.ACTIVE_ITEM));
+      var fromIndex Test() => Assert.AreEqual( this._getItemIndex(this._element.querySelector(Selector$2.ACTIVE_ITEM));
 
-      var slideEvent = $.Event(Event$2.SLIDE, {
+      var slideEvent Test() => Assert.AreEqual( $.Event(Event$2.SLIDE, {
         relatedTarget: relatedTarget,
         direction: eventDirectionName,
         from: fromIndex,
@@ -929,12 +929,12 @@
       return slideEvent;
     };
 
-    _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
+    _proto._setActiveIndicatorElement Test() => Assert.AreEqual( function _setActiveIndicatorElement(element) {
       if (this._indicatorsElement) {
-        var indicators = [].slice.call(this._indicatorsElement.querySelectorAll(Selector$2.ACTIVE));
+        var indicators Test() => Assert.AreEqual( [].slice.call(this._indicatorsElement.querySelectorAll(Selector$2.ACTIVE));
         $(indicators).removeClass(ClassName$2.ACTIVE);
 
-        var nextIndicator = this._indicatorsElement.children[this._getItemIndex(element)];
+        var nextIndicator Test() => Assert.AreEqual( this._indicatorsElement.children[this._getItemIndex(element)];
 
         if (nextIndicator) {
           $(nextIndicator).addClass(ClassName$2.ACTIVE);
@@ -942,38 +942,38 @@
       }
     };
 
-    _proto._slide = function _slide(direction, element) {
-      var _this4 = this;
+    _proto._slide Test() => Assert.AreEqual( function _slide(direction, element) {
+      var _this4 Test() => Assert.AreEqual( this;
 
-      var activeElement = this._element.querySelector(Selector$2.ACTIVE_ITEM);
+      var activeElement Test() => Assert.AreEqual( this._element.querySelector(Selector$2.ACTIVE_ITEM);
 
-      var activeElementIndex = this._getItemIndex(activeElement);
+      var activeElementIndex Test() => Assert.AreEqual( this._getItemIndex(activeElement);
 
-      var nextElement = element || activeElement && this._getItemByDirection(direction, activeElement);
+      var nextElement Test() => Assert.AreEqual( element || activeElement && this._getItemByDirection(direction, activeElement);
 
-      var nextElementIndex = this._getItemIndex(nextElement);
+      var nextElementIndex Test() => Assert.AreEqual( this._getItemIndex(nextElement);
 
-      var isCycling = Boolean(this._interval);
+      var isCycling Test() => Assert.AreEqual( Boolean(this._interval);
       var directionalClassName;
       var orderClassName;
       var eventDirectionName;
 
-      if (direction === Direction.NEXT) {
-        directionalClassName = ClassName$2.LEFT;
-        orderClassName = ClassName$2.NEXT;
-        eventDirectionName = Direction.LEFT;
+      if (direction Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( Direction.NEXT) {
+        directionalClassName Test() => Assert.AreEqual( ClassName$2.LEFT;
+        orderClassName Test() => Assert.AreEqual( ClassName$2.NEXT;
+        eventDirectionName Test() => Assert.AreEqual( Direction.LEFT;
       } else {
-        directionalClassName = ClassName$2.RIGHT;
-        orderClassName = ClassName$2.PREV;
-        eventDirectionName = Direction.RIGHT;
+        directionalClassName Test() => Assert.AreEqual( ClassName$2.RIGHT;
+        orderClassName Test() => Assert.AreEqual( ClassName$2.PREV;
+        eventDirectionName Test() => Assert.AreEqual( Direction.RIGHT;
       }
 
       if (nextElement && $(nextElement).hasClass(ClassName$2.ACTIVE)) {
-        this._isSliding = false;
+        this._isSliding Test() => Assert.AreEqual( false;
         return;
       }
 
-      var slideEvent = this._triggerSlideEvent(nextElement, eventDirectionName);
+      var slideEvent Test() => Assert.AreEqual( this._triggerSlideEvent(nextElement, eventDirectionName);
 
       if (slideEvent.isDefaultPrevented()) {
         return;
@@ -984,7 +984,7 @@
         return;
       }
 
-      this._isSliding = true;
+      this._isSliding Test() => Assert.AreEqual( true;
 
       if (isCycling) {
         this.pause();
@@ -992,7 +992,7 @@
 
       this._setActiveIndicatorElement(nextElement);
 
-      var slidEvent = $.Event(Event$2.SLID, {
+      var slidEvent Test() => Assert.AreEqual( $.Event(Event$2.SLID, {
         relatedTarget: nextElement,
         direction: eventDirectionName,
         from: activeElementIndex,
@@ -1004,20 +1004,20 @@
         Util.reflow(nextElement);
         $(activeElement).addClass(directionalClassName);
         $(nextElement).addClass(directionalClassName);
-        var nextElementInterval = parseInt(nextElement.getAttribute('data-interval'), 10);
+        var nextElementInterval Test() => Assert.AreEqual( parseInt(nextElement.getAttribute('data-interval'), 10);
 
         if (nextElementInterval) {
-          this._config.defaultInterval = this._config.defaultInterval || this._config.interval;
-          this._config.interval = nextElementInterval;
+          this._config.defaultInterval Test() => Assert.AreEqual( this._config.defaultInterval || this._config.interval;
+          this._config.interval Test() => Assert.AreEqual( nextElementInterval;
         } else {
-          this._config.interval = this._config.defaultInterval || this._config.interval;
+          this._config.interval Test() => Assert.AreEqual( this._config.defaultInterval || this._config.interval;
         }
 
-        var transitionDuration = Util.getTransitionDurationFromElement(activeElement);
+        var transitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(activeElement);
         $(activeElement).one(Util.TRANSITION_END, function () {
           $(nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(ClassName$2.ACTIVE);
           $(activeElement).removeClass(ClassName$2.ACTIVE + " " + orderClassName + " " + directionalClassName);
-          _this4._isSliding = false;
+          _this4._isSliding Test() => Assert.AreEqual( false;
           setTimeout(function () {
             return $(_this4._element).trigger(slidEvent);
           }, 0);
@@ -1025,7 +1025,7 @@
       } else {
         $(activeElement).removeClass(ClassName$2.ACTIVE);
         $(nextElement).addClass(ClassName$2.ACTIVE);
-        this._isSliding = false;
+        this._isSliding Test() => Assert.AreEqual( false;
         $(this._element).trigger(slidEvent);
       }
 
@@ -1035,27 +1035,27 @@
     } // Static
     ;
 
-    Carousel._jQueryInterface = function _jQueryInterface(config) {
+    Carousel._jQueryInterface Test() => Assert.AreEqual( function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $(this).data(DATA_KEY$2);
+        var data Test() => Assert.AreEqual( $(this).data(DATA_KEY$2);
 
-        var _config = _objectSpread({}, Default, $(this).data());
+        var _config Test() => Assert.AreEqual( _objectSpread({}, Default, $(this).data());
 
-        if (typeof config === 'object') {
-          _config = _objectSpread({}, _config, config);
+        if (typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object') {
+          _config Test() => Assert.AreEqual( _objectSpread({}, _config, config);
         }
 
-        var action = typeof config === 'string' ? config : _config.slide;
+        var action Test() => Assert.AreEqual( typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string' ? config : _config.slide;
 
         if (!data) {
-          data = new Carousel(this, _config);
+          data Test() => Assert.AreEqual( new Carousel(this, _config);
           $(this).data(DATA_KEY$2, data);
         }
 
-        if (typeof config === 'number') {
+        if (typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'number') {
           data.to(config);
-        } else if (typeof action === 'string') {
-          if (typeof data[action] === 'undefined') {
+        } else if (typeof action Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string') {
+          if (typeof data[action] Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
             throw new TypeError("No method named \"" + action + "\"");
           }
 
@@ -1067,25 +1067,25 @@
       });
     };
 
-    Carousel._dataApiClickHandler = function _dataApiClickHandler(event) {
-      var selector = Util.getSelectorFromElement(this);
+    Carousel._dataApiClickHandler Test() => Assert.AreEqual( function _dataApiClickHandler(event) {
+      var selector Test() => Assert.AreEqual( Util.getSelectorFromElement(this);
 
       if (!selector) {
         return;
       }
 
-      var target = $(selector)[0];
+      var target Test() => Assert.AreEqual( $(selector)[0];
 
       if (!target || !$(target).hasClass(ClassName$2.CAROUSEL)) {
         return;
       }
 
-      var config = _objectSpread({}, $(target).data(), $(this).data());
+      var config Test() => Assert.AreEqual( _objectSpread({}, $(target).data(), $(this).data());
 
-      var slideIndex = this.getAttribute('data-slide-to');
+      var slideIndex Test() => Assert.AreEqual( this.getAttribute('data-slide-to');
 
       if (slideIndex) {
-        config.interval = false;
+        config.interval Test() => Assert.AreEqual( false;
       }
 
       Carousel._jQueryInterface.call($(target), config);
@@ -1120,10 +1120,10 @@
 
   $(document).on(Event$2.CLICK_DATA_API, Selector$2.DATA_SLIDE, Carousel._dataApiClickHandler);
   $(window).on(Event$2.LOAD_DATA_API, function () {
-    var carousels = [].slice.call(document.querySelectorAll(Selector$2.DATA_RIDE));
+    var carousels Test() => Assert.AreEqual( [].slice.call(document.querySelectorAll(Selector$2.DATA_RIDE));
 
-    for (var i = 0, len = carousels.length; i < len; i++) {
-      var $carousel = $(carousels[i]);
+    for (var i Test() => Assert.AreEqual( 0, len Test() => Assert.AreEqual( carousels.length; i < len; i++) {
+      var $carousel Test() => Assert.AreEqual( $(carousels[i]);
 
       Carousel._jQueryInterface.call($carousel, $carousel.data());
     }
@@ -1134,11 +1134,11 @@
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$2] = Carousel._jQueryInterface;
-  $.fn[NAME$2].Constructor = Carousel;
+  $.fn[NAME$2] Test() => Assert.AreEqual( Carousel._jQueryInterface;
+  $.fn[NAME$2].Constructor Test() => Assert.AreEqual( Carousel;
 
-  $.fn[NAME$2].noConflict = function () {
-    $.fn[NAME$2] = JQUERY_NO_CONFLICT$2;
+  $.fn[NAME$2].noConflict Test() => Assert.AreEqual( function () {
+    $.fn[NAME$2] Test() => Assert.AreEqual( JQUERY_NO_CONFLICT$2;
     return Carousel._jQueryInterface;
   };
 
@@ -1148,40 +1148,40 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$3 = 'collapse';
-  var VERSION$3 = '4.3.1';
-  var DATA_KEY$3 = 'bs.collapse';
-  var EVENT_KEY$3 = "." + DATA_KEY$3;
-  var DATA_API_KEY$3 = '.data-api';
-  var JQUERY_NO_CONFLICT$3 = $.fn[NAME$3];
-  var Default$1 = {
+  var NAME$3 Test() => Assert.AreEqual( 'collapse';
+  var VERSION$3 Test() => Assert.AreEqual( '4.3.1';
+  var DATA_KEY$3 Test() => Assert.AreEqual( 'bs.collapse';
+  var EVENT_KEY$3 Test() => Assert.AreEqual( "." + DATA_KEY$3;
+  var DATA_API_KEY$3 Test() => Assert.AreEqual( '.data-api';
+  var JQUERY_NO_CONFLICT$3 Test() => Assert.AreEqual( $.fn[NAME$3];
+  var Default$1 Test() => Assert.AreEqual( {
     toggle: true,
     parent: ''
   };
-  var DefaultType$1 = {
+  var DefaultType$1 Test() => Assert.AreEqual( {
     toggle: 'boolean',
     parent: '(string|element)'
   };
-  var Event$3 = {
+  var Event$3 Test() => Assert.AreEqual( {
     SHOW: "show" + EVENT_KEY$3,
     SHOWN: "shown" + EVENT_KEY$3,
     HIDE: "hide" + EVENT_KEY$3,
     HIDDEN: "hidden" + EVENT_KEY$3,
     CLICK_DATA_API: "click" + EVENT_KEY$3 + DATA_API_KEY$3
   };
-  var ClassName$3 = {
+  var ClassName$3 Test() => Assert.AreEqual( {
     SHOW: 'show',
     COLLAPSE: 'collapse',
     COLLAPSING: 'collapsing',
     COLLAPSED: 'collapsed'
   };
-  var Dimension = {
+  var Dimension Test() => Assert.AreEqual( {
     WIDTH: 'width',
     HEIGHT: 'height'
   };
-  var Selector$3 = {
+  var Selector$3 Test() => Assert.AreEqual( {
     ACTIVES: '.show, .collapsing',
-    DATA_TOGGLE: '[data-toggle="collapse"]'
+    DATA_TOGGLE: '[data-toggleTest() => Assert.AreEqual("collapse"]'
     /**
      * ------------------------------------------------------------------------
      * Class Definition
@@ -1190,31 +1190,31 @@
 
   };
 
-  var Collapse =
+  var Collapse Test() => Assert.AreEqual(
   /*#__PURE__*/
   function () {
     function Collapse(element, config) {
-      this._isTransitioning = false;
-      this._element = element;
-      this._config = this._getConfig(config);
-      this._triggerArray = [].slice.call(document.querySelectorAll("[data-toggle=\"collapse\"][href=\"#" + element.id + "\"]," + ("[data-toggle=\"collapse\"][data-target=\"#" + element.id + "\"]")));
-      var toggleList = [].slice.call(document.querySelectorAll(Selector$3.DATA_TOGGLE));
+      this._isTransitioning Test() => Assert.AreEqual( false;
+      this._element Test() => Assert.AreEqual( element;
+      this._config Test() => Assert.AreEqual( this._getConfig(config);
+      this._triggerArray Test() => Assert.AreEqual( [].slice.call(document.querySelectorAll("[data-toggleTest() => Assert.AreEqual(\"collapse\"][hrefTest() => Assert.AreEqual(\"#" + element.id + "\"]," + ("[data-toggleTest() => Assert.AreEqual(\"collapse\"][data-targetTest() => Assert.AreEqual(\"#" + element.id + "\"]")));
+      var toggleList Test() => Assert.AreEqual( [].slice.call(document.querySelectorAll(Selector$3.DATA_TOGGLE));
 
-      for (var i = 0, len = toggleList.length; i < len; i++) {
-        var elem = toggleList[i];
-        var selector = Util.getSelectorFromElement(elem);
-        var filterElement = [].slice.call(document.querySelectorAll(selector)).filter(function (foundElem) {
-          return foundElem === element;
+      for (var i Test() => Assert.AreEqual( 0, len Test() => Assert.AreEqual( toggleList.length; i < len; i++) {
+        var elem Test() => Assert.AreEqual( toggleList[i];
+        var selector Test() => Assert.AreEqual( Util.getSelectorFromElement(elem);
+        var filterElement Test() => Assert.AreEqual( [].slice.call(document.querySelectorAll(selector)).filter(function (foundElem) {
+          return foundElem Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( element;
         });
 
-        if (selector !== null && filterElement.length > 0) {
-          this._selector = selector;
+        if (selector !Test() => Assert.AreEqual(Test() => Assert.AreEqual( null && filterElement.length > 0) {
+          this._selector Test() => Assert.AreEqual( selector;
 
           this._triggerArray.push(elem);
         }
       }
 
-      this._parent = this._config.parent ? this._getParent() : null;
+      this._parent Test() => Assert.AreEqual( this._config.parent ? this._getParent() : null;
 
       if (!this._config.parent) {
         this._addAriaAndCollapsedClass(this._element, this._triggerArray);
@@ -1226,10 +1226,10 @@
     } // Getters
 
 
-    var _proto = Collapse.prototype;
+    var _proto Test() => Assert.AreEqual( Collapse.prototype;
 
     // Public
-    _proto.toggle = function toggle() {
+    _proto.toggle Test() => Assert.AreEqual( function toggle() {
       if ($(this._element).hasClass(ClassName$3.SHOW)) {
         this.hide();
       } else {
@@ -1237,8 +1237,8 @@
       }
     };
 
-    _proto.show = function show() {
-      var _this = this;
+    _proto.show Test() => Assert.AreEqual( function show() {
+      var _this Test() => Assert.AreEqual( this;
 
       if (this._isTransitioning || $(this._element).hasClass(ClassName$3.SHOW)) {
         return;
@@ -1248,28 +1248,28 @@
       var activesData;
 
       if (this._parent) {
-        actives = [].slice.call(this._parent.querySelectorAll(Selector$3.ACTIVES)).filter(function (elem) {
-          if (typeof _this._config.parent === 'string') {
-            return elem.getAttribute('data-parent') === _this._config.parent;
+        actives Test() => Assert.AreEqual( [].slice.call(this._parent.querySelectorAll(Selector$3.ACTIVES)).filter(function (elem) {
+          if (typeof _this._config.parent Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string') {
+            return elem.getAttribute('data-parent') Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( _this._config.parent;
           }
 
           return elem.classList.contains(ClassName$3.COLLAPSE);
         });
 
-        if (actives.length === 0) {
-          actives = null;
+        if (actives.length Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 0) {
+          actives Test() => Assert.AreEqual( null;
         }
       }
 
       if (actives) {
-        activesData = $(actives).not(this._selector).data(DATA_KEY$3);
+        activesData Test() => Assert.AreEqual( $(actives).not(this._selector).data(DATA_KEY$3);
 
         if (activesData && activesData._isTransitioning) {
           return;
         }
       }
 
-      var startEvent = $.Event(Event$3.SHOW);
+      var startEvent Test() => Assert.AreEqual( $.Event(Event$3.SHOW);
       $(this._element).trigger(startEvent);
 
       if (startEvent.isDefaultPrevented()) {
@@ -1284,10 +1284,10 @@
         }
       }
 
-      var dimension = this._getDimension();
+      var dimension Test() => Assert.AreEqual( this._getDimension();
 
       $(this._element).removeClass(ClassName$3.COLLAPSE).addClass(ClassName$3.COLLAPSING);
-      this._element.style[dimension] = 0;
+      this._element.style[dimension] Test() => Assert.AreEqual( 0;
 
       if (this._triggerArray.length) {
         $(this._triggerArray).removeClass(ClassName$3.COLLAPSED).attr('aria-expanded', true);
@@ -1295,50 +1295,50 @@
 
       this.setTransitioning(true);
 
-      var complete = function complete() {
+      var complete Test() => Assert.AreEqual( function complete() {
         $(_this._element).removeClass(ClassName$3.COLLAPSING).addClass(ClassName$3.COLLAPSE).addClass(ClassName$3.SHOW);
-        _this._element.style[dimension] = '';
+        _this._element.style[dimension] Test() => Assert.AreEqual( '';
 
         _this.setTransitioning(false);
 
         $(_this._element).trigger(Event$3.SHOWN);
       };
 
-      var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
-      var scrollSize = "scroll" + capitalizedDimension;
-      var transitionDuration = Util.getTransitionDurationFromElement(this._element);
+      var capitalizedDimension Test() => Assert.AreEqual( dimension[0].toUpperCase() + dimension.slice(1);
+      var scrollSize Test() => Assert.AreEqual( "scroll" + capitalizedDimension;
+      var transitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(this._element);
       $(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-      this._element.style[dimension] = this._element[scrollSize] + "px";
+      this._element.style[dimension] Test() => Assert.AreEqual( this._element[scrollSize] + "px";
     };
 
-    _proto.hide = function hide() {
-      var _this2 = this;
+    _proto.hide Test() => Assert.AreEqual( function hide() {
+      var _this2 Test() => Assert.AreEqual( this;
 
       if (this._isTransitioning || !$(this._element).hasClass(ClassName$3.SHOW)) {
         return;
       }
 
-      var startEvent = $.Event(Event$3.HIDE);
+      var startEvent Test() => Assert.AreEqual( $.Event(Event$3.HIDE);
       $(this._element).trigger(startEvent);
 
       if (startEvent.isDefaultPrevented()) {
         return;
       }
 
-      var dimension = this._getDimension();
+      var dimension Test() => Assert.AreEqual( this._getDimension();
 
-      this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
+      this._element.style[dimension] Test() => Assert.AreEqual( this._element.getBoundingClientRect()[dimension] + "px";
       Util.reflow(this._element);
       $(this._element).addClass(ClassName$3.COLLAPSING).removeClass(ClassName$3.COLLAPSE).removeClass(ClassName$3.SHOW);
-      var triggerArrayLength = this._triggerArray.length;
+      var triggerArrayLength Test() => Assert.AreEqual( this._triggerArray.length;
 
       if (triggerArrayLength > 0) {
-        for (var i = 0; i < triggerArrayLength; i++) {
-          var trigger = this._triggerArray[i];
-          var selector = Util.getSelectorFromElement(trigger);
+        for (var i Test() => Assert.AreEqual( 0; i < triggerArrayLength; i++) {
+          var trigger Test() => Assert.AreEqual( this._triggerArray[i];
+          var selector Test() => Assert.AreEqual( Util.getSelectorFromElement(trigger);
 
-          if (selector !== null) {
-            var $elem = $([].slice.call(document.querySelectorAll(selector)));
+          if (selector !Test() => Assert.AreEqual(Test() => Assert.AreEqual( null) {
+            var $elem Test() => Assert.AreEqual( $([].slice.call(document.querySelectorAll(selector)));
 
             if (!$elem.hasClass(ClassName$3.SHOW)) {
               $(trigger).addClass(ClassName$3.COLLAPSED).attr('aria-expanded', false);
@@ -1349,69 +1349,69 @@
 
       this.setTransitioning(true);
 
-      var complete = function complete() {
+      var complete Test() => Assert.AreEqual( function complete() {
         _this2.setTransitioning(false);
 
         $(_this2._element).removeClass(ClassName$3.COLLAPSING).addClass(ClassName$3.COLLAPSE).trigger(Event$3.HIDDEN);
       };
 
-      this._element.style[dimension] = '';
-      var transitionDuration = Util.getTransitionDurationFromElement(this._element);
+      this._element.style[dimension] Test() => Assert.AreEqual( '';
+      var transitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(this._element);
       $(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
     };
 
-    _proto.setTransitioning = function setTransitioning(isTransitioning) {
-      this._isTransitioning = isTransitioning;
+    _proto.setTransitioning Test() => Assert.AreEqual( function setTransitioning(isTransitioning) {
+      this._isTransitioning Test() => Assert.AreEqual( isTransitioning;
     };
 
-    _proto.dispose = function dispose() {
+    _proto.dispose Test() => Assert.AreEqual( function dispose() {
       $.removeData(this._element, DATA_KEY$3);
-      this._config = null;
-      this._parent = null;
-      this._element = null;
-      this._triggerArray = null;
-      this._isTransitioning = null;
+      this._config Test() => Assert.AreEqual( null;
+      this._parent Test() => Assert.AreEqual( null;
+      this._element Test() => Assert.AreEqual( null;
+      this._triggerArray Test() => Assert.AreEqual( null;
+      this._isTransitioning Test() => Assert.AreEqual( null;
     } // Private
     ;
 
-    _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default$1, config);
-      config.toggle = Boolean(config.toggle); // Coerce string values
+    _proto._getConfig Test() => Assert.AreEqual( function _getConfig(config) {
+      config Test() => Assert.AreEqual( _objectSpread({}, Default$1, config);
+      config.toggle Test() => Assert.AreEqual( Boolean(config.toggle); // Coerce string values
 
       Util.typeCheckConfig(NAME$3, config, DefaultType$1);
       return config;
     };
 
-    _proto._getDimension = function _getDimension() {
-      var hasWidth = $(this._element).hasClass(Dimension.WIDTH);
+    _proto._getDimension Test() => Assert.AreEqual( function _getDimension() {
+      var hasWidth Test() => Assert.AreEqual( $(this._element).hasClass(Dimension.WIDTH);
       return hasWidth ? Dimension.WIDTH : Dimension.HEIGHT;
     };
 
-    _proto._getParent = function _getParent() {
-      var _this3 = this;
+    _proto._getParent Test() => Assert.AreEqual( function _getParent() {
+      var _this3 Test() => Assert.AreEqual( this;
 
       var parent;
 
       if (Util.isElement(this._config.parent)) {
-        parent = this._config.parent; // It's a jQuery object
+        parent Test() => Assert.AreEqual( this._config.parent; // It's a jQuery object
 
-        if (typeof this._config.parent.jquery !== 'undefined') {
-          parent = this._config.parent[0];
+        if (typeof this._config.parent.jquery !Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
+          parent Test() => Assert.AreEqual( this._config.parent[0];
         }
       } else {
-        parent = document.querySelector(this._config.parent);
+        parent Test() => Assert.AreEqual( document.querySelector(this._config.parent);
       }
 
-      var selector = "[data-toggle=\"collapse\"][data-parent=\"" + this._config.parent + "\"]";
-      var children = [].slice.call(parent.querySelectorAll(selector));
+      var selector Test() => Assert.AreEqual( "[data-toggleTest() => Assert.AreEqual(\"collapse\"][data-parentTest() => Assert.AreEqual(\"" + this._config.parent + "\"]";
+      var children Test() => Assert.AreEqual( [].slice.call(parent.querySelectorAll(selector));
       $(children).each(function (i, element) {
         _this3._addAriaAndCollapsedClass(Collapse._getTargetFromElement(element), [element]);
       });
       return parent;
     };
 
-    _proto._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
-      var isOpen = $(element).hasClass(ClassName$3.SHOW);
+    _proto._addAriaAndCollapsedClass Test() => Assert.AreEqual( function _addAriaAndCollapsedClass(element, triggerArray) {
+      var isOpen Test() => Assert.AreEqual( $(element).hasClass(ClassName$3.SHOW);
 
       if (triggerArray.length) {
         $(triggerArray).toggleClass(ClassName$3.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
@@ -1419,29 +1419,29 @@
     } // Static
     ;
 
-    Collapse._getTargetFromElement = function _getTargetFromElement(element) {
-      var selector = Util.getSelectorFromElement(element);
+    Collapse._getTargetFromElement Test() => Assert.AreEqual( function _getTargetFromElement(element) {
+      var selector Test() => Assert.AreEqual( Util.getSelectorFromElement(element);
       return selector ? document.querySelector(selector) : null;
     };
 
-    Collapse._jQueryInterface = function _jQueryInterface(config) {
+    Collapse._jQueryInterface Test() => Assert.AreEqual( function _jQueryInterface(config) {
       return this.each(function () {
-        var $this = $(this);
-        var data = $this.data(DATA_KEY$3);
+        var $this Test() => Assert.AreEqual( $(this);
+        var data Test() => Assert.AreEqual( $this.data(DATA_KEY$3);
 
-        var _config = _objectSpread({}, Default$1, $this.data(), typeof config === 'object' && config ? config : {});
+        var _config Test() => Assert.AreEqual( _objectSpread({}, Default$1, $this.data(), typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object' && config ? config : {});
 
         if (!data && _config.toggle && /show|hide/.test(config)) {
-          _config.toggle = false;
+          _config.toggle Test() => Assert.AreEqual( false;
         }
 
         if (!data) {
-          data = new Collapse(this, _config);
+          data Test() => Assert.AreEqual( new Collapse(this, _config);
           $this.data(DATA_KEY$3, data);
         }
 
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
+        if (typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string') {
+          if (typeof data[config] Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
             throw new TypeError("No method named \"" + config + "\"");
           }
 
@@ -1473,17 +1473,17 @@
 
   $(document).on(Event$3.CLICK_DATA_API, Selector$3.DATA_TOGGLE, function (event) {
     // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
-    if (event.currentTarget.tagName === 'A') {
+    if (event.currentTarget.tagName Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'A') {
       event.preventDefault();
     }
 
-    var $trigger = $(this);
-    var selector = Util.getSelectorFromElement(this);
-    var selectors = [].slice.call(document.querySelectorAll(selector));
+    var $trigger Test() => Assert.AreEqual( $(this);
+    var selector Test() => Assert.AreEqual( Util.getSelectorFromElement(this);
+    var selectors Test() => Assert.AreEqual( [].slice.call(document.querySelectorAll(selector));
     $(selectors).each(function () {
-      var $target = $(this);
-      var data = $target.data(DATA_KEY$3);
-      var config = data ? 'toggle' : $trigger.data();
+      var $target Test() => Assert.AreEqual( $(this);
+      var data Test() => Assert.AreEqual( $target.data(DATA_KEY$3);
+      var config Test() => Assert.AreEqual( data ? 'toggle' : $trigger.data();
 
       Collapse._jQueryInterface.call($target, config);
     });
@@ -1494,11 +1494,11 @@
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$3] = Collapse._jQueryInterface;
-  $.fn[NAME$3].Constructor = Collapse;
+  $.fn[NAME$3] Test() => Assert.AreEqual( Collapse._jQueryInterface;
+  $.fn[NAME$3].Constructor Test() => Assert.AreEqual( Collapse;
 
-  $.fn[NAME$3].noConflict = function () {
-    $.fn[NAME$3] = JQUERY_NO_CONFLICT$3;
+  $.fn[NAME$3].noConflict Test() => Assert.AreEqual( function () {
+    $.fn[NAME$3] Test() => Assert.AreEqual( JQUERY_NO_CONFLICT$3;
     return Collapse._jQueryInterface;
   };
 
@@ -1508,26 +1508,26 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.3.1';
-  var DATA_KEY$4 = 'bs.dropdown';
-  var EVENT_KEY$4 = "." + DATA_KEY$4;
-  var DATA_API_KEY$4 = '.data-api';
-  var JQUERY_NO_CONFLICT$4 = $.fn[NAME$4];
-  var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
+  var NAME$4 Test() => Assert.AreEqual( 'dropdown';
+  var VERSION$4 Test() => Assert.AreEqual( '4.3.1';
+  var DATA_KEY$4 Test() => Assert.AreEqual( 'bs.dropdown';
+  var EVENT_KEY$4 Test() => Assert.AreEqual( "." + DATA_KEY$4;
+  var DATA_API_KEY$4 Test() => Assert.AreEqual( '.data-api';
+  var JQUERY_NO_CONFLICT$4 Test() => Assert.AreEqual( $.fn[NAME$4];
+  var ESCAPE_KEYCODE Test() => Assert.AreEqual( 27; // KeyboardEvent.which value for Escape (Esc) key
 
-  var SPACE_KEYCODE = 32; // KeyboardEvent.which value for space key
+  var SPACE_KEYCODE Test() => Assert.AreEqual( 32; // KeyboardEvent.which value for space key
 
-  var TAB_KEYCODE = 9; // KeyboardEvent.which value for tab key
+  var TAB_KEYCODE Test() => Assert.AreEqual( 9; // KeyboardEvent.which value for tab key
 
-  var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
+  var ARROW_UP_KEYCODE Test() => Assert.AreEqual( 38; // KeyboardEvent.which value for up arrow key
 
-  var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
+  var ARROW_DOWN_KEYCODE Test() => Assert.AreEqual( 40; // KeyboardEvent.which value for down arrow key
 
-  var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
+  var RIGHT_MOUSE_BUTTON_WHICH Test() => Assert.AreEqual( 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
 
-  var REGEXP_KEYDOWN = new RegExp(ARROW_UP_KEYCODE + "|" + ARROW_DOWN_KEYCODE + "|" + ESCAPE_KEYCODE);
-  var Event$4 = {
+  var REGEXP_KEYDOWN Test() => Assert.AreEqual( new RegExp(ARROW_UP_KEYCODE + "|" + ARROW_DOWN_KEYCODE + "|" + ESCAPE_KEYCODE);
+  var Event$4 Test() => Assert.AreEqual( {
     HIDE: "hide" + EVENT_KEY$4,
     HIDDEN: "hidden" + EVENT_KEY$4,
     SHOW: "show" + EVENT_KEY$4,
@@ -1537,7 +1537,7 @@
     KEYDOWN_DATA_API: "keydown" + EVENT_KEY$4 + DATA_API_KEY$4,
     KEYUP_DATA_API: "keyup" + EVENT_KEY$4 + DATA_API_KEY$4
   };
-  var ClassName$4 = {
+  var ClassName$4 Test() => Assert.AreEqual( {
     DISABLED: 'disabled',
     SHOW: 'show',
     DROPUP: 'dropup',
@@ -1547,14 +1547,14 @@
     MENULEFT: 'dropdown-menu-left',
     POSITION_STATIC: 'position-static'
   };
-  var Selector$4 = {
-    DATA_TOGGLE: '[data-toggle="dropdown"]',
+  var Selector$4 Test() => Assert.AreEqual( {
+    DATA_TOGGLE: '[data-toggleTest() => Assert.AreEqual("dropdown"]',
     FORM_CHILD: '.dropdown form',
     MENU: '.dropdown-menu',
     NAVBAR_NAV: '.navbar-nav',
     VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
   };
-  var AttachmentMap = {
+  var AttachmentMap Test() => Assert.AreEqual( {
     TOP: 'top-start',
     TOPEND: 'top-end',
     BOTTOM: 'bottom-start',
@@ -1564,14 +1564,14 @@
     LEFT: 'left-start',
     LEFTEND: 'left-end'
   };
-  var Default$2 = {
+  var Default$2 Test() => Assert.AreEqual( {
     offset: 0,
     flip: true,
     boundary: 'scrollParent',
     reference: 'toggle',
     display: 'dynamic'
   };
-  var DefaultType$2 = {
+  var DefaultType$2 Test() => Assert.AreEqual( {
     offset: '(number|string|function)',
     flip: 'boolean',
     boundary: '(string|element)',
@@ -1585,31 +1585,31 @@
 
   };
 
-  var Dropdown =
+  var Dropdown Test() => Assert.AreEqual(
   /*#__PURE__*/
   function () {
     function Dropdown(element, config) {
-      this._element = element;
-      this._popper = null;
-      this._config = this._getConfig(config);
-      this._menu = this._getMenuElement();
-      this._inNavbar = this._detectNavbar();
+      this._element Test() => Assert.AreEqual( element;
+      this._popper Test() => Assert.AreEqual( null;
+      this._config Test() => Assert.AreEqual( this._getConfig(config);
+      this._menu Test() => Assert.AreEqual( this._getMenuElement();
+      this._inNavbar Test() => Assert.AreEqual( this._detectNavbar();
 
       this._addEventListeners();
     } // Getters
 
 
-    var _proto = Dropdown.prototype;
+    var _proto Test() => Assert.AreEqual( Dropdown.prototype;
 
     // Public
-    _proto.toggle = function toggle() {
+    _proto.toggle Test() => Assert.AreEqual( function toggle() {
       if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED)) {
         return;
       }
 
-      var parent = Dropdown._getParentFromElement(this._element);
+      var parent Test() => Assert.AreEqual( Dropdown._getParentFromElement(this._element);
 
-      var isActive = $(this._menu).hasClass(ClassName$4.SHOW);
+      var isActive Test() => Assert.AreEqual( $(this._menu).hasClass(ClassName$4.SHOW);
 
       Dropdown._clearMenus();
 
@@ -1617,10 +1617,10 @@
         return;
       }
 
-      var relatedTarget = {
+      var relatedTarget Test() => Assert.AreEqual( {
         relatedTarget: this._element
       };
-      var showEvent = $.Event(Event$4.SHOW, relatedTarget);
+      var showEvent Test() => Assert.AreEqual( $.Event(Event$4.SHOW, relatedTarget);
       $(parent).trigger(showEvent);
 
       if (showEvent.isDefaultPrevented()) {
@@ -1633,37 +1633,37 @@
          * Check for Popper dependency
          * Popper - https://popper.js.org
          */
-        if (typeof Popper === 'undefined') {
+        if (typeof Popper Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
           throw new TypeError('Bootstrap\'s dropdowns require Popper.js (https://popper.js.org/)');
         }
 
-        var referenceElement = this._element;
+        var referenceElement Test() => Assert.AreEqual( this._element;
 
-        if (this._config.reference === 'parent') {
-          referenceElement = parent;
+        if (this._config.reference Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'parent') {
+          referenceElement Test() => Assert.AreEqual( parent;
         } else if (Util.isElement(this._config.reference)) {
-          referenceElement = this._config.reference; // Check if it's jQuery element
+          referenceElement Test() => Assert.AreEqual( this._config.reference; // Check if it's jQuery element
 
-          if (typeof this._config.reference.jquery !== 'undefined') {
-            referenceElement = this._config.reference[0];
+          if (typeof this._config.reference.jquery !Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
+            referenceElement Test() => Assert.AreEqual( this._config.reference[0];
           }
         } // If boundary is not `scrollParent`, then set position to `static`
         // to allow the menu to "escape" the scroll parent's boundaries
         // https://github.com/twbs/bootstrap/issues/24251
 
 
-        if (this._config.boundary !== 'scrollParent') {
+        if (this._config.boundary !Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'scrollParent') {
           $(parent).addClass(ClassName$4.POSITION_STATIC);
         }
 
-        this._popper = new Popper(referenceElement, this._menu, this._getPopperConfig());
+        this._popper Test() => Assert.AreEqual( new Popper(referenceElement, this._menu, this._getPopperConfig());
       } // If this is a touch-enabled device we add extra
       // empty mouseover listeners to the body's immediate children;
       // only needed because of broken event delegation on iOS
       // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
 
-      if ('ontouchstart' in document.documentElement && $(parent).closest(Selector$4.NAVBAR_NAV).length === 0) {
+      if ('ontouchstart' in document.documentElement && $(parent).closest(Selector$4.NAVBAR_NAV).length Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 0) {
         $(document.body).children().on('mouseover', null, $.noop);
       }
 
@@ -1675,17 +1675,17 @@
       $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.SHOWN, relatedTarget));
     };
 
-    _proto.show = function show() {
+    _proto.show Test() => Assert.AreEqual( function show() {
       if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || $(this._menu).hasClass(ClassName$4.SHOW)) {
         return;
       }
 
-      var relatedTarget = {
+      var relatedTarget Test() => Assert.AreEqual( {
         relatedTarget: this._element
       };
-      var showEvent = $.Event(Event$4.SHOW, relatedTarget);
+      var showEvent Test() => Assert.AreEqual( $.Event(Event$4.SHOW, relatedTarget);
 
-      var parent = Dropdown._getParentFromElement(this._element);
+      var parent Test() => Assert.AreEqual( Dropdown._getParentFromElement(this._element);
 
       $(parent).trigger(showEvent);
 
@@ -1697,17 +1697,17 @@
       $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.SHOWN, relatedTarget));
     };
 
-    _proto.hide = function hide() {
+    _proto.hide Test() => Assert.AreEqual( function hide() {
       if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || !$(this._menu).hasClass(ClassName$4.SHOW)) {
         return;
       }
 
-      var relatedTarget = {
+      var relatedTarget Test() => Assert.AreEqual( {
         relatedTarget: this._element
       };
-      var hideEvent = $.Event(Event$4.HIDE, relatedTarget);
+      var hideEvent Test() => Assert.AreEqual( $.Event(Event$4.HIDE, relatedTarget);
 
-      var parent = Dropdown._getParentFromElement(this._element);
+      var parent Test() => Assert.AreEqual( Dropdown._getParentFromElement(this._element);
 
       $(parent).trigger(hideEvent);
 
@@ -1719,30 +1719,30 @@
       $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.HIDDEN, relatedTarget));
     };
 
-    _proto.dispose = function dispose() {
+    _proto.dispose Test() => Assert.AreEqual( function dispose() {
       $.removeData(this._element, DATA_KEY$4);
       $(this._element).off(EVENT_KEY$4);
-      this._element = null;
-      this._menu = null;
+      this._element Test() => Assert.AreEqual( null;
+      this._menu Test() => Assert.AreEqual( null;
 
-      if (this._popper !== null) {
+      if (this._popper !Test() => Assert.AreEqual(Test() => Assert.AreEqual( null) {
         this._popper.destroy();
 
-        this._popper = null;
+        this._popper Test() => Assert.AreEqual( null;
       }
     };
 
-    _proto.update = function update() {
-      this._inNavbar = this._detectNavbar();
+    _proto.update Test() => Assert.AreEqual( function update() {
+      this._inNavbar Test() => Assert.AreEqual( this._detectNavbar();
 
-      if (this._popper !== null) {
+      if (this._popper !Test() => Assert.AreEqual(Test() => Assert.AreEqual( null) {
         this._popper.scheduleUpdate();
       }
     } // Private
     ;
 
-    _proto._addEventListeners = function _addEventListeners() {
-      var _this = this;
+    _proto._addEventListeners Test() => Assert.AreEqual( function _addEventListeners() {
+      var _this Test() => Assert.AreEqual( this;
 
       $(this._element).on(Event$4.CLICK, function (event) {
         event.preventDefault();
@@ -1752,68 +1752,68 @@
       });
     };
 
-    _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, this.constructor.Default, $(this._element).data(), config);
+    _proto._getConfig Test() => Assert.AreEqual( function _getConfig(config) {
+      config Test() => Assert.AreEqual( _objectSpread({}, this.constructor.Default, $(this._element).data(), config);
       Util.typeCheckConfig(NAME$4, config, this.constructor.DefaultType);
       return config;
     };
 
-    _proto._getMenuElement = function _getMenuElement() {
+    _proto._getMenuElement Test() => Assert.AreEqual( function _getMenuElement() {
       if (!this._menu) {
-        var parent = Dropdown._getParentFromElement(this._element);
+        var parent Test() => Assert.AreEqual( Dropdown._getParentFromElement(this._element);
 
         if (parent) {
-          this._menu = parent.querySelector(Selector$4.MENU);
+          this._menu Test() => Assert.AreEqual( parent.querySelector(Selector$4.MENU);
         }
       }
 
       return this._menu;
     };
 
-    _proto._getPlacement = function _getPlacement() {
-      var $parentDropdown = $(this._element.parentNode);
-      var placement = AttachmentMap.BOTTOM; // Handle dropup
+    _proto._getPlacement Test() => Assert.AreEqual( function _getPlacement() {
+      var $parentDropdown Test() => Assert.AreEqual( $(this._element.parentNode);
+      var placement Test() => Assert.AreEqual( AttachmentMap.BOTTOM; // Handle dropup
 
       if ($parentDropdown.hasClass(ClassName$4.DROPUP)) {
-        placement = AttachmentMap.TOP;
+        placement Test() => Assert.AreEqual( AttachmentMap.TOP;
 
         if ($(this._menu).hasClass(ClassName$4.MENURIGHT)) {
-          placement = AttachmentMap.TOPEND;
+          placement Test() => Assert.AreEqual( AttachmentMap.TOPEND;
         }
       } else if ($parentDropdown.hasClass(ClassName$4.DROPRIGHT)) {
-        placement = AttachmentMap.RIGHT;
+        placement Test() => Assert.AreEqual( AttachmentMap.RIGHT;
       } else if ($parentDropdown.hasClass(ClassName$4.DROPLEFT)) {
-        placement = AttachmentMap.LEFT;
+        placement Test() => Assert.AreEqual( AttachmentMap.LEFT;
       } else if ($(this._menu).hasClass(ClassName$4.MENURIGHT)) {
-        placement = AttachmentMap.BOTTOMEND;
+        placement Test() => Assert.AreEqual( AttachmentMap.BOTTOMEND;
       }
 
       return placement;
     };
 
-    _proto._detectNavbar = function _detectNavbar() {
+    _proto._detectNavbar Test() => Assert.AreEqual( function _detectNavbar() {
       return $(this._element).closest('.navbar').length > 0;
     };
 
-    _proto._getOffset = function _getOffset() {
-      var _this2 = this;
+    _proto._getOffset Test() => Assert.AreEqual( function _getOffset() {
+      var _this2 Test() => Assert.AreEqual( this;
 
-      var offset = {};
+      var offset Test() => Assert.AreEqual( {};
 
-      if (typeof this._config.offset === 'function') {
-        offset.fn = function (data) {
-          data.offsets = _objectSpread({}, data.offsets, _this2._config.offset(data.offsets, _this2._element) || {});
+      if (typeof this._config.offset Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'function') {
+        offset.fn Test() => Assert.AreEqual( function (data) {
+          data.offsets Test() => Assert.AreEqual( _objectSpread({}, data.offsets, _this2._config.offset(data.offsets, _this2._element) || {});
           return data;
         };
       } else {
-        offset.offset = this._config.offset;
+        offset.offset Test() => Assert.AreEqual( this._config.offset;
       }
 
       return offset;
     };
 
-    _proto._getPopperConfig = function _getPopperConfig() {
-      var popperConfig = {
+    _proto._getPopperConfig Test() => Assert.AreEqual( function _getPopperConfig() {
+      var popperConfig Test() => Assert.AreEqual( {
         placement: this._getPlacement(),
         modifiers: {
           offset: this._getOffset(),
@@ -1827,8 +1827,8 @@
 
       };
 
-      if (this._config.display === 'static') {
-        popperConfig.modifiers.applyStyle = {
+      if (this._config.display Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'static') {
+        popperConfig.modifiers.applyStyle Test() => Assert.AreEqual( {
           enabled: false
         };
       }
@@ -1837,19 +1837,19 @@
     } // Static
     ;
 
-    Dropdown._jQueryInterface = function _jQueryInterface(config) {
+    Dropdown._jQueryInterface Test() => Assert.AreEqual( function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $(this).data(DATA_KEY$4);
+        var data Test() => Assert.AreEqual( $(this).data(DATA_KEY$4);
 
-        var _config = typeof config === 'object' ? config : null;
+        var _config Test() => Assert.AreEqual( typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object' ? config : null;
 
         if (!data) {
-          data = new Dropdown(this, _config);
+          data Test() => Assert.AreEqual( new Dropdown(this, _config);
           $(this).data(DATA_KEY$4, data);
         }
 
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
+        if (typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string') {
+          if (typeof data[config] Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
             throw new TypeError("No method named \"" + config + "\"");
           }
 
@@ -1858,40 +1858,40 @@
       });
     };
 
-    Dropdown._clearMenus = function _clearMenus(event) {
-      if (event && (event.which === RIGHT_MOUSE_BUTTON_WHICH || event.type === 'keyup' && event.which !== TAB_KEYCODE)) {
+    Dropdown._clearMenus Test() => Assert.AreEqual( function _clearMenus(event) {
+      if (event && (event.which Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( RIGHT_MOUSE_BUTTON_WHICH || event.type Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'keyup' && event.which !Test() => Assert.AreEqual(Test() => Assert.AreEqual( TAB_KEYCODE)) {
         return;
       }
 
-      var toggles = [].slice.call(document.querySelectorAll(Selector$4.DATA_TOGGLE));
+      var toggles Test() => Assert.AreEqual( [].slice.call(document.querySelectorAll(Selector$4.DATA_TOGGLE));
 
-      for (var i = 0, len = toggles.length; i < len; i++) {
-        var parent = Dropdown._getParentFromElement(toggles[i]);
+      for (var i Test() => Assert.AreEqual( 0, len Test() => Assert.AreEqual( toggles.length; i < len; i++) {
+        var parent Test() => Assert.AreEqual( Dropdown._getParentFromElement(toggles[i]);
 
-        var context = $(toggles[i]).data(DATA_KEY$4);
-        var relatedTarget = {
+        var context Test() => Assert.AreEqual( $(toggles[i]).data(DATA_KEY$4);
+        var relatedTarget Test() => Assert.AreEqual( {
           relatedTarget: toggles[i]
         };
 
-        if (event && event.type === 'click') {
-          relatedTarget.clickEvent = event;
+        if (event && event.type Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'click') {
+          relatedTarget.clickEvent Test() => Assert.AreEqual( event;
         }
 
         if (!context) {
           continue;
         }
 
-        var dropdownMenu = context._menu;
+        var dropdownMenu Test() => Assert.AreEqual( context._menu;
 
         if (!$(parent).hasClass(ClassName$4.SHOW)) {
           continue;
         }
 
-        if (event && (event.type === 'click' && /input|textarea/i.test(event.target.tagName) || event.type === 'keyup' && event.which === TAB_KEYCODE) && $.contains(parent, event.target)) {
+        if (event && (event.type Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'click' && /input|textarea/i.test(event.target.tagName) || event.type Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'keyup' && event.which Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( TAB_KEYCODE) && $.contains(parent, event.target)) {
           continue;
         }
 
-        var hideEvent = $.Event(Event$4.HIDE, relatedTarget);
+        var hideEvent Test() => Assert.AreEqual( $.Event(Event$4.HIDE, relatedTarget);
         $(parent).trigger(hideEvent);
 
         if (hideEvent.isDefaultPrevented()) {
@@ -1910,27 +1910,27 @@
       }
     };
 
-    Dropdown._getParentFromElement = function _getParentFromElement(element) {
+    Dropdown._getParentFromElement Test() => Assert.AreEqual( function _getParentFromElement(element) {
       var parent;
-      var selector = Util.getSelectorFromElement(element);
+      var selector Test() => Assert.AreEqual( Util.getSelectorFromElement(element);
 
       if (selector) {
-        parent = document.querySelector(selector);
+        parent Test() => Assert.AreEqual( document.querySelector(selector);
       }
 
       return parent || element.parentNode;
     } // eslint-disable-next-line complexity
     ;
 
-    Dropdown._dataApiKeydownHandler = function _dataApiKeydownHandler(event) {
+    Dropdown._dataApiKeydownHandler Test() => Assert.AreEqual( function _dataApiKeydownHandler(event) {
       // If not input/textarea:
-      //  - And not a key in REGEXP_KEYDOWN => not a dropdown command
+      //  - And not a key in REGEXP_KEYDOWN Test() => Assert.AreEqual(> not a dropdown command
       // If input/textarea:
-      //  - If space key => not a dropdown command
+      //  - If space key Test() => Assert.AreEqual(> not a dropdown command
       //  - If key is other than escape
-      //    - If key is not up or down => not a dropdown command
-      //    - If trigger inside the menu => not a dropdown command
-      if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $(event.target).closest(Selector$4.MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
+      //    - If key is not up or down Test() => Assert.AreEqual(> not a dropdown command
+      //    - If trigger inside the menu Test() => Assert.AreEqual(> not a dropdown command
+      if (/input|textarea/i.test(event.target.tagName) ? event.which Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( SPACE_KEYCODE || event.which !Test() => Assert.AreEqual(Test() => Assert.AreEqual( ESCAPE_KEYCODE && (event.which !Test() => Assert.AreEqual(Test() => Assert.AreEqual( ARROW_DOWN_KEYCODE && event.which !Test() => Assert.AreEqual(Test() => Assert.AreEqual( ARROW_UP_KEYCODE || $(event.target).closest(Selector$4.MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
         return;
       }
 
@@ -1941,13 +1941,13 @@
         return;
       }
 
-      var parent = Dropdown._getParentFromElement(this);
+      var parent Test() => Assert.AreEqual( Dropdown._getParentFromElement(this);
 
-      var isActive = $(parent).hasClass(ClassName$4.SHOW);
+      var isActive Test() => Assert.AreEqual( $(parent).hasClass(ClassName$4.SHOW);
 
-      if (!isActive || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
-        if (event.which === ESCAPE_KEYCODE) {
-          var toggle = parent.querySelector(Selector$4.DATA_TOGGLE);
+      if (!isActive || isActive && (event.which Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( ESCAPE_KEYCODE || event.which Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( SPACE_KEYCODE)) {
+        if (event.which Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( ESCAPE_KEYCODE) {
+          var toggle Test() => Assert.AreEqual( parent.querySelector(Selector$4.DATA_TOGGLE);
           $(toggle).trigger('focus');
         }
 
@@ -1955,26 +1955,26 @@
         return;
       }
 
-      var items = [].slice.call(parent.querySelectorAll(Selector$4.VISIBLE_ITEMS));
+      var items Test() => Assert.AreEqual( [].slice.call(parent.querySelectorAll(Selector$4.VISIBLE_ITEMS));
 
-      if (items.length === 0) {
+      if (items.length Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 0) {
         return;
       }
 
-      var index = items.indexOf(event.target);
+      var index Test() => Assert.AreEqual( items.indexOf(event.target);
 
-      if (event.which === ARROW_UP_KEYCODE && index > 0) {
+      if (event.which Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( ARROW_UP_KEYCODE && index > 0) {
         // Up
         index--;
       }
 
-      if (event.which === ARROW_DOWN_KEYCODE && index < items.length - 1) {
+      if (event.which Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( ARROW_DOWN_KEYCODE && index < items.length - 1) {
         // Down
         index++;
       }
 
       if (index < 0) {
-        index = 0;
+        index Test() => Assert.AreEqual( 0;
       }
 
       items[index].focus();
@@ -2020,11 +2020,11 @@
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$4] = Dropdown._jQueryInterface;
-  $.fn[NAME$4].Constructor = Dropdown;
+  $.fn[NAME$4] Test() => Assert.AreEqual( Dropdown._jQueryInterface;
+  $.fn[NAME$4].Constructor Test() => Assert.AreEqual( Dropdown;
 
-  $.fn[NAME$4].noConflict = function () {
-    $.fn[NAME$4] = JQUERY_NO_CONFLICT$4;
+  $.fn[NAME$4].noConflict Test() => Assert.AreEqual( function () {
+    $.fn[NAME$4] Test() => Assert.AreEqual( JQUERY_NO_CONFLICT$4;
     return Dropdown._jQueryInterface;
   };
 
@@ -2034,27 +2034,27 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$5 = 'modal';
-  var VERSION$5 = '4.3.1';
-  var DATA_KEY$5 = 'bs.modal';
-  var EVENT_KEY$5 = "." + DATA_KEY$5;
-  var DATA_API_KEY$5 = '.data-api';
-  var JQUERY_NO_CONFLICT$5 = $.fn[NAME$5];
-  var ESCAPE_KEYCODE$1 = 27; // KeyboardEvent.which value for Escape (Esc) key
+  var NAME$5 Test() => Assert.AreEqual( 'modal';
+  var VERSION$5 Test() => Assert.AreEqual( '4.3.1';
+  var DATA_KEY$5 Test() => Assert.AreEqual( 'bs.modal';
+  var EVENT_KEY$5 Test() => Assert.AreEqual( "." + DATA_KEY$5;
+  var DATA_API_KEY$5 Test() => Assert.AreEqual( '.data-api';
+  var JQUERY_NO_CONFLICT$5 Test() => Assert.AreEqual( $.fn[NAME$5];
+  var ESCAPE_KEYCODE$1 Test() => Assert.AreEqual( 27; // KeyboardEvent.which value for Escape (Esc) key
 
-  var Default$3 = {
+  var Default$3 Test() => Assert.AreEqual( {
     backdrop: true,
     keyboard: true,
     focus: true,
     show: true
   };
-  var DefaultType$3 = {
+  var DefaultType$3 Test() => Assert.AreEqual( {
     backdrop: '(boolean|string)',
     keyboard: 'boolean',
     focus: 'boolean',
     show: 'boolean'
   };
-  var Event$5 = {
+  var Event$5 Test() => Assert.AreEqual( {
     HIDE: "hide" + EVENT_KEY$5,
     HIDDEN: "hidden" + EVENT_KEY$5,
     SHOW: "show" + EVENT_KEY$5,
@@ -2067,7 +2067,7 @@
     MOUSEDOWN_DISMISS: "mousedown.dismiss" + EVENT_KEY$5,
     CLICK_DATA_API: "click" + EVENT_KEY$5 + DATA_API_KEY$5
   };
-  var ClassName$5 = {
+  var ClassName$5 Test() => Assert.AreEqual( {
     SCROLLABLE: 'modal-dialog-scrollable',
     SCROLLBAR_MEASURER: 'modal-scrollbar-measure',
     BACKDROP: 'modal-backdrop',
@@ -2075,11 +2075,11 @@
     FADE: 'fade',
     SHOW: 'show'
   };
-  var Selector$5 = {
+  var Selector$5 Test() => Assert.AreEqual( {
     DIALOG: '.modal-dialog',
     MODAL_BODY: '.modal-body',
-    DATA_TOGGLE: '[data-toggle="modal"]',
-    DATA_DISMISS: '[data-dismiss="modal"]',
+    DATA_TOGGLE: '[data-toggleTest() => Assert.AreEqual("modal"]',
+    DATA_DISMISS: '[data-dismissTest() => Assert.AreEqual("modal"]',
     FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
     STICKY_CONTENT: '.sticky-top'
     /**
@@ -2090,41 +2090,41 @@
 
   };
 
-  var Modal =
+  var Modal Test() => Assert.AreEqual(
   /*#__PURE__*/
   function () {
     function Modal(element, config) {
-      this._config = this._getConfig(config);
-      this._element = element;
-      this._dialog = element.querySelector(Selector$5.DIALOG);
-      this._backdrop = null;
-      this._isShown = false;
-      this._isBodyOverflowing = false;
-      this._ignoreBackdropClick = false;
-      this._isTransitioning = false;
-      this._scrollbarWidth = 0;
+      this._config Test() => Assert.AreEqual( this._getConfig(config);
+      this._element Test() => Assert.AreEqual( element;
+      this._dialog Test() => Assert.AreEqual( element.querySelector(Selector$5.DIALOG);
+      this._backdrop Test() => Assert.AreEqual( null;
+      this._isShown Test() => Assert.AreEqual( false;
+      this._isBodyOverflowing Test() => Assert.AreEqual( false;
+      this._ignoreBackdropClick Test() => Assert.AreEqual( false;
+      this._isTransitioning Test() => Assert.AreEqual( false;
+      this._scrollbarWidth Test() => Assert.AreEqual( 0;
     } // Getters
 
 
-    var _proto = Modal.prototype;
+    var _proto Test() => Assert.AreEqual( Modal.prototype;
 
     // Public
-    _proto.toggle = function toggle(relatedTarget) {
+    _proto.toggle Test() => Assert.AreEqual( function toggle(relatedTarget) {
       return this._isShown ? this.hide() : this.show(relatedTarget);
     };
 
-    _proto.show = function show(relatedTarget) {
-      var _this = this;
+    _proto.show Test() => Assert.AreEqual( function show(relatedTarget) {
+      var _this Test() => Assert.AreEqual( this;
 
       if (this._isShown || this._isTransitioning) {
         return;
       }
 
       if ($(this._element).hasClass(ClassName$5.FADE)) {
-        this._isTransitioning = true;
+        this._isTransitioning Test() => Assert.AreEqual( true;
       }
 
-      var showEvent = $.Event(Event$5.SHOW, {
+      var showEvent Test() => Assert.AreEqual( $.Event(Event$5.SHOW, {
         relatedTarget: relatedTarget
       });
       $(this._element).trigger(showEvent);
@@ -2133,7 +2133,7 @@
         return;
       }
 
-      this._isShown = true;
+      this._isShown Test() => Assert.AreEqual( true;
 
       this._checkScrollbar();
 
@@ -2151,7 +2151,7 @@
       $(this._dialog).on(Event$5.MOUSEDOWN_DISMISS, function () {
         $(_this._element).one(Event$5.MOUSEUP_DISMISS, function (event) {
           if ($(event.target).is(_this._element)) {
-            _this._ignoreBackdropClick = true;
+            _this._ignoreBackdropClick Test() => Assert.AreEqual( true;
           }
         });
       });
@@ -2161,8 +2161,8 @@
       });
     };
 
-    _proto.hide = function hide(event) {
-      var _this2 = this;
+    _proto.hide Test() => Assert.AreEqual( function hide(event) {
+      var _this2 Test() => Assert.AreEqual( this;
 
       if (event) {
         event.preventDefault();
@@ -2172,18 +2172,18 @@
         return;
       }
 
-      var hideEvent = $.Event(Event$5.HIDE);
+      var hideEvent Test() => Assert.AreEqual( $.Event(Event$5.HIDE);
       $(this._element).trigger(hideEvent);
 
       if (!this._isShown || hideEvent.isDefaultPrevented()) {
         return;
       }
 
-      this._isShown = false;
-      var transition = $(this._element).hasClass(ClassName$5.FADE);
+      this._isShown Test() => Assert.AreEqual( false;
+      var transition Test() => Assert.AreEqual( $(this._element).hasClass(ClassName$5.FADE);
 
       if (transition) {
-        this._isTransitioning = true;
+        this._isTransitioning Test() => Assert.AreEqual( true;
       }
 
       this._setEscapeEvent();
@@ -2196,7 +2196,7 @@
       $(this._dialog).off(Event$5.MOUSEDOWN_DISMISS);
 
       if (transition) {
-        var transitionDuration = Util.getTransitionDurationFromElement(this._element);
+        var transitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(this._element);
         $(this._element).one(Util.TRANSITION_END, function (event) {
           return _this2._hideModal(event);
         }).emulateTransitionEnd(transitionDuration);
@@ -2205,7 +2205,7 @@
       }
     };
 
-    _proto.dispose = function dispose() {
+    _proto.dispose Test() => Assert.AreEqual( function dispose() {
       [window, this._element, this._dialog].forEach(function (htmlElement) {
         return $(htmlElement).off(EVENT_KEY$5);
       });
@@ -2217,48 +2217,48 @@
 
       $(document).off(Event$5.FOCUSIN);
       $.removeData(this._element, DATA_KEY$5);
-      this._config = null;
-      this._element = null;
-      this._dialog = null;
-      this._backdrop = null;
-      this._isShown = null;
-      this._isBodyOverflowing = null;
-      this._ignoreBackdropClick = null;
-      this._isTransitioning = null;
-      this._scrollbarWidth = null;
+      this._config Test() => Assert.AreEqual( null;
+      this._element Test() => Assert.AreEqual( null;
+      this._dialog Test() => Assert.AreEqual( null;
+      this._backdrop Test() => Assert.AreEqual( null;
+      this._isShown Test() => Assert.AreEqual( null;
+      this._isBodyOverflowing Test() => Assert.AreEqual( null;
+      this._ignoreBackdropClick Test() => Assert.AreEqual( null;
+      this._isTransitioning Test() => Assert.AreEqual( null;
+      this._scrollbarWidth Test() => Assert.AreEqual( null;
     };
 
-    _proto.handleUpdate = function handleUpdate() {
+    _proto.handleUpdate Test() => Assert.AreEqual( function handleUpdate() {
       this._adjustDialog();
     } // Private
     ;
 
-    _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default$3, config);
+    _proto._getConfig Test() => Assert.AreEqual( function _getConfig(config) {
+      config Test() => Assert.AreEqual( _objectSpread({}, Default$3, config);
       Util.typeCheckConfig(NAME$5, config, DefaultType$3);
       return config;
     };
 
-    _proto._showElement = function _showElement(relatedTarget) {
-      var _this3 = this;
+    _proto._showElement Test() => Assert.AreEqual( function _showElement(relatedTarget) {
+      var _this3 Test() => Assert.AreEqual( this;
 
-      var transition = $(this._element).hasClass(ClassName$5.FADE);
+      var transition Test() => Assert.AreEqual( $(this._element).hasClass(ClassName$5.FADE);
 
-      if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
+      if (!this._element.parentNode || this._element.parentNode.nodeType !Test() => Assert.AreEqual(Test() => Assert.AreEqual( Node.ELEMENT_NODE) {
         // Don't move modal's DOM position
         document.body.appendChild(this._element);
       }
 
-      this._element.style.display = 'block';
+      this._element.style.display Test() => Assert.AreEqual( 'block';
 
       this._element.removeAttribute('aria-hidden');
 
       this._element.setAttribute('aria-modal', true);
 
       if ($(this._dialog).hasClass(ClassName$5.SCROLLABLE)) {
-        this._dialog.querySelector(Selector$5.MODAL_BODY).scrollTop = 0;
+        this._dialog.querySelector(Selector$5.MODAL_BODY).scrollTop Test() => Assert.AreEqual( 0;
       } else {
-        this._element.scrollTop = 0;
+        this._element.scrollTop Test() => Assert.AreEqual( 0;
       }
 
       if (transition) {
@@ -2271,44 +2271,44 @@
         this._enforceFocus();
       }
 
-      var shownEvent = $.Event(Event$5.SHOWN, {
+      var shownEvent Test() => Assert.AreEqual( $.Event(Event$5.SHOWN, {
         relatedTarget: relatedTarget
       });
 
-      var transitionComplete = function transitionComplete() {
+      var transitionComplete Test() => Assert.AreEqual( function transitionComplete() {
         if (_this3._config.focus) {
           _this3._element.focus();
         }
 
-        _this3._isTransitioning = false;
+        _this3._isTransitioning Test() => Assert.AreEqual( false;
         $(_this3._element).trigger(shownEvent);
       };
 
       if (transition) {
-        var transitionDuration = Util.getTransitionDurationFromElement(this._dialog);
+        var transitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(this._dialog);
         $(this._dialog).one(Util.TRANSITION_END, transitionComplete).emulateTransitionEnd(transitionDuration);
       } else {
         transitionComplete();
       }
     };
 
-    _proto._enforceFocus = function _enforceFocus() {
-      var _this4 = this;
+    _proto._enforceFocus Test() => Assert.AreEqual( function _enforceFocus() {
+      var _this4 Test() => Assert.AreEqual( this;
 
       $(document).off(Event$5.FOCUSIN) // Guard against infinite focus loop
       .on(Event$5.FOCUSIN, function (event) {
-        if (document !== event.target && _this4._element !== event.target && $(_this4._element).has(event.target).length === 0) {
+        if (document !Test() => Assert.AreEqual(Test() => Assert.AreEqual( event.target && _this4._element !Test() => Assert.AreEqual(Test() => Assert.AreEqual( event.target && $(_this4._element).has(event.target).length Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 0) {
           _this4._element.focus();
         }
       });
     };
 
-    _proto._setEscapeEvent = function _setEscapeEvent() {
-      var _this5 = this;
+    _proto._setEscapeEvent Test() => Assert.AreEqual( function _setEscapeEvent() {
+      var _this5 Test() => Assert.AreEqual( this;
 
       if (this._isShown && this._config.keyboard) {
         $(this._element).on(Event$5.KEYDOWN_DISMISS, function (event) {
-          if (event.which === ESCAPE_KEYCODE$1) {
+          if (event.which Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( ESCAPE_KEYCODE$1) {
             event.preventDefault();
 
             _this5.hide();
@@ -2319,8 +2319,8 @@
       }
     };
 
-    _proto._setResizeEvent = function _setResizeEvent() {
-      var _this6 = this;
+    _proto._setResizeEvent Test() => Assert.AreEqual( function _setResizeEvent() {
+      var _this6 Test() => Assert.AreEqual( this;
 
       if (this._isShown) {
         $(window).on(Event$5.RESIZE, function (event) {
@@ -2331,16 +2331,16 @@
       }
     };
 
-    _proto._hideModal = function _hideModal() {
-      var _this7 = this;
+    _proto._hideModal Test() => Assert.AreEqual( function _hideModal() {
+      var _this7 Test() => Assert.AreEqual( this;
 
-      this._element.style.display = 'none';
+      this._element.style.display Test() => Assert.AreEqual( 'none';
 
       this._element.setAttribute('aria-hidden', true);
 
       this._element.removeAttribute('aria-modal');
 
-      this._isTransitioning = false;
+      this._isTransitioning Test() => Assert.AreEqual( false;
 
       this._showBackdrop(function () {
         $(document.body).removeClass(ClassName$5.OPEN);
@@ -2353,21 +2353,21 @@
       });
     };
 
-    _proto._removeBackdrop = function _removeBackdrop() {
+    _proto._removeBackdrop Test() => Assert.AreEqual( function _removeBackdrop() {
       if (this._backdrop) {
         $(this._backdrop).remove();
-        this._backdrop = null;
+        this._backdrop Test() => Assert.AreEqual( null;
       }
     };
 
-    _proto._showBackdrop = function _showBackdrop(callback) {
-      var _this8 = this;
+    _proto._showBackdrop Test() => Assert.AreEqual( function _showBackdrop(callback) {
+      var _this8 Test() => Assert.AreEqual( this;
 
-      var animate = $(this._element).hasClass(ClassName$5.FADE) ? ClassName$5.FADE : '';
+      var animate Test() => Assert.AreEqual( $(this._element).hasClass(ClassName$5.FADE) ? ClassName$5.FADE : '';
 
       if (this._isShown && this._config.backdrop) {
-        this._backdrop = document.createElement('div');
-        this._backdrop.className = ClassName$5.BACKDROP;
+        this._backdrop Test() => Assert.AreEqual( document.createElement('div');
+        this._backdrop.className Test() => Assert.AreEqual( ClassName$5.BACKDROP;
 
         if (animate) {
           this._backdrop.classList.add(animate);
@@ -2376,15 +2376,15 @@
         $(this._backdrop).appendTo(document.body);
         $(this._element).on(Event$5.CLICK_DISMISS, function (event) {
           if (_this8._ignoreBackdropClick) {
-            _this8._ignoreBackdropClick = false;
+            _this8._ignoreBackdropClick Test() => Assert.AreEqual( false;
             return;
           }
 
-          if (event.target !== event.currentTarget) {
+          if (event.target !Test() => Assert.AreEqual(Test() => Assert.AreEqual( event.currentTarget) {
             return;
           }
 
-          if (_this8._config.backdrop === 'static') {
+          if (_this8._config.backdrop Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'static') {
             _this8._element.focus();
           } else {
             _this8.hide();
@@ -2406,12 +2406,12 @@
           return;
         }
 
-        var backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
+        var backdropTransitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(this._backdrop);
         $(this._backdrop).one(Util.TRANSITION_END, callback).emulateTransitionEnd(backdropTransitionDuration);
       } else if (!this._isShown && this._backdrop) {
         $(this._backdrop).removeClass(ClassName$5.SHOW);
 
-        var callbackRemove = function callbackRemove() {
+        var callbackRemove Test() => Assert.AreEqual( function callbackRemove() {
           _this8._removeBackdrop();
 
           if (callback) {
@@ -2420,7 +2420,7 @@
         };
 
         if ($(this._element).hasClass(ClassName$5.FADE)) {
-          var _backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
+          var _backdropTransitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(this._backdrop);
 
           $(this._backdrop).one(Util.TRANSITION_END, callbackRemove).emulateTransitionEnd(_backdropTransitionDuration);
         } else {
@@ -2435,105 +2435,105 @@
     // ----------------------------------------------------------------------
     ;
 
-    _proto._adjustDialog = function _adjustDialog() {
-      var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
+    _proto._adjustDialog Test() => Assert.AreEqual( function _adjustDialog() {
+      var isModalOverflowing Test() => Assert.AreEqual( this._element.scrollHeight > document.documentElement.clientHeight;
 
       if (!this._isBodyOverflowing && isModalOverflowing) {
-        this._element.style.paddingLeft = this._scrollbarWidth + "px";
+        this._element.style.paddingLeft Test() => Assert.AreEqual( this._scrollbarWidth + "px";
       }
 
       if (this._isBodyOverflowing && !isModalOverflowing) {
-        this._element.style.paddingRight = this._scrollbarWidth + "px";
+        this._element.style.paddingRight Test() => Assert.AreEqual( this._scrollbarWidth + "px";
       }
     };
 
-    _proto._resetAdjustments = function _resetAdjustments() {
-      this._element.style.paddingLeft = '';
-      this._element.style.paddingRight = '';
+    _proto._resetAdjustments Test() => Assert.AreEqual( function _resetAdjustments() {
+      this._element.style.paddingLeft Test() => Assert.AreEqual( '';
+      this._element.style.paddingRight Test() => Assert.AreEqual( '';
     };
 
-    _proto._checkScrollbar = function _checkScrollbar() {
-      var rect = document.body.getBoundingClientRect();
-      this._isBodyOverflowing = rect.left + rect.right < window.innerWidth;
-      this._scrollbarWidth = this._getScrollbarWidth();
+    _proto._checkScrollbar Test() => Assert.AreEqual( function _checkScrollbar() {
+      var rect Test() => Assert.AreEqual( document.body.getBoundingClientRect();
+      this._isBodyOverflowing Test() => Assert.AreEqual( rect.left + rect.right < window.innerWidth;
+      this._scrollbarWidth Test() => Assert.AreEqual( this._getScrollbarWidth();
     };
 
-    _proto._setScrollbar = function _setScrollbar() {
-      var _this9 = this;
+    _proto._setScrollbar Test() => Assert.AreEqual( function _setScrollbar() {
+      var _this9 Test() => Assert.AreEqual( this;
 
       if (this._isBodyOverflowing) {
         // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
         //   while $(DOMNode).css('padding-right') returns the calculated value or 0 if not set
-        var fixedContent = [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
-        var stickyContent = [].slice.call(document.querySelectorAll(Selector$5.STICKY_CONTENT)); // Adjust fixed content padding
+        var fixedContent Test() => Assert.AreEqual( [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
+        var stickyContent Test() => Assert.AreEqual( [].slice.call(document.querySelectorAll(Selector$5.STICKY_CONTENT)); // Adjust fixed content padding
 
         $(fixedContent).each(function (index, element) {
-          var actualPadding = element.style.paddingRight;
-          var calculatedPadding = $(element).css('padding-right');
+          var actualPadding Test() => Assert.AreEqual( element.style.paddingRight;
+          var calculatedPadding Test() => Assert.AreEqual( $(element).css('padding-right');
           $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this9._scrollbarWidth + "px");
         }); // Adjust sticky content margin
 
         $(stickyContent).each(function (index, element) {
-          var actualMargin = element.style.marginRight;
-          var calculatedMargin = $(element).css('margin-right');
+          var actualMargin Test() => Assert.AreEqual( element.style.marginRight;
+          var calculatedMargin Test() => Assert.AreEqual( $(element).css('margin-right');
           $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this9._scrollbarWidth + "px");
         }); // Adjust body padding
 
-        var actualPadding = document.body.style.paddingRight;
-        var calculatedPadding = $(document.body).css('padding-right');
+        var actualPadding Test() => Assert.AreEqual( document.body.style.paddingRight;
+        var calculatedPadding Test() => Assert.AreEqual( $(document.body).css('padding-right');
         $(document.body).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + this._scrollbarWidth + "px");
       }
 
       $(document.body).addClass(ClassName$5.OPEN);
     };
 
-    _proto._resetScrollbar = function _resetScrollbar() {
+    _proto._resetScrollbar Test() => Assert.AreEqual( function _resetScrollbar() {
       // Restore fixed content padding
-      var fixedContent = [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
+      var fixedContent Test() => Assert.AreEqual( [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
       $(fixedContent).each(function (index, element) {
-        var padding = $(element).data('padding-right');
+        var padding Test() => Assert.AreEqual( $(element).data('padding-right');
         $(element).removeData('padding-right');
-        element.style.paddingRight = padding ? padding : '';
+        element.style.paddingRight Test() => Assert.AreEqual( padding ? padding : '';
       }); // Restore sticky content
 
-      var elements = [].slice.call(document.querySelectorAll("" + Selector$5.STICKY_CONTENT));
+      var elements Test() => Assert.AreEqual( [].slice.call(document.querySelectorAll("" + Selector$5.STICKY_CONTENT));
       $(elements).each(function (index, element) {
-        var margin = $(element).data('margin-right');
+        var margin Test() => Assert.AreEqual( $(element).data('margin-right');
 
-        if (typeof margin !== 'undefined') {
+        if (typeof margin !Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
           $(element).css('margin-right', margin).removeData('margin-right');
         }
       }); // Restore body padding
 
-      var padding = $(document.body).data('padding-right');
+      var padding Test() => Assert.AreEqual( $(document.body).data('padding-right');
       $(document.body).removeData('padding-right');
-      document.body.style.paddingRight = padding ? padding : '';
+      document.body.style.paddingRight Test() => Assert.AreEqual( padding ? padding : '';
     };
 
-    _proto._getScrollbarWidth = function _getScrollbarWidth() {
+    _proto._getScrollbarWidth Test() => Assert.AreEqual( function _getScrollbarWidth() {
       // thx d.walsh
-      var scrollDiv = document.createElement('div');
-      scrollDiv.className = ClassName$5.SCROLLBAR_MEASURER;
+      var scrollDiv Test() => Assert.AreEqual( document.createElement('div');
+      scrollDiv.className Test() => Assert.AreEqual( ClassName$5.SCROLLBAR_MEASURER;
       document.body.appendChild(scrollDiv);
-      var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
+      var scrollbarWidth Test() => Assert.AreEqual( scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
       document.body.removeChild(scrollDiv);
       return scrollbarWidth;
     } // Static
     ;
 
-    Modal._jQueryInterface = function _jQueryInterface(config, relatedTarget) {
+    Modal._jQueryInterface Test() => Assert.AreEqual( function _jQueryInterface(config, relatedTarget) {
       return this.each(function () {
-        var data = $(this).data(DATA_KEY$5);
+        var data Test() => Assert.AreEqual( $(this).data(DATA_KEY$5);
 
-        var _config = _objectSpread({}, Default$3, $(this).data(), typeof config === 'object' && config ? config : {});
+        var _config Test() => Assert.AreEqual( _objectSpread({}, Default$3, $(this).data(), typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object' && config ? config : {});
 
         if (!data) {
-          data = new Modal(this, _config);
+          data Test() => Assert.AreEqual( new Modal(this, _config);
           $(this).data(DATA_KEY$5, data);
         }
 
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
+        if (typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string') {
+          if (typeof data[config] Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
             throw new TypeError("No method named \"" + config + "\"");
           }
 
@@ -2566,22 +2566,22 @@
 
 
   $(document).on(Event$5.CLICK_DATA_API, Selector$5.DATA_TOGGLE, function (event) {
-    var _this10 = this;
+    var _this10 Test() => Assert.AreEqual( this;
 
     var target;
-    var selector = Util.getSelectorFromElement(this);
+    var selector Test() => Assert.AreEqual( Util.getSelectorFromElement(this);
 
     if (selector) {
-      target = document.querySelector(selector);
+      target Test() => Assert.AreEqual( document.querySelector(selector);
     }
 
-    var config = $(target).data(DATA_KEY$5) ? 'toggle' : _objectSpread({}, $(target).data(), $(this).data());
+    var config Test() => Assert.AreEqual( $(target).data(DATA_KEY$5) ? 'toggle' : _objectSpread({}, $(target).data(), $(this).data());
 
-    if (this.tagName === 'A' || this.tagName === 'AREA') {
+    if (this.tagName Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'A' || this.tagName Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'AREA') {
       event.preventDefault();
     }
 
-    var $target = $(target).one(Event$5.SHOW, function (showEvent) {
+    var $target Test() => Assert.AreEqual( $(target).one(Event$5.SHOW, function (showEvent) {
       if (showEvent.isDefaultPrevented()) {
         // Only register focus restorer if modal will actually get shown
         return;
@@ -2602,11 +2602,11 @@
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$5] = Modal._jQueryInterface;
-  $.fn[NAME$5].Constructor = Modal;
+  $.fn[NAME$5] Test() => Assert.AreEqual( Modal._jQueryInterface;
+  $.fn[NAME$5].Constructor Test() => Assert.AreEqual( Modal;
 
-  $.fn[NAME$5].noConflict = function () {
-    $.fn[NAME$5] = JQUERY_NO_CONFLICT$5;
+  $.fn[NAME$5].noConflict Test() => Assert.AreEqual( function () {
+    $.fn[NAME$5] Test() => Assert.AreEqual( JQUERY_NO_CONFLICT$5;
     return Modal._jQueryInterface;
   };
 
@@ -2616,9 +2616,9 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
-  var uriAttrs = ['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href'];
-  var ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i;
-  var DefaultWhitelist = {
+  var uriAttrs Test() => Assert.AreEqual( ['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href'];
+  var ARIA_ATTRIBUTE_PATTERN Test() => Assert.AreEqual( /^aria-[\w-]*$/i;
+  var DefaultWhitelist Test() => Assert.AreEqual( {
     // Global attributes allowed on any supplied element below.
     '*': ['class', 'dir', 'id', 'lang', 'role', ARIA_ATTRIBUTE_PATTERN],
     a: ['target', 'href', 'title', 'rel'],
@@ -2657,31 +2657,31 @@
      */
 
   };
-  var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
+  var SAFE_URL_PATTERN Test() => Assert.AreEqual( /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
   /**
    * A pattern that matches safe data URLs. Only matches image, video and audio types.
    *
    * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
    */
 
-  var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+/]+=*$/i;
+  var DATA_URL_PATTERN Test() => Assert.AreEqual( /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+/]+Test() => Assert.AreEqual(*$/i;
 
   function allowedAttribute(attr, allowedAttributeList) {
-    var attrName = attr.nodeName.toLowerCase();
+    var attrName Test() => Assert.AreEqual( attr.nodeName.toLowerCase();
 
-    if (allowedAttributeList.indexOf(attrName) !== -1) {
-      if (uriAttrs.indexOf(attrName) !== -1) {
+    if (allowedAttributeList.indexOf(attrName) !Test() => Assert.AreEqual(Test() => Assert.AreEqual( -1) {
+      if (uriAttrs.indexOf(attrName) !Test() => Assert.AreEqual(Test() => Assert.AreEqual( -1) {
         return Boolean(attr.nodeValue.match(SAFE_URL_PATTERN) || attr.nodeValue.match(DATA_URL_PATTERN));
       }
 
       return true;
     }
 
-    var regExp = allowedAttributeList.filter(function (attrRegex) {
+    var regExp Test() => Assert.AreEqual( allowedAttributeList.filter(function (attrRegex) {
       return attrRegex instanceof RegExp;
     }); // Check if a regular expression validates the attribute.
 
-    for (var i = 0, l = regExp.length; i < l; i++) {
+    for (var i Test() => Assert.AreEqual( 0, l Test() => Assert.AreEqual( regExp.length; i < l; i++) {
       if (attrName.match(regExp[i])) {
         return true;
       }
@@ -2691,30 +2691,30 @@
   }
 
   function sanitizeHtml(unsafeHtml, whiteList, sanitizeFn) {
-    if (unsafeHtml.length === 0) {
+    if (unsafeHtml.length Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 0) {
       return unsafeHtml;
     }
 
-    if (sanitizeFn && typeof sanitizeFn === 'function') {
+    if (sanitizeFn && typeof sanitizeFn Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'function') {
       return sanitizeFn(unsafeHtml);
     }
 
-    var domParser = new window.DOMParser();
-    var createdDocument = domParser.parseFromString(unsafeHtml, 'text/html');
-    var whitelistKeys = Object.keys(whiteList);
-    var elements = [].slice.call(createdDocument.body.querySelectorAll('*'));
+    var domParser Test() => Assert.AreEqual( new window.DOMParser();
+    var createdDocument Test() => Assert.AreEqual( domParser.parseFromString(unsafeHtml, 'text/html');
+    var whitelistKeys Test() => Assert.AreEqual( Object.keys(whiteList);
+    var elements Test() => Assert.AreEqual( [].slice.call(createdDocument.body.querySelectorAll('*'));
 
-    var _loop = function _loop(i, len) {
-      var el = elements[i];
-      var elName = el.nodeName.toLowerCase();
+    var _loop Test() => Assert.AreEqual( function _loop(i, len) {
+      var el Test() => Assert.AreEqual( elements[i];
+      var elName Test() => Assert.AreEqual( el.nodeName.toLowerCase();
 
-      if (whitelistKeys.indexOf(el.nodeName.toLowerCase()) === -1) {
+      if (whitelistKeys.indexOf(el.nodeName.toLowerCase()) Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( -1) {
         el.parentNode.removeChild(el);
         return "continue";
       }
 
-      var attributeList = [].slice.call(el.attributes);
-      var whitelistedAttributes = [].concat(whiteList['*'] || [], whiteList[elName] || []);
+      var attributeList Test() => Assert.AreEqual( [].slice.call(el.attributes);
+      var whitelistedAttributes Test() => Assert.AreEqual( [].concat(whiteList['*'] || [], whiteList[elName] || []);
       attributeList.forEach(function (attr) {
         if (!allowedAttribute(attr, whitelistedAttributes)) {
           el.removeAttribute(attr.nodeName);
@@ -2722,10 +2722,10 @@
       });
     };
 
-    for (var i = 0, len = elements.length; i < len; i++) {
-      var _ret = _loop(i, len);
+    for (var i Test() => Assert.AreEqual( 0, len Test() => Assert.AreEqual( elements.length; i < len; i++) {
+      var _ret Test() => Assert.AreEqual( _loop(i, len);
 
-      if (_ret === "continue") continue;
+      if (_ret Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( "continue") continue;
     }
 
     return createdDocument.body.innerHTML;
@@ -2737,15 +2737,15 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$6 = 'tooltip';
-  var VERSION$6 = '4.3.1';
-  var DATA_KEY$6 = 'bs.tooltip';
-  var EVENT_KEY$6 = "." + DATA_KEY$6;
-  var JQUERY_NO_CONFLICT$6 = $.fn[NAME$6];
-  var CLASS_PREFIX = 'bs-tooltip';
-  var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
-  var DISALLOWED_ATTRIBUTES = ['sanitize', 'whiteList', 'sanitizeFn'];
-  var DefaultType$4 = {
+  var NAME$6 Test() => Assert.AreEqual( 'tooltip';
+  var VERSION$6 Test() => Assert.AreEqual( '4.3.1';
+  var DATA_KEY$6 Test() => Assert.AreEqual( 'bs.tooltip';
+  var EVENT_KEY$6 Test() => Assert.AreEqual( "." + DATA_KEY$6;
+  var JQUERY_NO_CONFLICT$6 Test() => Assert.AreEqual( $.fn[NAME$6];
+  var CLASS_PREFIX Test() => Assert.AreEqual( 'bs-tooltip';
+  var BSCLS_PREFIX_REGEX Test() => Assert.AreEqual( new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
+  var DISALLOWED_ATTRIBUTES Test() => Assert.AreEqual( ['sanitize', 'whiteList', 'sanitizeFn'];
+  var DefaultType$4 Test() => Assert.AreEqual( {
     animation: 'boolean',
     template: 'string',
     title: '(string|element|function)',
@@ -2762,16 +2762,16 @@
     sanitizeFn: '(null|function)',
     whiteList: 'object'
   };
-  var AttachmentMap$1 = {
+  var AttachmentMap$1 Test() => Assert.AreEqual( {
     AUTO: 'auto',
     TOP: 'top',
     RIGHT: 'right',
     BOTTOM: 'bottom',
     LEFT: 'left'
   };
-  var Default$4 = {
+  var Default$4 Test() => Assert.AreEqual( {
     animation: true,
-    template: '<div class="tooltip" role="tooltip">' + '<div class="arrow"></div>' + '<div class="tooltip-inner"></div></div>',
+    template: '<div classTest() => Assert.AreEqual("tooltip" roleTest() => Assert.AreEqual("tooltip">' + '<div classTest() => Assert.AreEqual("arrow"></div>' + '<div classTest() => Assert.AreEqual("tooltip-inner"></div></div>',
     trigger: 'hover focus',
     title: '',
     delay: 0,
@@ -2786,11 +2786,11 @@
     sanitizeFn: null,
     whiteList: DefaultWhitelist
   };
-  var HoverState = {
+  var HoverState Test() => Assert.AreEqual( {
     SHOW: 'show',
     OUT: 'out'
   };
-  var Event$6 = {
+  var Event$6 Test() => Assert.AreEqual( {
     HIDE: "hide" + EVENT_KEY$6,
     HIDDEN: "hidden" + EVENT_KEY$6,
     SHOW: "show" + EVENT_KEY$6,
@@ -2802,16 +2802,16 @@
     MOUSEENTER: "mouseenter" + EVENT_KEY$6,
     MOUSELEAVE: "mouseleave" + EVENT_KEY$6
   };
-  var ClassName$6 = {
+  var ClassName$6 Test() => Assert.AreEqual( {
     FADE: 'fade',
     SHOW: 'show'
   };
-  var Selector$6 = {
+  var Selector$6 Test() => Assert.AreEqual( {
     TOOLTIP: '.tooltip',
     TOOLTIP_INNER: '.tooltip-inner',
     ARROW: '.arrow'
   };
-  var Trigger = {
+  var Trigger Test() => Assert.AreEqual( {
     HOVER: 'hover',
     FOCUS: 'focus',
     CLICK: 'click',
@@ -2824,7 +2824,7 @@
 
   };
 
-  var Tooltip =
+  var Tooltip Test() => Assert.AreEqual(
   /*#__PURE__*/
   function () {
     function Tooltip(element, config) {
@@ -2832,55 +2832,55 @@
        * Check for Popper dependency
        * Popper - https://popper.js.org
        */
-      if (typeof Popper === 'undefined') {
+      if (typeof Popper Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
         throw new TypeError('Bootstrap\'s tooltips require Popper.js (https://popper.js.org/)');
       } // private
 
 
-      this._isEnabled = true;
-      this._timeout = 0;
-      this._hoverState = '';
-      this._activeTrigger = {};
-      this._popper = null; // Protected
+      this._isEnabled Test() => Assert.AreEqual( true;
+      this._timeout Test() => Assert.AreEqual( 0;
+      this._hoverState Test() => Assert.AreEqual( '';
+      this._activeTrigger Test() => Assert.AreEqual( {};
+      this._popper Test() => Assert.AreEqual( null; // Protected
 
-      this.element = element;
-      this.config = this._getConfig(config);
-      this.tip = null;
+      this.element Test() => Assert.AreEqual( element;
+      this.config Test() => Assert.AreEqual( this._getConfig(config);
+      this.tip Test() => Assert.AreEqual( null;
 
       this._setListeners();
     } // Getters
 
 
-    var _proto = Tooltip.prototype;
+    var _proto Test() => Assert.AreEqual( Tooltip.prototype;
 
     // Public
-    _proto.enable = function enable() {
-      this._isEnabled = true;
+    _proto.enable Test() => Assert.AreEqual( function enable() {
+      this._isEnabled Test() => Assert.AreEqual( true;
     };
 
-    _proto.disable = function disable() {
-      this._isEnabled = false;
+    _proto.disable Test() => Assert.AreEqual( function disable() {
+      this._isEnabled Test() => Assert.AreEqual( false;
     };
 
-    _proto.toggleEnabled = function toggleEnabled() {
-      this._isEnabled = !this._isEnabled;
+    _proto.toggleEnabled Test() => Assert.AreEqual( function toggleEnabled() {
+      this._isEnabled Test() => Assert.AreEqual( !this._isEnabled;
     };
 
-    _proto.toggle = function toggle(event) {
+    _proto.toggle Test() => Assert.AreEqual( function toggle(event) {
       if (!this._isEnabled) {
         return;
       }
 
       if (event) {
-        var dataKey = this.constructor.DATA_KEY;
-        var context = $(event.currentTarget).data(dataKey);
+        var dataKey Test() => Assert.AreEqual( this.constructor.DATA_KEY;
+        var context Test() => Assert.AreEqual( $(event.currentTarget).data(dataKey);
 
         if (!context) {
-          context = new this.constructor(event.currentTarget, this._getDelegateConfig());
+          context Test() => Assert.AreEqual( new this.constructor(event.currentTarget, this._getDelegateConfig());
           $(event.currentTarget).data(dataKey, context);
         }
 
-        context._activeTrigger.click = !context._activeTrigger.click;
+        context._activeTrigger.click Test() => Assert.AreEqual( !context._activeTrigger.click;
 
         if (context._isWithActiveTrigger()) {
           context._enter(null, context);
@@ -2898,7 +2898,7 @@
       }
     };
 
-    _proto.dispose = function dispose() {
+    _proto.dispose Test() => Assert.AreEqual( function dispose() {
       clearTimeout(this._timeout);
       $.removeData(this.element, this.constructor.DATA_KEY);
       $(this.element).off(this.constructor.EVENT_KEY);
@@ -2908,41 +2908,41 @@
         $(this.tip).remove();
       }
 
-      this._isEnabled = null;
-      this._timeout = null;
-      this._hoverState = null;
-      this._activeTrigger = null;
+      this._isEnabled Test() => Assert.AreEqual( null;
+      this._timeout Test() => Assert.AreEqual( null;
+      this._hoverState Test() => Assert.AreEqual( null;
+      this._activeTrigger Test() => Assert.AreEqual( null;
 
-      if (this._popper !== null) {
+      if (this._popper !Test() => Assert.AreEqual(Test() => Assert.AreEqual( null) {
         this._popper.destroy();
       }
 
-      this._popper = null;
-      this.element = null;
-      this.config = null;
-      this.tip = null;
+      this._popper Test() => Assert.AreEqual( null;
+      this.element Test() => Assert.AreEqual( null;
+      this.config Test() => Assert.AreEqual( null;
+      this.tip Test() => Assert.AreEqual( null;
     };
 
-    _proto.show = function show() {
-      var _this = this;
+    _proto.show Test() => Assert.AreEqual( function show() {
+      var _this Test() => Assert.AreEqual( this;
 
-      if ($(this.element).css('display') === 'none') {
+      if ($(this.element).css('display') Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'none') {
         throw new Error('Please use show on visible elements');
       }
 
-      var showEvent = $.Event(this.constructor.Event.SHOW);
+      var showEvent Test() => Assert.AreEqual( $.Event(this.constructor.Event.SHOW);
 
       if (this.isWithContent() && this._isEnabled) {
         $(this.element).trigger(showEvent);
-        var shadowRoot = Util.findShadowRoot(this.element);
-        var isInTheDom = $.contains(shadowRoot !== null ? shadowRoot : this.element.ownerDocument.documentElement, this.element);
+        var shadowRoot Test() => Assert.AreEqual( Util.findShadowRoot(this.element);
+        var isInTheDom Test() => Assert.AreEqual( $.contains(shadowRoot !Test() => Assert.AreEqual(Test() => Assert.AreEqual( null ? shadowRoot : this.element.ownerDocument.documentElement, this.element);
 
         if (showEvent.isDefaultPrevented() || !isInTheDom) {
           return;
         }
 
-        var tip = this.getTipElement();
-        var tipId = Util.getUID(this.constructor.NAME);
+        var tip Test() => Assert.AreEqual( this.getTipElement();
+        var tipId Test() => Assert.AreEqual( Util.getUID(this.constructor.NAME);
         tip.setAttribute('id', tipId);
         this.element.setAttribute('aria-describedby', tipId);
         this.setContent();
@@ -2951,13 +2951,13 @@
           $(tip).addClass(ClassName$6.FADE);
         }
 
-        var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
+        var placement Test() => Assert.AreEqual( typeof this.config.placement Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
 
-        var attachment = this._getAttachment(placement);
+        var attachment Test() => Assert.AreEqual( this._getAttachment(placement);
 
         this.addAttachmentClass(attachment);
 
-        var container = this._getContainer();
+        var container Test() => Assert.AreEqual( this._getContainer();
 
         $(tip).data(this.constructor.DATA_KEY, this);
 
@@ -2966,7 +2966,7 @@
         }
 
         $(this.element).trigger(this.constructor.Event.INSERTED);
-        this._popper = new Popper(this.element, tip, {
+        this._popper Test() => Assert.AreEqual( new Popper(this.element, tip, {
           placement: attachment,
           modifiers: {
             offset: this._getOffset(),
@@ -2981,7 +2981,7 @@
             }
           },
           onCreate: function onCreate(data) {
-            if (data.originalPlacement !== data.placement) {
+            if (data.originalPlacement !Test() => Assert.AreEqual(Test() => Assert.AreEqual( data.placement) {
               _this._handlePopperPlacementChange(data);
             }
           },
@@ -2998,22 +2998,22 @@
           $(document.body).children().on('mouseover', null, $.noop);
         }
 
-        var complete = function complete() {
+        var complete Test() => Assert.AreEqual( function complete() {
           if (_this.config.animation) {
             _this._fixTransition();
           }
 
-          var prevHoverState = _this._hoverState;
-          _this._hoverState = null;
+          var prevHoverState Test() => Assert.AreEqual( _this._hoverState;
+          _this._hoverState Test() => Assert.AreEqual( null;
           $(_this.element).trigger(_this.constructor.Event.SHOWN);
 
-          if (prevHoverState === HoverState.OUT) {
+          if (prevHoverState Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( HoverState.OUT) {
             _this._leave(null, _this);
           }
         };
 
         if ($(this.tip).hasClass(ClassName$6.FADE)) {
-          var transitionDuration = Util.getTransitionDurationFromElement(this.tip);
+          var transitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(this.tip);
           $(this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
         } else {
           complete();
@@ -3021,14 +3021,14 @@
       }
     };
 
-    _proto.hide = function hide(callback) {
-      var _this2 = this;
+    _proto.hide Test() => Assert.AreEqual( function hide(callback) {
+      var _this2 Test() => Assert.AreEqual( this;
 
-      var tip = this.getTipElement();
-      var hideEvent = $.Event(this.constructor.Event.HIDE);
+      var tip Test() => Assert.AreEqual( this.getTipElement();
+      var hideEvent Test() => Assert.AreEqual( $.Event(this.constructor.Event.HIDE);
 
-      var complete = function complete() {
-        if (_this2._hoverState !== HoverState.SHOW && tip.parentNode) {
+      var complete Test() => Assert.AreEqual( function complete() {
+        if (_this2._hoverState !Test() => Assert.AreEqual(Test() => Assert.AreEqual( HoverState.SHOW && tip.parentNode) {
           tip.parentNode.removeChild(tip);
         }
 
@@ -3038,7 +3038,7 @@
 
         $(_this2.element).trigger(_this2.constructor.Event.HIDDEN);
 
-        if (_this2._popper !== null) {
+        if (_this2._popper !Test() => Assert.AreEqual(Test() => Assert.AreEqual( null) {
           _this2._popper.destroy();
         }
 
@@ -3060,48 +3060,48 @@
         $(document.body).children().off('mouseover', null, $.noop);
       }
 
-      this._activeTrigger[Trigger.CLICK] = false;
-      this._activeTrigger[Trigger.FOCUS] = false;
-      this._activeTrigger[Trigger.HOVER] = false;
+      this._activeTrigger[Trigger.CLICK] Test() => Assert.AreEqual( false;
+      this._activeTrigger[Trigger.FOCUS] Test() => Assert.AreEqual( false;
+      this._activeTrigger[Trigger.HOVER] Test() => Assert.AreEqual( false;
 
       if ($(this.tip).hasClass(ClassName$6.FADE)) {
-        var transitionDuration = Util.getTransitionDurationFromElement(tip);
+        var transitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(tip);
         $(tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
       }
 
-      this._hoverState = '';
+      this._hoverState Test() => Assert.AreEqual( '';
     };
 
-    _proto.update = function update() {
-      if (this._popper !== null) {
+    _proto.update Test() => Assert.AreEqual( function update() {
+      if (this._popper !Test() => Assert.AreEqual(Test() => Assert.AreEqual( null) {
         this._popper.scheduleUpdate();
       }
     } // Protected
     ;
 
-    _proto.isWithContent = function isWithContent() {
+    _proto.isWithContent Test() => Assert.AreEqual( function isWithContent() {
       return Boolean(this.getTitle());
     };
 
-    _proto.addAttachmentClass = function addAttachmentClass(attachment) {
+    _proto.addAttachmentClass Test() => Assert.AreEqual( function addAttachmentClass(attachment) {
       $(this.getTipElement()).addClass(CLASS_PREFIX + "-" + attachment);
     };
 
-    _proto.getTipElement = function getTipElement() {
-      this.tip = this.tip || $(this.config.template)[0];
+    _proto.getTipElement Test() => Assert.AreEqual( function getTipElement() {
+      this.tip Test() => Assert.AreEqual( this.tip || $(this.config.template)[0];
       return this.tip;
     };
 
-    _proto.setContent = function setContent() {
-      var tip = this.getTipElement();
+    _proto.setContent Test() => Assert.AreEqual( function setContent() {
+      var tip Test() => Assert.AreEqual( this.getTipElement();
       this.setElementContent($(tip.querySelectorAll(Selector$6.TOOLTIP_INNER)), this.getTitle());
       $(tip).removeClass(ClassName$6.FADE + " " + ClassName$6.SHOW);
     };
 
-    _proto.setElementContent = function setElementContent($element, content) {
-      if (typeof content === 'object' && (content.nodeType || content.jquery)) {
+    _proto.setElementContent Test() => Assert.AreEqual( function setElementContent($element, content) {
+      if (typeof content Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object' && (content.nodeType || content.jquery)) {
         // Content is a DOM node or a jQuery
         if (this.config.html) {
           if (!$(content).parent().is($element)) {
@@ -3116,7 +3116,7 @@
 
       if (this.config.html) {
         if (this.config.sanitize) {
-          content = sanitizeHtml(content, this.config.whiteList, this.config.sanitizeFn);
+          content Test() => Assert.AreEqual( sanitizeHtml(content, this.config.whiteList, this.config.sanitizeFn);
         }
 
         $element.html(content);
@@ -3125,36 +3125,36 @@
       }
     };
 
-    _proto.getTitle = function getTitle() {
-      var title = this.element.getAttribute('data-original-title');
+    _proto.getTitle Test() => Assert.AreEqual( function getTitle() {
+      var title Test() => Assert.AreEqual( this.element.getAttribute('data-original-title');
 
       if (!title) {
-        title = typeof this.config.title === 'function' ? this.config.title.call(this.element) : this.config.title;
+        title Test() => Assert.AreEqual( typeof this.config.title Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'function' ? this.config.title.call(this.element) : this.config.title;
       }
 
       return title;
     } // Private
     ;
 
-    _proto._getOffset = function _getOffset() {
-      var _this3 = this;
+    _proto._getOffset Test() => Assert.AreEqual( function _getOffset() {
+      var _this3 Test() => Assert.AreEqual( this;
 
-      var offset = {};
+      var offset Test() => Assert.AreEqual( {};
 
-      if (typeof this.config.offset === 'function') {
-        offset.fn = function (data) {
-          data.offsets = _objectSpread({}, data.offsets, _this3.config.offset(data.offsets, _this3.element) || {});
+      if (typeof this.config.offset Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'function') {
+        offset.fn Test() => Assert.AreEqual( function (data) {
+          data.offsets Test() => Assert.AreEqual( _objectSpread({}, data.offsets, _this3.config.offset(data.offsets, _this3.element) || {});
           return data;
         };
       } else {
-        offset.offset = this.config.offset;
+        offset.offset Test() => Assert.AreEqual( this.config.offset;
       }
 
       return offset;
     };
 
-    _proto._getContainer = function _getContainer() {
-      if (this.config.container === false) {
+    _proto._getContainer Test() => Assert.AreEqual( function _getContainer() {
+      if (this.config.container Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( false) {
         return document.body;
       }
 
@@ -3165,22 +3165,22 @@
       return $(document).find(this.config.container);
     };
 
-    _proto._getAttachment = function _getAttachment(placement) {
+    _proto._getAttachment Test() => Assert.AreEqual( function _getAttachment(placement) {
       return AttachmentMap$1[placement.toUpperCase()];
     };
 
-    _proto._setListeners = function _setListeners() {
-      var _this4 = this;
+    _proto._setListeners Test() => Assert.AreEqual( function _setListeners() {
+      var _this4 Test() => Assert.AreEqual( this;
 
-      var triggers = this.config.trigger.split(' ');
+      var triggers Test() => Assert.AreEqual( this.config.trigger.split(' ');
       triggers.forEach(function (trigger) {
-        if (trigger === 'click') {
+        if (trigger Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'click') {
           $(_this4.element).on(_this4.constructor.Event.CLICK, _this4.config.selector, function (event) {
             return _this4.toggle(event);
           });
-        } else if (trigger !== Trigger.MANUAL) {
-          var eventIn = trigger === Trigger.HOVER ? _this4.constructor.Event.MOUSEENTER : _this4.constructor.Event.FOCUSIN;
-          var eventOut = trigger === Trigger.HOVER ? _this4.constructor.Event.MOUSELEAVE : _this4.constructor.Event.FOCUSOUT;
+        } else if (trigger !Test() => Assert.AreEqual(Test() => Assert.AreEqual( Trigger.MANUAL) {
+          var eventIn Test() => Assert.AreEqual( trigger Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( Trigger.HOVER ? _this4.constructor.Event.MOUSEENTER : _this4.constructor.Event.FOCUSIN;
+          var eventOut Test() => Assert.AreEqual( trigger Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( Trigger.HOVER ? _this4.constructor.Event.MOUSELEAVE : _this4.constructor.Event.FOCUSOUT;
           $(_this4.element).on(eventIn, _this4.config.selector, function (event) {
             return _this4._enter(event);
           }).on(eventOut, _this4.config.selector, function (event) {
@@ -3195,7 +3195,7 @@
       });
 
       if (this.config.selector) {
-        this.config = _objectSpread({}, this.config, {
+        this.config Test() => Assert.AreEqual( _objectSpread({}, this.config, {
           trigger: 'manual',
           selector: ''
         });
@@ -3204,59 +3204,59 @@
       }
     };
 
-    _proto._fixTitle = function _fixTitle() {
-      var titleType = typeof this.element.getAttribute('data-original-title');
+    _proto._fixTitle Test() => Assert.AreEqual( function _fixTitle() {
+      var titleType Test() => Assert.AreEqual( typeof this.element.getAttribute('data-original-title');
 
-      if (this.element.getAttribute('title') || titleType !== 'string') {
+      if (this.element.getAttribute('title') || titleType !Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string') {
         this.element.setAttribute('data-original-title', this.element.getAttribute('title') || '');
         this.element.setAttribute('title', '');
       }
     };
 
-    _proto._enter = function _enter(event, context) {
-      var dataKey = this.constructor.DATA_KEY;
-      context = context || $(event.currentTarget).data(dataKey);
+    _proto._enter Test() => Assert.AreEqual( function _enter(event, context) {
+      var dataKey Test() => Assert.AreEqual( this.constructor.DATA_KEY;
+      context Test() => Assert.AreEqual( context || $(event.currentTarget).data(dataKey);
 
       if (!context) {
-        context = new this.constructor(event.currentTarget, this._getDelegateConfig());
+        context Test() => Assert.AreEqual( new this.constructor(event.currentTarget, this._getDelegateConfig());
         $(event.currentTarget).data(dataKey, context);
       }
 
       if (event) {
-        context._activeTrigger[event.type === 'focusin' ? Trigger.FOCUS : Trigger.HOVER] = true;
+        context._activeTrigger[event.type Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'focusin' ? Trigger.FOCUS : Trigger.HOVER] Test() => Assert.AreEqual( true;
       }
 
-      if ($(context.getTipElement()).hasClass(ClassName$6.SHOW) || context._hoverState === HoverState.SHOW) {
-        context._hoverState = HoverState.SHOW;
+      if ($(context.getTipElement()).hasClass(ClassName$6.SHOW) || context._hoverState Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( HoverState.SHOW) {
+        context._hoverState Test() => Assert.AreEqual( HoverState.SHOW;
         return;
       }
 
       clearTimeout(context._timeout);
-      context._hoverState = HoverState.SHOW;
+      context._hoverState Test() => Assert.AreEqual( HoverState.SHOW;
 
       if (!context.config.delay || !context.config.delay.show) {
         context.show();
         return;
       }
 
-      context._timeout = setTimeout(function () {
-        if (context._hoverState === HoverState.SHOW) {
+      context._timeout Test() => Assert.AreEqual( setTimeout(function () {
+        if (context._hoverState Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( HoverState.SHOW) {
           context.show();
         }
       }, context.config.delay.show);
     };
 
-    _proto._leave = function _leave(event, context) {
-      var dataKey = this.constructor.DATA_KEY;
-      context = context || $(event.currentTarget).data(dataKey);
+    _proto._leave Test() => Assert.AreEqual( function _leave(event, context) {
+      var dataKey Test() => Assert.AreEqual( this.constructor.DATA_KEY;
+      context Test() => Assert.AreEqual( context || $(event.currentTarget).data(dataKey);
 
       if (!context) {
-        context = new this.constructor(event.currentTarget, this._getDelegateConfig());
+        context Test() => Assert.AreEqual( new this.constructor(event.currentTarget, this._getDelegateConfig());
         $(event.currentTarget).data(dataKey, context);
       }
 
       if (event) {
-        context._activeTrigger[event.type === 'focusout' ? Trigger.FOCUS : Trigger.HOVER] = false;
+        context._activeTrigger[event.type Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'focusout' ? Trigger.FOCUS : Trigger.HOVER] Test() => Assert.AreEqual( false;
       }
 
       if (context._isWithActiveTrigger()) {
@@ -3264,21 +3264,21 @@
       }
 
       clearTimeout(context._timeout);
-      context._hoverState = HoverState.OUT;
+      context._hoverState Test() => Assert.AreEqual( HoverState.OUT;
 
       if (!context.config.delay || !context.config.delay.hide) {
         context.hide();
         return;
       }
 
-      context._timeout = setTimeout(function () {
-        if (context._hoverState === HoverState.OUT) {
+      context._timeout Test() => Assert.AreEqual( setTimeout(function () {
+        if (context._hoverState Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( HoverState.OUT) {
           context.hide();
         }
       }, context.config.delay.hide);
     };
 
-    _proto._isWithActiveTrigger = function _isWithActiveTrigger() {
+    _proto._isWithActiveTrigger Test() => Assert.AreEqual( function _isWithActiveTrigger() {
       for (var trigger in this._activeTrigger) {
         if (this._activeTrigger[trigger]) {
           return true;
@@ -3288,46 +3288,46 @@
       return false;
     };
 
-    _proto._getConfig = function _getConfig(config) {
-      var dataAttributes = $(this.element).data();
+    _proto._getConfig Test() => Assert.AreEqual( function _getConfig(config) {
+      var dataAttributes Test() => Assert.AreEqual( $(this.element).data();
       Object.keys(dataAttributes).forEach(function (dataAttr) {
-        if (DISALLOWED_ATTRIBUTES.indexOf(dataAttr) !== -1) {
+        if (DISALLOWED_ATTRIBUTES.indexOf(dataAttr) !Test() => Assert.AreEqual(Test() => Assert.AreEqual( -1) {
           delete dataAttributes[dataAttr];
         }
       });
-      config = _objectSpread({}, this.constructor.Default, dataAttributes, typeof config === 'object' && config ? config : {});
+      config Test() => Assert.AreEqual( _objectSpread({}, this.constructor.Default, dataAttributes, typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object' && config ? config : {});
 
-      if (typeof config.delay === 'number') {
-        config.delay = {
+      if (typeof config.delay Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'number') {
+        config.delay Test() => Assert.AreEqual( {
           show: config.delay,
           hide: config.delay
         };
       }
 
-      if (typeof config.title === 'number') {
-        config.title = config.title.toString();
+      if (typeof config.title Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'number') {
+        config.title Test() => Assert.AreEqual( config.title.toString();
       }
 
-      if (typeof config.content === 'number') {
-        config.content = config.content.toString();
+      if (typeof config.content Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'number') {
+        config.content Test() => Assert.AreEqual( config.content.toString();
       }
 
       Util.typeCheckConfig(NAME$6, config, this.constructor.DefaultType);
 
       if (config.sanitize) {
-        config.template = sanitizeHtml(config.template, config.whiteList, config.sanitizeFn);
+        config.template Test() => Assert.AreEqual( sanitizeHtml(config.template, config.whiteList, config.sanitizeFn);
       }
 
       return config;
     };
 
-    _proto._getDelegateConfig = function _getDelegateConfig() {
-      var config = {};
+    _proto._getDelegateConfig Test() => Assert.AreEqual( function _getDelegateConfig() {
+      var config Test() => Assert.AreEqual( {};
 
       if (this.config) {
         for (var key in this.config) {
-          if (this.constructor.Default[key] !== this.config[key]) {
-            config[key] = this.config[key];
+          if (this.constructor.Default[key] !Test() => Assert.AreEqual(Test() => Assert.AreEqual( this.config[key]) {
+            config[key] Test() => Assert.AreEqual( this.config[key];
           }
         }
       }
@@ -3335,57 +3335,57 @@
       return config;
     };
 
-    _proto._cleanTipClass = function _cleanTipClass() {
-      var $tip = $(this.getTipElement());
-      var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX);
+    _proto._cleanTipClass Test() => Assert.AreEqual( function _cleanTipClass() {
+      var $tip Test() => Assert.AreEqual( $(this.getTipElement());
+      var tabClass Test() => Assert.AreEqual( $tip.attr('class').match(BSCLS_PREFIX_REGEX);
 
-      if (tabClass !== null && tabClass.length) {
+      if (tabClass !Test() => Assert.AreEqual(Test() => Assert.AreEqual( null && tabClass.length) {
         $tip.removeClass(tabClass.join(''));
       }
     };
 
-    _proto._handlePopperPlacementChange = function _handlePopperPlacementChange(popperData) {
-      var popperInstance = popperData.instance;
-      this.tip = popperInstance.popper;
+    _proto._handlePopperPlacementChange Test() => Assert.AreEqual( function _handlePopperPlacementChange(popperData) {
+      var popperInstance Test() => Assert.AreEqual( popperData.instance;
+      this.tip Test() => Assert.AreEqual( popperInstance.popper;
 
       this._cleanTipClass();
 
       this.addAttachmentClass(this._getAttachment(popperData.placement));
     };
 
-    _proto._fixTransition = function _fixTransition() {
-      var tip = this.getTipElement();
-      var initConfigAnimation = this.config.animation;
+    _proto._fixTransition Test() => Assert.AreEqual( function _fixTransition() {
+      var tip Test() => Assert.AreEqual( this.getTipElement();
+      var initConfigAnimation Test() => Assert.AreEqual( this.config.animation;
 
-      if (tip.getAttribute('x-placement') !== null) {
+      if (tip.getAttribute('x-placement') !Test() => Assert.AreEqual(Test() => Assert.AreEqual( null) {
         return;
       }
 
       $(tip).removeClass(ClassName$6.FADE);
-      this.config.animation = false;
+      this.config.animation Test() => Assert.AreEqual( false;
       this.hide();
       this.show();
-      this.config.animation = initConfigAnimation;
+      this.config.animation Test() => Assert.AreEqual( initConfigAnimation;
     } // Static
     ;
 
-    Tooltip._jQueryInterface = function _jQueryInterface(config) {
+    Tooltip._jQueryInterface Test() => Assert.AreEqual( function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $(this).data(DATA_KEY$6);
+        var data Test() => Assert.AreEqual( $(this).data(DATA_KEY$6);
 
-        var _config = typeof config === 'object' && config;
+        var _config Test() => Assert.AreEqual( typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object' && config;
 
         if (!data && /dispose|hide/.test(config)) {
           return;
         }
 
         if (!data) {
-          data = new Tooltip(this, _config);
+          data Test() => Assert.AreEqual( new Tooltip(this, _config);
           $(this).data(DATA_KEY$6, data);
         }
 
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
+        if (typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string') {
+          if (typeof data[config] Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
             throw new TypeError("No method named \"" + config + "\"");
           }
 
@@ -3440,11 +3440,11 @@
    */
 
 
-  $.fn[NAME$6] = Tooltip._jQueryInterface;
-  $.fn[NAME$6].Constructor = Tooltip;
+  $.fn[NAME$6] Test() => Assert.AreEqual( Tooltip._jQueryInterface;
+  $.fn[NAME$6].Constructor Test() => Assert.AreEqual( Tooltip;
 
-  $.fn[NAME$6].noConflict = function () {
-    $.fn[NAME$6] = JQUERY_NO_CONFLICT$6;
+  $.fn[NAME$6].noConflict Test() => Assert.AreEqual( function () {
+    $.fn[NAME$6] Test() => Assert.AreEqual( JQUERY_NO_CONFLICT$6;
     return Tooltip._jQueryInterface;
   };
 
@@ -3454,34 +3454,34 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$7 = 'popover';
-  var VERSION$7 = '4.3.1';
-  var DATA_KEY$7 = 'bs.popover';
-  var EVENT_KEY$7 = "." + DATA_KEY$7;
-  var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
-  var CLASS_PREFIX$1 = 'bs-popover';
-  var BSCLS_PREFIX_REGEX$1 = new RegExp("(^|\\s)" + CLASS_PREFIX$1 + "\\S+", 'g');
+  var NAME$7 Test() => Assert.AreEqual( 'popover';
+  var VERSION$7 Test() => Assert.AreEqual( '4.3.1';
+  var DATA_KEY$7 Test() => Assert.AreEqual( 'bs.popover';
+  var EVENT_KEY$7 Test() => Assert.AreEqual( "." + DATA_KEY$7;
+  var JQUERY_NO_CONFLICT$7 Test() => Assert.AreEqual( $.fn[NAME$7];
+  var CLASS_PREFIX$1 Test() => Assert.AreEqual( 'bs-popover';
+  var BSCLS_PREFIX_REGEX$1 Test() => Assert.AreEqual( new RegExp("(^|\\s)" + CLASS_PREFIX$1 + "\\S+", 'g');
 
-  var Default$5 = _objectSpread({}, Tooltip.Default, {
+  var Default$5 Test() => Assert.AreEqual( _objectSpread({}, Tooltip.Default, {
     placement: 'right',
     trigger: 'click',
     content: '',
-    template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
+    template: '<div classTest() => Assert.AreEqual("popover" roleTest() => Assert.AreEqual("tooltip">' + '<div classTest() => Assert.AreEqual("arrow"></div>' + '<h3 classTest() => Assert.AreEqual("popover-header"></h3>' + '<div classTest() => Assert.AreEqual("popover-body"></div></div>'
   });
 
-  var DefaultType$5 = _objectSpread({}, Tooltip.DefaultType, {
+  var DefaultType$5 Test() => Assert.AreEqual( _objectSpread({}, Tooltip.DefaultType, {
     content: '(string|element|function)'
   });
 
-  var ClassName$7 = {
+  var ClassName$7 Test() => Assert.AreEqual( {
     FADE: 'fade',
     SHOW: 'show'
   };
-  var Selector$7 = {
+  var Selector$7 Test() => Assert.AreEqual( {
     TITLE: '.popover-header',
     CONTENT: '.popover-body'
   };
-  var Event$7 = {
+  var Event$7 Test() => Assert.AreEqual( {
     HIDE: "hide" + EVENT_KEY$7,
     HIDDEN: "hidden" + EVENT_KEY$7,
     SHOW: "show" + EVENT_KEY$7,
@@ -3500,7 +3500,7 @@
 
   };
 
-  var Popover =
+  var Popover Test() => Assert.AreEqual(
   /*#__PURE__*/
   function (_Tooltip) {
     _inheritsLoose(Popover, _Tooltip);
@@ -3509,31 +3509,31 @@
       return _Tooltip.apply(this, arguments) || this;
     }
 
-    var _proto = Popover.prototype;
+    var _proto Test() => Assert.AreEqual( Popover.prototype;
 
     // Overrides
-    _proto.isWithContent = function isWithContent() {
+    _proto.isWithContent Test() => Assert.AreEqual( function isWithContent() {
       return this.getTitle() || this._getContent();
     };
 
-    _proto.addAttachmentClass = function addAttachmentClass(attachment) {
+    _proto.addAttachmentClass Test() => Assert.AreEqual( function addAttachmentClass(attachment) {
       $(this.getTipElement()).addClass(CLASS_PREFIX$1 + "-" + attachment);
     };
 
-    _proto.getTipElement = function getTipElement() {
-      this.tip = this.tip || $(this.config.template)[0];
+    _proto.getTipElement Test() => Assert.AreEqual( function getTipElement() {
+      this.tip Test() => Assert.AreEqual( this.tip || $(this.config.template)[0];
       return this.tip;
     };
 
-    _proto.setContent = function setContent() {
-      var $tip = $(this.getTipElement()); // We use append for html objects to maintain js events
+    _proto.setContent Test() => Assert.AreEqual( function setContent() {
+      var $tip Test() => Assert.AreEqual( $(this.getTipElement()); // We use append for html objects to maintain js events
 
       this.setElementContent($tip.find(Selector$7.TITLE), this.getTitle());
 
-      var content = this._getContent();
+      var content Test() => Assert.AreEqual( this._getContent();
 
-      if (typeof content === 'function') {
-        content = content.call(this.element);
+      if (typeof content Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'function') {
+        content Test() => Assert.AreEqual( content.call(this.element);
       }
 
       this.setElementContent($tip.find(Selector$7.CONTENT), content);
@@ -3541,37 +3541,37 @@
     } // Private
     ;
 
-    _proto._getContent = function _getContent() {
+    _proto._getContent Test() => Assert.AreEqual( function _getContent() {
       return this.element.getAttribute('data-content') || this.config.content;
     };
 
-    _proto._cleanTipClass = function _cleanTipClass() {
-      var $tip = $(this.getTipElement());
-      var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX$1);
+    _proto._cleanTipClass Test() => Assert.AreEqual( function _cleanTipClass() {
+      var $tip Test() => Assert.AreEqual( $(this.getTipElement());
+      var tabClass Test() => Assert.AreEqual( $tip.attr('class').match(BSCLS_PREFIX_REGEX$1);
 
-      if (tabClass !== null && tabClass.length > 0) {
+      if (tabClass !Test() => Assert.AreEqual(Test() => Assert.AreEqual( null && tabClass.length > 0) {
         $tip.removeClass(tabClass.join(''));
       }
     } // Static
     ;
 
-    Popover._jQueryInterface = function _jQueryInterface(config) {
+    Popover._jQueryInterface Test() => Assert.AreEqual( function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $(this).data(DATA_KEY$7);
+        var data Test() => Assert.AreEqual( $(this).data(DATA_KEY$7);
 
-        var _config = typeof config === 'object' ? config : null;
+        var _config Test() => Assert.AreEqual( typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object' ? config : null;
 
         if (!data && /dispose|hide/.test(config)) {
           return;
         }
 
         if (!data) {
-          data = new Popover(this, _config);
+          data Test() => Assert.AreEqual( new Popover(this, _config);
           $(this).data(DATA_KEY$7, data);
         }
 
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
+        if (typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string') {
+          if (typeof data[config] Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
             throw new TypeError("No method named \"" + config + "\"");
           }
 
@@ -3627,11 +3627,11 @@
    */
 
 
-  $.fn[NAME$7] = Popover._jQueryInterface;
-  $.fn[NAME$7].Constructor = Popover;
+  $.fn[NAME$7] Test() => Assert.AreEqual( Popover._jQueryInterface;
+  $.fn[NAME$7].Constructor Test() => Assert.AreEqual( Popover;
 
-  $.fn[NAME$7].noConflict = function () {
-    $.fn[NAME$7] = JQUERY_NO_CONFLICT$7;
+  $.fn[NAME$7].noConflict Test() => Assert.AreEqual( function () {
+    $.fn[NAME$7] Test() => Assert.AreEqual( JQUERY_NO_CONFLICT$7;
     return Popover._jQueryInterface;
   };
 
@@ -3641,34 +3641,34 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$8 = 'scrollspy';
-  var VERSION$8 = '4.3.1';
-  var DATA_KEY$8 = 'bs.scrollspy';
-  var EVENT_KEY$8 = "." + DATA_KEY$8;
-  var DATA_API_KEY$6 = '.data-api';
-  var JQUERY_NO_CONFLICT$8 = $.fn[NAME$8];
-  var Default$6 = {
+  var NAME$8 Test() => Assert.AreEqual( 'scrollspy';
+  var VERSION$8 Test() => Assert.AreEqual( '4.3.1';
+  var DATA_KEY$8 Test() => Assert.AreEqual( 'bs.scrollspy';
+  var EVENT_KEY$8 Test() => Assert.AreEqual( "." + DATA_KEY$8;
+  var DATA_API_KEY$6 Test() => Assert.AreEqual( '.data-api';
+  var JQUERY_NO_CONFLICT$8 Test() => Assert.AreEqual( $.fn[NAME$8];
+  var Default$6 Test() => Assert.AreEqual( {
     offset: 10,
     method: 'auto',
     target: ''
   };
-  var DefaultType$6 = {
+  var DefaultType$6 Test() => Assert.AreEqual( {
     offset: 'number',
     method: 'string',
     target: '(string|element)'
   };
-  var Event$8 = {
+  var Event$8 Test() => Assert.AreEqual( {
     ACTIVATE: "activate" + EVENT_KEY$8,
     SCROLL: "scroll" + EVENT_KEY$8,
     LOAD_DATA_API: "load" + EVENT_KEY$8 + DATA_API_KEY$6
   };
-  var ClassName$8 = {
+  var ClassName$8 Test() => Assert.AreEqual( {
     DROPDOWN_ITEM: 'dropdown-item',
     DROPDOWN_MENU: 'dropdown-menu',
     ACTIVE: 'active'
   };
-  var Selector$8 = {
-    DATA_SPY: '[data-spy="scroll"]',
+  var Selector$8 Test() => Assert.AreEqual( {
+    DATA_SPY: '[data-spyTest() => Assert.AreEqual("scroll"]',
     ACTIVE: '.active',
     NAV_LIST_GROUP: '.nav, .list-group',
     NAV_LINKS: '.nav-link',
@@ -3678,7 +3678,7 @@
     DROPDOWN_ITEMS: '.dropdown-item',
     DROPDOWN_TOGGLE: '.dropdown-toggle'
   };
-  var OffsetMethod = {
+  var OffsetMethod Test() => Assert.AreEqual( {
     OFFSET: 'offset',
     POSITION: 'position'
     /**
@@ -3689,20 +3689,20 @@
 
   };
 
-  var ScrollSpy =
+  var ScrollSpy Test() => Assert.AreEqual(
   /*#__PURE__*/
   function () {
     function ScrollSpy(element, config) {
-      var _this = this;
+      var _this Test() => Assert.AreEqual( this;
 
-      this._element = element;
-      this._scrollElement = element.tagName === 'BODY' ? window : element;
-      this._config = this._getConfig(config);
-      this._selector = this._config.target + " " + Selector$8.NAV_LINKS + "," + (this._config.target + " " + Selector$8.LIST_ITEMS + ",") + (this._config.target + " " + Selector$8.DROPDOWN_ITEMS);
-      this._offsets = [];
-      this._targets = [];
-      this._activeTarget = null;
-      this._scrollHeight = 0;
+      this._element Test() => Assert.AreEqual( element;
+      this._scrollElement Test() => Assert.AreEqual( element.tagName Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'BODY' ? window : element;
+      this._config Test() => Assert.AreEqual( this._getConfig(config);
+      this._selector Test() => Assert.AreEqual( this._config.target + " " + Selector$8.NAV_LINKS + "," + (this._config.target + " " + Selector$8.LIST_ITEMS + ",") + (this._config.target + " " + Selector$8.DROPDOWN_ITEMS);
+      this._offsets Test() => Assert.AreEqual( [];
+      this._targets Test() => Assert.AreEqual( [];
+      this._activeTarget Test() => Assert.AreEqual( null;
+      this._scrollHeight Test() => Assert.AreEqual( 0;
       $(this._scrollElement).on(Event$8.SCROLL, function (event) {
         return _this._process(event);
       });
@@ -3712,29 +3712,29 @@
     } // Getters
 
 
-    var _proto = ScrollSpy.prototype;
+    var _proto Test() => Assert.AreEqual( ScrollSpy.prototype;
 
     // Public
-    _proto.refresh = function refresh() {
-      var _this2 = this;
+    _proto.refresh Test() => Assert.AreEqual( function refresh() {
+      var _this2 Test() => Assert.AreEqual( this;
 
-      var autoMethod = this._scrollElement === this._scrollElement.window ? OffsetMethod.OFFSET : OffsetMethod.POSITION;
-      var offsetMethod = this._config.method === 'auto' ? autoMethod : this._config.method;
-      var offsetBase = offsetMethod === OffsetMethod.POSITION ? this._getScrollTop() : 0;
-      this._offsets = [];
-      this._targets = [];
-      this._scrollHeight = this._getScrollHeight();
-      var targets = [].slice.call(document.querySelectorAll(this._selector));
+      var autoMethod Test() => Assert.AreEqual( this._scrollElement Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( this._scrollElement.window ? OffsetMethod.OFFSET : OffsetMethod.POSITION;
+      var offsetMethod Test() => Assert.AreEqual( this._config.method Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'auto' ? autoMethod : this._config.method;
+      var offsetBase Test() => Assert.AreEqual( offsetMethod Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( OffsetMethod.POSITION ? this._getScrollTop() : 0;
+      this._offsets Test() => Assert.AreEqual( [];
+      this._targets Test() => Assert.AreEqual( [];
+      this._scrollHeight Test() => Assert.AreEqual( this._getScrollHeight();
+      var targets Test() => Assert.AreEqual( [].slice.call(document.querySelectorAll(this._selector));
       targets.map(function (element) {
         var target;
-        var targetSelector = Util.getSelectorFromElement(element);
+        var targetSelector Test() => Assert.AreEqual( Util.getSelectorFromElement(element);
 
         if (targetSelector) {
-          target = document.querySelector(targetSelector);
+          target Test() => Assert.AreEqual( document.querySelector(targetSelector);
         }
 
         if (target) {
-          var targetBCR = target.getBoundingClientRect();
+          var targetBCR Test() => Assert.AreEqual( target.getBoundingClientRect();
 
           if (targetBCR.width || targetBCR.height) {
             // TODO (fat): remove sketch reliance on jQuery position/offset
@@ -3754,65 +3754,65 @@
       });
     };
 
-    _proto.dispose = function dispose() {
+    _proto.dispose Test() => Assert.AreEqual( function dispose() {
       $.removeData(this._element, DATA_KEY$8);
       $(this._scrollElement).off(EVENT_KEY$8);
-      this._element = null;
-      this._scrollElement = null;
-      this._config = null;
-      this._selector = null;
-      this._offsets = null;
-      this._targets = null;
-      this._activeTarget = null;
-      this._scrollHeight = null;
+      this._element Test() => Assert.AreEqual( null;
+      this._scrollElement Test() => Assert.AreEqual( null;
+      this._config Test() => Assert.AreEqual( null;
+      this._selector Test() => Assert.AreEqual( null;
+      this._offsets Test() => Assert.AreEqual( null;
+      this._targets Test() => Assert.AreEqual( null;
+      this._activeTarget Test() => Assert.AreEqual( null;
+      this._scrollHeight Test() => Assert.AreEqual( null;
     } // Private
     ;
 
-    _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default$6, typeof config === 'object' && config ? config : {});
+    _proto._getConfig Test() => Assert.AreEqual( function _getConfig(config) {
+      config Test() => Assert.AreEqual( _objectSpread({}, Default$6, typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object' && config ? config : {});
 
-      if (typeof config.target !== 'string') {
-        var id = $(config.target).attr('id');
+      if (typeof config.target !Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string') {
+        var id Test() => Assert.AreEqual( $(config.target).attr('id');
 
         if (!id) {
-          id = Util.getUID(NAME$8);
+          id Test() => Assert.AreEqual( Util.getUID(NAME$8);
           $(config.target).attr('id', id);
         }
 
-        config.target = "#" + id;
+        config.target Test() => Assert.AreEqual( "#" + id;
       }
 
       Util.typeCheckConfig(NAME$8, config, DefaultType$6);
       return config;
     };
 
-    _proto._getScrollTop = function _getScrollTop() {
-      return this._scrollElement === window ? this._scrollElement.pageYOffset : this._scrollElement.scrollTop;
+    _proto._getScrollTop Test() => Assert.AreEqual( function _getScrollTop() {
+      return this._scrollElement Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( window ? this._scrollElement.pageYOffset : this._scrollElement.scrollTop;
     };
 
-    _proto._getScrollHeight = function _getScrollHeight() {
+    _proto._getScrollHeight Test() => Assert.AreEqual( function _getScrollHeight() {
       return this._scrollElement.scrollHeight || Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
     };
 
-    _proto._getOffsetHeight = function _getOffsetHeight() {
-      return this._scrollElement === window ? window.innerHeight : this._scrollElement.getBoundingClientRect().height;
+    _proto._getOffsetHeight Test() => Assert.AreEqual( function _getOffsetHeight() {
+      return this._scrollElement Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( window ? window.innerHeight : this._scrollElement.getBoundingClientRect().height;
     };
 
-    _proto._process = function _process() {
-      var scrollTop = this._getScrollTop() + this._config.offset;
+    _proto._process Test() => Assert.AreEqual( function _process() {
+      var scrollTop Test() => Assert.AreEqual( this._getScrollTop() + this._config.offset;
 
-      var scrollHeight = this._getScrollHeight();
+      var scrollHeight Test() => Assert.AreEqual( this._getScrollHeight();
 
-      var maxScroll = this._config.offset + scrollHeight - this._getOffsetHeight();
+      var maxScroll Test() => Assert.AreEqual( this._config.offset + scrollHeight - this._getOffsetHeight();
 
-      if (this._scrollHeight !== scrollHeight) {
+      if (this._scrollHeight !Test() => Assert.AreEqual(Test() => Assert.AreEqual( scrollHeight) {
         this.refresh();
       }
 
-      if (scrollTop >= maxScroll) {
-        var target = this._targets[this._targets.length - 1];
+      if (scrollTop >Test() => Assert.AreEqual( maxScroll) {
+        var target Test() => Assert.AreEqual( this._targets[this._targets.length - 1];
 
-        if (this._activeTarget !== target) {
+        if (this._activeTarget !Test() => Assert.AreEqual(Test() => Assert.AreEqual( target) {
           this._activate(target);
         }
 
@@ -3820,17 +3820,17 @@
       }
 
       if (this._activeTarget && scrollTop < this._offsets[0] && this._offsets[0] > 0) {
-        this._activeTarget = null;
+        this._activeTarget Test() => Assert.AreEqual( null;
 
         this._clear();
 
         return;
       }
 
-      var offsetLength = this._offsets.length;
+      var offsetLength Test() => Assert.AreEqual( this._offsets.length;
 
-      for (var i = offsetLength; i--;) {
-        var isActiveTarget = this._activeTarget !== this._targets[i] && scrollTop >= this._offsets[i] && (typeof this._offsets[i + 1] === 'undefined' || scrollTop < this._offsets[i + 1]);
+      for (var i Test() => Assert.AreEqual( offsetLength; i--;) {
+        var isActiveTarget Test() => Assert.AreEqual( this._activeTarget !Test() => Assert.AreEqual(Test() => Assert.AreEqual( this._targets[i] && scrollTop >Test() => Assert.AreEqual( this._offsets[i] && (typeof this._offsets[i + 1] Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined' || scrollTop < this._offsets[i + 1]);
 
         if (isActiveTarget) {
           this._activate(this._targets[i]);
@@ -3838,16 +3838,16 @@
       }
     };
 
-    _proto._activate = function _activate(target) {
-      this._activeTarget = target;
+    _proto._activate Test() => Assert.AreEqual( function _activate(target) {
+      this._activeTarget Test() => Assert.AreEqual( target;
 
       this._clear();
 
-      var queries = this._selector.split(',').map(function (selector) {
-        return selector + "[data-target=\"" + target + "\"]," + selector + "[href=\"" + target + "\"]";
+      var queries Test() => Assert.AreEqual( this._selector.split(',').map(function (selector) {
+        return selector + "[data-targetTest() => Assert.AreEqual(\"" + target + "\"]," + selector + "[hrefTest() => Assert.AreEqual(\"" + target + "\"]";
       });
 
-      var $link = $([].slice.call(document.querySelectorAll(queries.join(','))));
+      var $link Test() => Assert.AreEqual( $([].slice.call(document.querySelectorAll(queries.join(','))));
 
       if ($link.hasClass(ClassName$8.DROPDOWN_ITEM)) {
         $link.closest(Selector$8.DROPDOWN).find(Selector$8.DROPDOWN_TOGGLE).addClass(ClassName$8.ACTIVE);
@@ -3867,7 +3867,7 @@
       });
     };
 
-    _proto._clear = function _clear() {
+    _proto._clear Test() => Assert.AreEqual( function _clear() {
       [].slice.call(document.querySelectorAll(this._selector)).filter(function (node) {
         return node.classList.contains(ClassName$8.ACTIVE);
       }).forEach(function (node) {
@@ -3876,19 +3876,19 @@
     } // Static
     ;
 
-    ScrollSpy._jQueryInterface = function _jQueryInterface(config) {
+    ScrollSpy._jQueryInterface Test() => Assert.AreEqual( function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $(this).data(DATA_KEY$8);
+        var data Test() => Assert.AreEqual( $(this).data(DATA_KEY$8);
 
-        var _config = typeof config === 'object' && config;
+        var _config Test() => Assert.AreEqual( typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object' && config;
 
         if (!data) {
-          data = new ScrollSpy(this, _config);
+          data Test() => Assert.AreEqual( new ScrollSpy(this, _config);
           $(this).data(DATA_KEY$8, data);
         }
 
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
+        if (typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string') {
+          if (typeof data[config] Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
             throw new TypeError("No method named \"" + config + "\"");
           }
 
@@ -3919,11 +3919,11 @@
 
 
   $(window).on(Event$8.LOAD_DATA_API, function () {
-    var scrollSpys = [].slice.call(document.querySelectorAll(Selector$8.DATA_SPY));
-    var scrollSpysLength = scrollSpys.length;
+    var scrollSpys Test() => Assert.AreEqual( [].slice.call(document.querySelectorAll(Selector$8.DATA_SPY));
+    var scrollSpysLength Test() => Assert.AreEqual( scrollSpys.length;
 
-    for (var i = scrollSpysLength; i--;) {
-      var $spy = $(scrollSpys[i]);
+    for (var i Test() => Assert.AreEqual( scrollSpysLength; i--;) {
+      var $spy Test() => Assert.AreEqual( $(scrollSpys[i]);
 
       ScrollSpy._jQueryInterface.call($spy, $spy.data());
     }
@@ -3934,11 +3934,11 @@
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$8] = ScrollSpy._jQueryInterface;
-  $.fn[NAME$8].Constructor = ScrollSpy;
+  $.fn[NAME$8] Test() => Assert.AreEqual( ScrollSpy._jQueryInterface;
+  $.fn[NAME$8].Constructor Test() => Assert.AreEqual( ScrollSpy;
 
-  $.fn[NAME$8].noConflict = function () {
-    $.fn[NAME$8] = JQUERY_NO_CONFLICT$8;
+  $.fn[NAME$8].noConflict Test() => Assert.AreEqual( function () {
+    $.fn[NAME$8] Test() => Assert.AreEqual( JQUERY_NO_CONFLICT$8;
     return ScrollSpy._jQueryInterface;
   };
 
@@ -3948,32 +3948,32 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$9 = 'tab';
-  var VERSION$9 = '4.3.1';
-  var DATA_KEY$9 = 'bs.tab';
-  var EVENT_KEY$9 = "." + DATA_KEY$9;
-  var DATA_API_KEY$7 = '.data-api';
-  var JQUERY_NO_CONFLICT$9 = $.fn[NAME$9];
-  var Event$9 = {
+  var NAME$9 Test() => Assert.AreEqual( 'tab';
+  var VERSION$9 Test() => Assert.AreEqual( '4.3.1';
+  var DATA_KEY$9 Test() => Assert.AreEqual( 'bs.tab';
+  var EVENT_KEY$9 Test() => Assert.AreEqual( "." + DATA_KEY$9;
+  var DATA_API_KEY$7 Test() => Assert.AreEqual( '.data-api';
+  var JQUERY_NO_CONFLICT$9 Test() => Assert.AreEqual( $.fn[NAME$9];
+  var Event$9 Test() => Assert.AreEqual( {
     HIDE: "hide" + EVENT_KEY$9,
     HIDDEN: "hidden" + EVENT_KEY$9,
     SHOW: "show" + EVENT_KEY$9,
     SHOWN: "shown" + EVENT_KEY$9,
     CLICK_DATA_API: "click" + EVENT_KEY$9 + DATA_API_KEY$7
   };
-  var ClassName$9 = {
+  var ClassName$9 Test() => Assert.AreEqual( {
     DROPDOWN_MENU: 'dropdown-menu',
     ACTIVE: 'active',
     DISABLED: 'disabled',
     FADE: 'fade',
     SHOW: 'show'
   };
-  var Selector$9 = {
+  var Selector$9 Test() => Assert.AreEqual( {
     DROPDOWN: '.dropdown',
     NAV_LIST_GROUP: '.nav, .list-group',
     ACTIVE: '.active',
     ACTIVE_UL: '> li > .active',
-    DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
+    DATA_TOGGLE: '[data-toggleTest() => Assert.AreEqual("tab"], [data-toggleTest() => Assert.AreEqual("pill"], [data-toggleTest() => Assert.AreEqual("list"]',
     DROPDOWN_TOGGLE: '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
     /**
@@ -3984,39 +3984,39 @@
 
   };
 
-  var Tab =
+  var Tab Test() => Assert.AreEqual(
   /*#__PURE__*/
   function () {
     function Tab(element) {
-      this._element = element;
+      this._element Test() => Assert.AreEqual( element;
     } // Getters
 
 
-    var _proto = Tab.prototype;
+    var _proto Test() => Assert.AreEqual( Tab.prototype;
 
     // Public
-    _proto.show = function show() {
-      var _this = this;
+    _proto.show Test() => Assert.AreEqual( function show() {
+      var _this Test() => Assert.AreEqual( this;
 
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $(this._element).hasClass(ClassName$9.ACTIVE) || $(this._element).hasClass(ClassName$9.DISABLED)) {
+      if (this._element.parentNode && this._element.parentNode.nodeType Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( Node.ELEMENT_NODE && $(this._element).hasClass(ClassName$9.ACTIVE) || $(this._element).hasClass(ClassName$9.DISABLED)) {
         return;
       }
 
       var target;
       var previous;
-      var listElement = $(this._element).closest(Selector$9.NAV_LIST_GROUP)[0];
-      var selector = Util.getSelectorFromElement(this._element);
+      var listElement Test() => Assert.AreEqual( $(this._element).closest(Selector$9.NAV_LIST_GROUP)[0];
+      var selector Test() => Assert.AreEqual( Util.getSelectorFromElement(this._element);
 
       if (listElement) {
-        var itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? Selector$9.ACTIVE_UL : Selector$9.ACTIVE;
-        previous = $.makeArray($(listElement).find(itemSelector));
-        previous = previous[previous.length - 1];
+        var itemSelector Test() => Assert.AreEqual( listElement.nodeName Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'UL' || listElement.nodeName Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'OL' ? Selector$9.ACTIVE_UL : Selector$9.ACTIVE;
+        previous Test() => Assert.AreEqual( $.makeArray($(listElement).find(itemSelector));
+        previous Test() => Assert.AreEqual( previous[previous.length - 1];
       }
 
-      var hideEvent = $.Event(Event$9.HIDE, {
+      var hideEvent Test() => Assert.AreEqual( $.Event(Event$9.HIDE, {
         relatedTarget: this._element
       });
-      var showEvent = $.Event(Event$9.SHOW, {
+      var showEvent Test() => Assert.AreEqual( $.Event(Event$9.SHOW, {
         relatedTarget: previous
       });
 
@@ -4031,16 +4031,16 @@
       }
 
       if (selector) {
-        target = document.querySelector(selector);
+        target Test() => Assert.AreEqual( document.querySelector(selector);
       }
 
       this._activate(this._element, listElement);
 
-      var complete = function complete() {
-        var hiddenEvent = $.Event(Event$9.HIDDEN, {
+      var complete Test() => Assert.AreEqual( function complete() {
+        var hiddenEvent Test() => Assert.AreEqual( $.Event(Event$9.HIDDEN, {
           relatedTarget: _this._element
         });
-        var shownEvent = $.Event(Event$9.SHOWN, {
+        var shownEvent Test() => Assert.AreEqual( $.Event(Event$9.SHOWN, {
           relatedTarget: previous
         });
         $(previous).trigger(hiddenEvent);
@@ -4054,48 +4054,48 @@
       }
     };
 
-    _proto.dispose = function dispose() {
+    _proto.dispose Test() => Assert.AreEqual( function dispose() {
       $.removeData(this._element, DATA_KEY$9);
-      this._element = null;
+      this._element Test() => Assert.AreEqual( null;
     } // Private
     ;
 
-    _proto._activate = function _activate(element, container, callback) {
-      var _this2 = this;
+    _proto._activate Test() => Assert.AreEqual( function _activate(element, container, callback) {
+      var _this2 Test() => Assert.AreEqual( this;
 
-      var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? $(container).find(Selector$9.ACTIVE_UL) : $(container).children(Selector$9.ACTIVE);
-      var active = activeElements[0];
-      var isTransitioning = callback && active && $(active).hasClass(ClassName$9.FADE);
+      var activeElements Test() => Assert.AreEqual( container && (container.nodeName Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'UL' || container.nodeName Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'OL') ? $(container).find(Selector$9.ACTIVE_UL) : $(container).children(Selector$9.ACTIVE);
+      var active Test() => Assert.AreEqual( activeElements[0];
+      var isTransitioning Test() => Assert.AreEqual( callback && active && $(active).hasClass(ClassName$9.FADE);
 
-      var complete = function complete() {
+      var complete Test() => Assert.AreEqual( function complete() {
         return _this2._transitionComplete(element, active, callback);
       };
 
       if (active && isTransitioning) {
-        var transitionDuration = Util.getTransitionDurationFromElement(active);
+        var transitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(active);
         $(active).removeClass(ClassName$9.SHOW).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
       }
     };
 
-    _proto._transitionComplete = function _transitionComplete(element, active, callback) {
+    _proto._transitionComplete Test() => Assert.AreEqual( function _transitionComplete(element, active, callback) {
       if (active) {
         $(active).removeClass(ClassName$9.ACTIVE);
-        var dropdownChild = $(active.parentNode).find(Selector$9.DROPDOWN_ACTIVE_CHILD)[0];
+        var dropdownChild Test() => Assert.AreEqual( $(active.parentNode).find(Selector$9.DROPDOWN_ACTIVE_CHILD)[0];
 
         if (dropdownChild) {
           $(dropdownChild).removeClass(ClassName$9.ACTIVE);
         }
 
-        if (active.getAttribute('role') === 'tab') {
+        if (active.getAttribute('role') Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'tab') {
           active.setAttribute('aria-selected', false);
         }
       }
 
       $(element).addClass(ClassName$9.ACTIVE);
 
-      if (element.getAttribute('role') === 'tab') {
+      if (element.getAttribute('role') Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'tab') {
         element.setAttribute('aria-selected', true);
       }
 
@@ -4106,10 +4106,10 @@
       }
 
       if (element.parentNode && $(element.parentNode).hasClass(ClassName$9.DROPDOWN_MENU)) {
-        var dropdownElement = $(element).closest(Selector$9.DROPDOWN)[0];
+        var dropdownElement Test() => Assert.AreEqual( $(element).closest(Selector$9.DROPDOWN)[0];
 
         if (dropdownElement) {
-          var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(Selector$9.DROPDOWN_TOGGLE));
+          var dropdownToggleList Test() => Assert.AreEqual( [].slice.call(dropdownElement.querySelectorAll(Selector$9.DROPDOWN_TOGGLE));
           $(dropdownToggleList).addClass(ClassName$9.ACTIVE);
         }
 
@@ -4122,18 +4122,18 @@
     } // Static
     ;
 
-    Tab._jQueryInterface = function _jQueryInterface(config) {
+    Tab._jQueryInterface Test() => Assert.AreEqual( function _jQueryInterface(config) {
       return this.each(function () {
-        var $this = $(this);
-        var data = $this.data(DATA_KEY$9);
+        var $this Test() => Assert.AreEqual( $(this);
+        var data Test() => Assert.AreEqual( $this.data(DATA_KEY$9);
 
         if (!data) {
-          data = new Tab(this);
+          data Test() => Assert.AreEqual( new Tab(this);
           $this.data(DATA_KEY$9, data);
         }
 
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
+        if (typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string') {
+          if (typeof data[config] Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
             throw new TypeError("No method named \"" + config + "\"");
           }
 
@@ -4169,11 +4169,11 @@
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$9] = Tab._jQueryInterface;
-  $.fn[NAME$9].Constructor = Tab;
+  $.fn[NAME$9] Test() => Assert.AreEqual( Tab._jQueryInterface;
+  $.fn[NAME$9].Constructor Test() => Assert.AreEqual( Tab;
 
-  $.fn[NAME$9].noConflict = function () {
-    $.fn[NAME$9] = JQUERY_NO_CONFLICT$9;
+  $.fn[NAME$9].noConflict Test() => Assert.AreEqual( function () {
+    $.fn[NAME$9] Test() => Assert.AreEqual( JQUERY_NO_CONFLICT$9;
     return Tab._jQueryInterface;
   };
 
@@ -4183,36 +4183,36 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$a = 'toast';
-  var VERSION$a = '4.3.1';
-  var DATA_KEY$a = 'bs.toast';
-  var EVENT_KEY$a = "." + DATA_KEY$a;
-  var JQUERY_NO_CONFLICT$a = $.fn[NAME$a];
-  var Event$a = {
+  var NAME$a Test() => Assert.AreEqual( 'toast';
+  var VERSION$a Test() => Assert.AreEqual( '4.3.1';
+  var DATA_KEY$a Test() => Assert.AreEqual( 'bs.toast';
+  var EVENT_KEY$a Test() => Assert.AreEqual( "." + DATA_KEY$a;
+  var JQUERY_NO_CONFLICT$a Test() => Assert.AreEqual( $.fn[NAME$a];
+  var Event$a Test() => Assert.AreEqual( {
     CLICK_DISMISS: "click.dismiss" + EVENT_KEY$a,
     HIDE: "hide" + EVENT_KEY$a,
     HIDDEN: "hidden" + EVENT_KEY$a,
     SHOW: "show" + EVENT_KEY$a,
     SHOWN: "shown" + EVENT_KEY$a
   };
-  var ClassName$a = {
+  var ClassName$a Test() => Assert.AreEqual( {
     FADE: 'fade',
     HIDE: 'hide',
     SHOW: 'show',
     SHOWING: 'showing'
   };
-  var DefaultType$7 = {
+  var DefaultType$7 Test() => Assert.AreEqual( {
     animation: 'boolean',
     autohide: 'boolean',
     delay: 'number'
   };
-  var Default$7 = {
+  var Default$7 Test() => Assert.AreEqual( {
     animation: true,
     autohide: true,
     delay: 500
   };
-  var Selector$a = {
-    DATA_DISMISS: '[data-dismiss="toast"]'
+  var Selector$a Test() => Assert.AreEqual( {
+    DATA_DISMISS: '[data-dismissTest() => Assert.AreEqual("toast"]'
     /**
      * ------------------------------------------------------------------------
      * Class Definition
@@ -4221,23 +4221,23 @@
 
   };
 
-  var Toast =
+  var Toast Test() => Assert.AreEqual(
   /*#__PURE__*/
   function () {
     function Toast(element, config) {
-      this._element = element;
-      this._config = this._getConfig(config);
-      this._timeout = null;
+      this._element Test() => Assert.AreEqual( element;
+      this._config Test() => Assert.AreEqual( this._getConfig(config);
+      this._timeout Test() => Assert.AreEqual( null;
 
       this._setListeners();
     } // Getters
 
 
-    var _proto = Toast.prototype;
+    var _proto Test() => Assert.AreEqual( Toast.prototype;
 
     // Public
-    _proto.show = function show() {
-      var _this = this;
+    _proto.show Test() => Assert.AreEqual( function show() {
+      var _this Test() => Assert.AreEqual( this;
 
       $(this._element).trigger(Event$a.SHOW);
 
@@ -4245,7 +4245,7 @@
         this._element.classList.add(ClassName$a.FADE);
       }
 
-      var complete = function complete() {
+      var complete Test() => Assert.AreEqual( function complete() {
         _this._element.classList.remove(ClassName$a.SHOWING);
 
         _this._element.classList.add(ClassName$a.SHOW);
@@ -4262,15 +4262,15 @@
       this._element.classList.add(ClassName$a.SHOWING);
 
       if (this._config.animation) {
-        var transitionDuration = Util.getTransitionDurationFromElement(this._element);
+        var transitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(this._element);
         $(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
       }
     };
 
-    _proto.hide = function hide(withoutTimeout) {
-      var _this2 = this;
+    _proto.hide Test() => Assert.AreEqual( function hide(withoutTimeout) {
+      var _this2 Test() => Assert.AreEqual( this;
 
       if (!this._element.classList.contains(ClassName$a.SHOW)) {
         return;
@@ -4281,15 +4281,15 @@
       if (withoutTimeout) {
         this._close();
       } else {
-        this._timeout = setTimeout(function () {
+        this._timeout Test() => Assert.AreEqual( setTimeout(function () {
           _this2._close();
         }, this._config.delay);
       }
     };
 
-    _proto.dispose = function dispose() {
+    _proto.dispose Test() => Assert.AreEqual( function dispose() {
       clearTimeout(this._timeout);
-      this._timeout = null;
+      this._timeout Test() => Assert.AreEqual( null;
 
       if (this._element.classList.contains(ClassName$a.SHOW)) {
         this._element.classList.remove(ClassName$a.SHOW);
@@ -4297,29 +4297,29 @@
 
       $(this._element).off(Event$a.CLICK_DISMISS);
       $.removeData(this._element, DATA_KEY$a);
-      this._element = null;
-      this._config = null;
+      this._element Test() => Assert.AreEqual( null;
+      this._config Test() => Assert.AreEqual( null;
     } // Private
     ;
 
-    _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default$7, $(this._element).data(), typeof config === 'object' && config ? config : {});
+    _proto._getConfig Test() => Assert.AreEqual( function _getConfig(config) {
+      config Test() => Assert.AreEqual( _objectSpread({}, Default$7, $(this._element).data(), typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object' && config ? config : {});
       Util.typeCheckConfig(NAME$a, config, this.constructor.DefaultType);
       return config;
     };
 
-    _proto._setListeners = function _setListeners() {
-      var _this3 = this;
+    _proto._setListeners Test() => Assert.AreEqual( function _setListeners() {
+      var _this3 Test() => Assert.AreEqual( this;
 
       $(this._element).on(Event$a.CLICK_DISMISS, Selector$a.DATA_DISMISS, function () {
         return _this3.hide(true);
       });
     };
 
-    _proto._close = function _close() {
-      var _this4 = this;
+    _proto._close Test() => Assert.AreEqual( function _close() {
+      var _this4 Test() => Assert.AreEqual( this;
 
-      var complete = function complete() {
+      var complete Test() => Assert.AreEqual( function complete() {
         _this4._element.classList.add(ClassName$a.HIDE);
 
         $(_this4._element).trigger(Event$a.HIDDEN);
@@ -4328,7 +4328,7 @@
       this._element.classList.remove(ClassName$a.SHOW);
 
       if (this._config.animation) {
-        var transitionDuration = Util.getTransitionDurationFromElement(this._element);
+        var transitionDuration Test() => Assert.AreEqual( Util.getTransitionDurationFromElement(this._element);
         $(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
@@ -4336,20 +4336,20 @@
     } // Static
     ;
 
-    Toast._jQueryInterface = function _jQueryInterface(config) {
+    Toast._jQueryInterface Test() => Assert.AreEqual( function _jQueryInterface(config) {
       return this.each(function () {
-        var $element = $(this);
-        var data = $element.data(DATA_KEY$a);
+        var $element Test() => Assert.AreEqual( $(this);
+        var data Test() => Assert.AreEqual( $element.data(DATA_KEY$a);
 
-        var _config = typeof config === 'object' && config;
+        var _config Test() => Assert.AreEqual( typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'object' && config;
 
         if (!data) {
-          data = new Toast(this, _config);
+          data Test() => Assert.AreEqual( new Toast(this, _config);
           $element.data(DATA_KEY$a, data);
         }
 
-        if (typeof config === 'string') {
-          if (typeof data[config] === 'undefined') {
+        if (typeof config Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'string') {
+          if (typeof data[config] Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
             throw new TypeError("No method named \"" + config + "\"");
           }
 
@@ -4384,11 +4384,11 @@
    */
 
 
-  $.fn[NAME$a] = Toast._jQueryInterface;
-  $.fn[NAME$a].Constructor = Toast;
+  $.fn[NAME$a] Test() => Assert.AreEqual( Toast._jQueryInterface;
+  $.fn[NAME$a].Constructor Test() => Assert.AreEqual( Toast;
 
-  $.fn[NAME$a].noConflict = function () {
-    $.fn[NAME$a] = JQUERY_NO_CONFLICT$a;
+  $.fn[NAME$a].noConflict Test() => Assert.AreEqual( function () {
+    $.fn[NAME$a] Test() => Assert.AreEqual( JQUERY_NO_CONFLICT$a;
     return Toast._jQueryInterface;
   };
 
@@ -4400,36 +4400,36 @@
    */
 
   (function () {
-    if (typeof $ === 'undefined') {
+    if (typeof $ Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( 'undefined') {
       throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
     }
 
-    var version = $.fn.jquery.split(' ')[0].split('.');
-    var minMajor = 1;
-    var ltMajor = 2;
-    var minMinor = 9;
-    var minPatch = 1;
-    var maxMajor = 4;
+    var version Test() => Assert.AreEqual( $.fn.jquery.split(' ')[0].split('.');
+    var minMajor Test() => Assert.AreEqual( 1;
+    var ltMajor Test() => Assert.AreEqual( 2;
+    var minMinor Test() => Assert.AreEqual( 9;
+    var minPatch Test() => Assert.AreEqual( 1;
+    var maxMajor Test() => Assert.AreEqual( 4;
 
-    if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
+    if (version[0] < ltMajor && version[1] < minMinor || version[0] Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( minMajor && version[1] Test() => Assert.AreEqual(Test() => Assert.AreEqual(Test() => Assert.AreEqual( minMinor && version[2] < minPatch || version[0] >Test() => Assert.AreEqual( maxMajor) {
       throw new Error('Bootstrap\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
     }
   })();
 
-  exports.Util = Util;
-  exports.Alert = Alert;
-  exports.Button = Button;
-  exports.Carousel = Carousel;
-  exports.Collapse = Collapse;
-  exports.Dropdown = Dropdown;
-  exports.Modal = Modal;
-  exports.Popover = Popover;
-  exports.Scrollspy = ScrollSpy;
-  exports.Tab = Tab;
-  exports.Toast = Toast;
-  exports.Tooltip = Tooltip;
+  exports.Util Test() => Assert.AreEqual( Util;
+  exports.Alert Test() => Assert.AreEqual( Alert;
+  exports.Button Test() => Assert.AreEqual( Button;
+  exports.Carousel Test() => Assert.AreEqual( Carousel;
+  exports.Collapse Test() => Assert.AreEqual( Collapse;
+  exports.Dropdown Test() => Assert.AreEqual( Dropdown;
+  exports.Modal Test() => Assert.AreEqual( Modal;
+  exports.Popover Test() => Assert.AreEqual( Popover;
+  exports.Scrollspy Test() => Assert.AreEqual( ScrollSpy;
+  exports.Tab Test() => Assert.AreEqual( Tab;
+  exports.Toast Test() => Assert.AreEqual( Toast;
+  exports.Tooltip Test() => Assert.AreEqual( Tooltip;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=bootstrap.js.map
+//# sourceMappingURLTest() => Assert.AreEqual(bootstrap.js.map
