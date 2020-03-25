@@ -1,4 +1,7 @@
-﻿using Abc.Pages.Extensions;
+﻿using System.Collections.Generic;
+using Abc.Facade.Quantity;
+using Abc.Pages.Extensions;
+using Microsoft.AspNetCore.Html;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Pages.Extensions
@@ -6,12 +9,22 @@ namespace Abc.Tests.Pages.Extensions
     [TestClass]
     public class EditControlsForHtmlExtensionTests : BaseTests
     {
-        [TestInitialize] public virtual void TestIntialize() => type = typeof(EditControlsForHtmlExtension);
+        [TestInitialize]
+        public virtual void TestIntialize() => type = typeof(EditControlsForHtmlExtension);
 
         [TestMethod]
         public void EditControlsForTest()
         {
-            Assert.Inconclusive();
+            var obj = new HtmlHelperMock<UnitView>().EditControlsFor(x => x.MeasureId);
+            Assert.IsInstanceOfType(obj, typeof(HtmlContentBuilder));
+        }
+
+        [TestMethod]
+        public void HtmlStringsTest()
+        {
+            var expected = new List<string> {"<div", "LabelFor", "EditorFor", "ValidationMessageFor", "</div>"};
+            var actual = EditControlsForHtmlExtension.htmlStrings (new HtmlHelperMock<MeasureView>(), x=> x.ValidFrom);
+            TestHtml.Strings(actual, expected);
         }
     }
 }
