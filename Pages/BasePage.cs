@@ -25,7 +25,7 @@ namespace Abc.Pages {
         public abstract string ItemId { get; }
 
         public string PageTitle { get; set; }
-        public string PageSubTitle => getPageSubtitle();
+        public string PageSubTitle => getPageSubTitle();
         public string FixedFilter { 
             get=> db.FixedFilter;
             set=> db.FixedFilter = value; }
@@ -36,7 +36,6 @@ namespace Abc.Pages {
             get=> db.SortOrder;
             set => db.SortOrder = value; 
             }
-        public string CurrentFilter { get; set; }
         public string SearchString { 
             get=> db.SearchString;
             set=> db.SearchString = value; }
@@ -58,7 +57,7 @@ namespace Abc.Pages {
             return $"{PageUrl}/Quantity/Measures/Index?fixedFilter={FixedFilter}&fixedValue={FixedValue}";
         }
 
-        protected internal virtual string getPageSubtitle() {
+        protected internal virtual string getPageSubTitle() {
             return string.Empty;
         }
         protected internal async Task<bool> addObject(string fixedFilter, string fixedValue) {

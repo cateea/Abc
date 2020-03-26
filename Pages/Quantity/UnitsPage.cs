@@ -34,10 +34,10 @@ namespace Abc.Pages.Quantity {
             return UnitViewFactory.Create(view);
         }
 
-        protected internal override string getPageSubtitle()
+        protected internal override string getPageSubTitle()
         {
             return FixedValue is null
-                ? base.getPageSubtitle()
+                ? base.getPageSubTitle()
                 : $"For {GetMeasureName(FixedValue)}";
         }
 
