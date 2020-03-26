@@ -34,6 +34,7 @@ namespace Abc.Soft
             services.AddRazorPages();
             services.AddScoped<IMeasuresRepository, MeasureRepository>();
             services.AddScoped<IUnitsRepository, UnitsRepository>();
+            services.AddServerSideBlazor();
 
         }
 
@@ -63,6 +64,7 @@ namespace Abc.Soft
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapBlazorHub();
             });
         }
     }
