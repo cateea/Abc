@@ -7,7 +7,7 @@ namespace Abc.Soft.Areas.Quantity.Pages.Units {
 
     public class EditModel : UnitsPage {
 
-        public EditModel(IUnitsRepository r, IMeasureRepository m) : base(r, m) { }
+        public EditModel(IUnitsRepository r, IMeasuresRepository m) : base(r, m) { }
 
 
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue) {

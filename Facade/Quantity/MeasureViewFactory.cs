@@ -6,8 +6,8 @@ namespace Abc.Facade.Quantity
     public static class MeasureViewFactory
     {
 
-        public static Measure Create(MeasureView v) {
-            var o = new Measure();
+        public static Measures Create(MeasureView v) {
+            var o = new Measures();
             Copy.Members(v, o.Data);
             //o.Data.Id = v.Id;
             //o.Data.Code = v.Code;
@@ -19,7 +19,7 @@ namespace Abc.Facade.Quantity
             return o;
         }
 
-        public static MeasureView Create(Measure o) {
+        public static MeasureView Create(Measures o) {
             var v = new MeasureView();
             Copy.Members(o.Data, v);
             //v.Id = o.Data.Id;

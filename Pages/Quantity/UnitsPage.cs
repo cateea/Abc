@@ -8,12 +8,12 @@ namespace Abc.Pages.Quantity {
 
     public abstract class UnitsPage : BasePage<IUnitsRepository, Unit, UnitView, UnitData> {
 
-        protected internal UnitsPage(IUnitsRepository r, IMeasureRepository m) : base(r) {
+        protected internal UnitsPage(IUnitsRepository r, IMeasuresRepository m) : base(r) {
             PageTitle = "Units";
             Measures = createMeasures(m);
         }
 
-        private static IEnumerable<SelectListItem> createMeasures(IMeasureRepository r)
+        private static IEnumerable<SelectListItem> createMeasures(IMeasuresRepository r)
         {
             var list = new List<SelectListItem>();
             var measures = r.Get().GetAwaiter().GetResult();

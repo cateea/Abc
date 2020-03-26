@@ -13,14 +13,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Infra {
 
-    [TestClass] public class SortedRepositoryTests : AbstractClassTests<SortedRepository<Measure, MeasureData>,
-        BaseRepository<Measure, MeasureData>> {
+    [TestClass] public class SortedRepositoryTests : AbstractClassTests<SortedRepository<Measures, MeasureData>,
+        BaseRepository<Measures, MeasureData>> {
 
-        private class testClass : SortedRepository<Measure, MeasureData> {
+        private class testClass : SortedRepository<Measures, MeasureData> {
 
             public testClass(DbContext c, DbSet<MeasureData> s) : base(c, s) { }
 
-            protected internal override Measure toDomainObject(MeasureData d) => new Measure(d);
+            protected internal override Measures toDomainObject(MeasureData d) => new Measures(d);
 
             protected override async Task<MeasureData> getData(string id) {
                 await Task.CompletedTask;

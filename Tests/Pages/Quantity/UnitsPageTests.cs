@@ -16,11 +16,11 @@ namespace Abc.Tests.Pages.Quantity
     {
         private class TestClass : UnitsPage
         {
-            internal TestClass(IUnitsRepository r, IMeasureRepository m) : base(r, m) { }
+            internal TestClass(IUnitsRepository r, IMeasuresRepository m) : base(r, m) { }
         }
 
         private class UnitsRepository : BaseTestRepository<Unit, UnitData>, IUnitsRepository { }
-        private class MeasuresRepository : BaseTestRepository<Measure, MeasureData>, IMeasureRepository { }
+        private class MeasuresRepository : BaseTestRepository<Measures, MeasureData>, IMeasuresRepository { }
 
         private UnitsRepository units = new UnitsRepository();
         private MeasuresRepository measures = new MeasuresRepository();
@@ -33,7 +33,7 @@ namespace Abc.Tests.Pages.Quantity
             units = new UnitsRepository();
             measures = new MeasuresRepository();
             data = GetRandom.Object<MeasureData>();
-            var m = new Measure(data);
+            var m = new Measures(data);
             measures.Add(m).GetAwaiter();
             addRandomMeasures();
             obj = new TestClass(units, measures);
@@ -44,7 +44,7 @@ namespace Abc.Tests.Pages.Quantity
             for (var i = 0; i < GetRandom.UInt8(0, 10); i++)
             {
                 var d = GetRandom.Object<MeasureData>();
-                var m = new Measure(d);
+                var m = new Measures(d);
                 measures.Add(m).GetAwaiter();
             }
         }

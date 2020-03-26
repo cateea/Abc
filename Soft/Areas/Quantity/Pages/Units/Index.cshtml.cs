@@ -7,7 +7,7 @@ namespace Abc.Soft.Areas.Quantity.Pages.Units
     public class IndexModel : UnitsPage
     {
         
-        public IndexModel(IUnitsRepository r, IMeasureRepository m) : base(r, m)
+        public IndexModel(IUnitsRepository r, IMeasuresRepository m) : base(r, m)
     {
     }
 
